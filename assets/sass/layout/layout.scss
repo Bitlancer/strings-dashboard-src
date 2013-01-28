@@ -1,0 +1,35 @@
+body {
+  background: #f8f8f8;
+  &.loading {
+    background: #f8f8f8 url('http://assets.ambient.ly/bitlancer/loading.gif') center no-repeat;  
+    > section {
+      display: none;  
+    }
+    > nav {
+      left: -241px;
+    }
+    > header {
+      top: -51px;  
+    }
+  }
+  hr {
+    &.space {
+      border: 1px solid transparent;
+      clear: both;
+      display: block;  
+      margin:5px 0; 
+    }
+  }
+  .float-left {
+    float: left;  
+  }
+  .float-right {
+    float: right;  
+  }
+  .overflow-hidden {
+    overflow: hidden;  
+  }
+  @import 'header.scss';
+  @import 'nav.scss';
+  @import 'section.scss';
+}

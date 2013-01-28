@@ -1,0 +1,21 @@
+> section {
+  max-width: 1200px;
+  min-width: 630px;
+  //margin: 95px 0 30px 300px;
+  padding: 90px 60px 30px 300px;
+  position: relative;
+  > div {
+    &#content {
+      background: #fff; 
+      border: 1px solid darken($white, 7%);
+      padding: 20px; 
+    }
+    > span {
+      display: block;
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;  
+      }
+    }
+  }
+}

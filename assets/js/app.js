@@ -1,4 +1,4 @@
-$(function() {
+
   var strings = {
     
     events : function() {
@@ -57,14 +57,14 @@ $(function() {
         },
         
         tables : function(){
-          if($('table')){
+          if($('table[data-type="datatable"]')){
             var tableConfig = {
               "sPaginationType": "full_numbers",
               "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
               "iDisplayLength":"2",
               "oLanguage": { "sSearch": "" }
             }
-            $('table').not('pre > table').each(function() {
+            $('table[data-type="datatable"]').not('pre > table').each(function() {
               $(this).dataTable(tableConfig);
               $('.dataTables_filter input').attr('placeholder','Search');
             });
@@ -88,4 +88,3 @@ $(function() {
     strings.interface.loaded();
   });
 
-});

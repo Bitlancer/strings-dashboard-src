@@ -61,7 +61,7 @@
       </span>
       <span>
         <h2>Tables <a class="view-source">View Source</a></h2>
-        <table id="fruit">
+        <table data-type="datatable" id="fruit">
           <thead>
             <tr>
               <th data-sort="fruit">Fruit</th>
@@ -94,7 +94,7 @@
         </table>
 <!-- Code -->
 <pre data-language="html">
-<table id="fruit">
+<table data-type="datatable" id="fruit">
   <thead>
     <tr>
       <th data-sort="fruit">Fruit</th>
@@ -136,19 +136,19 @@
         </ul>
 <!-- Code -->
 <pre data-language="javascript">
-stringsUI.messages(
+strings.interface.messages(
 "success",
 "Success!",
 "I only appear when things go well. It's nice to see you, too."
 );
 
-stringsUI.messages(
+strings.interface.messages(
 "error",
 "",
 "Did you notice me? I bet you did."
 );
 
-stringsUI.messages(
+strings.interface.messages(
 "warning",
 "Warning!",
 "Nothings wrong, but something's not right. Please don't ignore me :/"

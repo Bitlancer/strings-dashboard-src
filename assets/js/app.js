@@ -52,7 +52,7 @@
           // Temporary fix until app uses php includes
           $('body > header').load('assets/html/header.html');
           $('body > nav').load('assets/html/nav.html', function(response, status, xhr){
-            if (status == "success" && $('body > nav > a#'+config.name).length) {$('body > nav > a#'+config.name).addClass('active')}
+            if (status == "success" && $('body > nav > span#'+config.name).length) {$('body > nav > span#'+config.name).addClass('active')}
           });
         },
         

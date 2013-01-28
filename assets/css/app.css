@@ -215,44 +215,65 @@ body {
     -o-transition: left 0.3s ease-in-out;
     transition: left 0.3s ease-in-out;
     -webkit-transition-delay: .15s; }
-    body > nav > a {
-      background-color: #f8f8f8;
-      background-image: -moz-linear-gradient(#f8f8f8, #f0f0f0);
-      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#f0f0f0));
-      background-image: -webkit-linear-gradient(#f8f8f8, #f0f0f0);
-      background-image: -o-linear-gradient(#f8f8f8, #f0f0f0);
-      border-bottom: 1px solid #e8e8e8;
-      border-top: 1px solid white;
-      color: #666;
+    body > nav > span {
       display: block;
-      font-size: 15px;
-      font-weight: 600;
-      height: 20px;
-      line-height: 20px;
-      overflow: hidden;
-      padding: 10px 20px;
-      position: relative;
-      text-shadow: 1px 1px 0 white; }
-      body > nav > a:before {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 20px auto;
-        content: ' ';
-        display: inline-block;
-        height: 20px;
-        margin-right: 10px;
-        width: 20px;
-        vertical-align: top; }
-      body > nav > a#dashboard:before {
+      background: rgba(0, 0, 0, 0.8); }
+      body > nav > span > span {
+        display: none; }
+      body > nav > span#dashboard > a:before {
         background-image: url("http://assets.ambient.ly/bitlancer/dashboard.png"); }
-      body > nav > a#devices:before {
+      body > nav > span#devices > a:before {
         background-image: url("http://assets.ambient.ly/bitlancer/cabinet.png");
         background-size: auto 20px; }
-      body > nav > a#formations:before {
+      body > nav > span#formations > a:before {
         background-image: url("http://assets.ambient.ly/bitlancer/cloud.png"); }
-      body > nav > a#user-management:before {
+      body > nav > span#user-management > a:before {
         background-image: url("http://assets.ambient.ly/bitlancer/user.png"); }
-      body > nav > a.active {
+      body > nav > span.active > span {
+        display: block;
+        overflow: hidden;
+        padding: 5px 0;
+        -webkit-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.3);
+        box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.3); }
+        body > nav > span.active > span > a {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          color: #fff;
+          padding: 10px 20px;
+          display: block;
+          font-size: 13px;
+          font-weight: 700; }
+          body > nav > span.active > span > a:last-of-type {
+            border: 0; }
+      body > nav > span > a {
+        background-color: #f8f8f8;
+        background-image: -moz-linear-gradient(#f8f8f8, #f0f0f0);
+        background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#f0f0f0));
+        background-image: -webkit-linear-gradient(#f8f8f8, #f0f0f0);
+        background-image: -o-linear-gradient(#f8f8f8, #f0f0f0);
+        border-bottom: 1px solid #e8e8e8;
+        border-top: 1px solid white;
+        color: #666;
+        display: block;
+        font-size: 15px;
+        font-weight: 600;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        padding: 10px 20px;
+        position: relative;
+        text-shadow: 1px 1px 0 white; }
+        body > nav > span > a:before {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 20px auto;
+          content: ' ';
+          display: inline-block;
+          height: 20px;
+          margin-right: 10px;
+          width: 20px;
+          vertical-align: top; }
+      body > nav > span.active > a {
         border-bottom: 1px solid #dddddd;
         border-top: 1px solid #f0f0f0;
         cursor: default;
@@ -265,7 +286,7 @@ body {
         -webkit-box-shadow: inset 0 1px 0 #dddddd, inset 0 -1px 0 white;
         -moz-box-shadow: inset 0 1px 0 #dddddd, inset 0 -1px 0 white;
         box-shadow: inset 0 1px 0 #dddddd, inset 0 -1px 0 white; }
-        body > nav > a.active:after {
+        body > nav > span.active > a:after {
           background: #f8f8f8;
           border-left: 1px solid #d6d6d6;
           border-bottom: 1px solid #d6d6d6;

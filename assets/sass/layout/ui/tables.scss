@@ -36,6 +36,55 @@ table {
       }
     }
   }
+  tr[data-status]{
+    td {
+      padding: 10px 5px;
+      &:first-child {
+        padding: 10px 5px 10px 25px;  
+        &:before {
+          content: ' ';
+          height: 35px;
+          width: 15px;
+          position: absolute;
+          left: 0;
+          margin-top: -10px;
+        }
+      }
+    }
+  }
+  tr[data-status='error']{
+    //border-left: 30px solid $red;
+    td:first-child:before {
+      background: $red url('http://assets.ambient.ly/bitlancer/status.png');
+      background-size: 100% 50%;
+      @include box-shadow((
+        1px 0 0 $red,
+        inset -1px 0 0 rgba(255,255,255,.2)
+      ));
+    }
+  }
+  tr[data-status='running']{
+    //border-left: 30px solid $red;
+    td:first-child:before {
+      background: $green url('http://assets.ambient.ly/bitlancer/status.png');
+      background-size: 100% 50%;
+      @include box-shadow((
+        1px 0 0 $green,
+        inset -1px 0 0 rgba(255,255,255,.2)
+      ));
+    }
+  }
+  tr[data-status='warning']{
+    //border-left: 30px solid $red;
+    td:first-child:before {
+      background: $orange url('http://assets.ambient.ly/bitlancer/status.png');
+      background-size: 100% 50%;
+      @include box-shadow((
+        1px 0 0 $orange,
+        inset -1px 0 0 rgba(255,255,255,.2)
+      ));
+    }
+  }
   td {
     border: 1px solid darken($white,5%);  
   }

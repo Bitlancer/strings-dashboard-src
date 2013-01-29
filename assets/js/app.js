@@ -61,7 +61,7 @@
             var tableConfig = {
               "sPaginationType": "full_numbers",
               "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
-              "iDisplayLength":"2",
+              "iDisplayLength":3,
               "oLanguage": { "sSearch": "" }
             }
             $('table[data-type="datatable"]').not('pre > table').each(function() {

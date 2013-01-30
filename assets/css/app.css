@@ -416,6 +416,42 @@ body {
     line-height: 18px;
     padding: 0 5px; }
 
+@-webkit-keyframes activity {
+  0% {
+    background-position: 0 0;
+    opacity: 0; }
+
+  100% {
+    background-position: 0 -35px;
+    opacity: 1; } }
+
+@-moz-keyframes activity {
+  0% {
+    background-position: 0 0;
+    opacity: 0; }
+
+  100% {
+    background-position: 0 -35px;
+    opacity: 1; } }
+
+@-ms-keyframes activity {
+  0% {
+    background-position: 0 0;
+    opacity: 0; }
+
+  100% {
+    background-position: 0 -35px;
+    opacity: 1; } }
+
+@keyframes activity {
+  0% {
+    background-position: 0 0;
+    opacity: 0; }
+
+  100% {
+    background-position: 0 -35px;
+    opacity: 1; } }
+
 table {
   border: 1px solid #d6d6d6;
   width: 100%; }
@@ -464,24 +500,39 @@ table {
         position: absolute;
         left: 0;
         margin-top: -10px; }
+  table tr[data-status='loading'] td:first-child:before {
+    background: #bbbbbb url("http://assets.ambient.ly/bitlancer/status.png");
+    background-size: 100% 50%;
+    background-position: 0 0;
+    -webkit-box-shadow: 1px 0 0 #bbbbbb, inset -1px 0 0 rgba(255, 255, 255, 0.2);
+    -moz-box-shadow: 1px 0 0 #bbbbbb, inset -1px 0 0 rgba(255, 255, 255, 0.2);
+    box-shadow: 1px 0 0 #bbbbbb, inset -1px 0 0 rgba(255, 255, 255, 0.2); }
   table tr[data-status='error'] td:first-child:before {
     background: #d94141 url("http://assets.ambient.ly/bitlancer/status.png");
     background-size: 100% 50%;
+    background-position: 0 0;
     -webkit-box-shadow: 1px 0 0 #d94141, inset -1px 0 0 rgba(255, 255, 255, 0.2);
     -moz-box-shadow: 1px 0 0 #d94141, inset -1px 0 0 rgba(255, 255, 255, 0.2);
     box-shadow: 1px 0 0 #d94141, inset -1px 0 0 rgba(255, 255, 255, 0.2); }
   table tr[data-status='running'] td:first-child:before {
     background: #59b036 url("http://assets.ambient.ly/bitlancer/status.png");
     background-size: 100% 50%;
+    background-position: 0 0;
     -webkit-box-shadow: 1px 0 0 #59b036, inset -1px 0 0 rgba(255, 255, 255, 0.2);
     -moz-box-shadow: 1px 0 0 #59b036, inset -1px 0 0 rgba(255, 255, 255, 0.2);
     box-shadow: 1px 0 0 #59b036, inset -1px 0 0 rgba(255, 255, 255, 0.2); }
   table tr[data-status='warning'] td:first-child:before {
     background: #ffb33d url("http://assets.ambient.ly/bitlancer/status.png");
     background-size: 100% 50%;
+    background-position: 0 0;
     -webkit-box-shadow: 1px 0 0 #ffb33d, inset -1px 0 0 rgba(255, 255, 255, 0.2);
     -moz-box-shadow: 1px 0 0 #ffb33d, inset -1px 0 0 rgba(255, 255, 255, 0.2);
     box-shadow: 1px 0 0 #ffb33d, inset -1px 0 0 rgba(255, 255, 255, 0.2); }
+  table tr.activity td:first-child:before {
+    -webkit-animation: activity 0.75s infinite alternate;
+    -moz-animation: activity 0.75s infinite alternate;
+    -o-animation: activity 0.75s infinite alternate;
+    animation: activity 0.75s infinite alternate; }
   table td {
     border: 1px solid #e3e3e3; }
 

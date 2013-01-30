@@ -1,3 +1,14 @@
+@include keyframes(activity){
+  0% {
+    background-position: 0 0;
+    opacity: 0;
+  }
+  100% {
+    background-position: 0 -35px;
+    opacity: 1;
+  }
+}
+
 table {
   border: 1px solid darken($white,10%);
   width: 100%;
@@ -52,11 +63,24 @@ table {
       }
     }
   }
+  tr[data-status='loading']{
+    //border-left: 30px solid $red;
+    td:first-child:before {
+      background: #bbb url('http://assets.ambient.ly/bitlancer/status.png');
+      background-size: 100% 50%;
+      background-position: 0 0;
+      @include box-shadow((
+        1px 0 0 #bbb,
+        inset -1px 0 0 rgba(255,255,255,.2)
+      ));
+    }
+  }
   tr[data-status='error']{
     //border-left: 30px solid $red;
     td:first-child:before {
       background: $red url('http://assets.ambient.ly/bitlancer/status.png');
       background-size: 100% 50%;
+      background-position: 0 0;
       @include box-shadow((
         1px 0 0 $red,
         inset -1px 0 0 rgba(255,255,255,.2)
@@ -68,6 +92,7 @@ table {
     td:first-child:before {
       background: $green url('http://assets.ambient.ly/bitlancer/status.png');
       background-size: 100% 50%;
+      background-position: 0 0;
       @include box-shadow((
         1px 0 0 $green,
         inset -1px 0 0 rgba(255,255,255,.2)
@@ -79,10 +104,16 @@ table {
     td:first-child:before {
       background: $orange url('http://assets.ambient.ly/bitlancer/status.png');
       background-size: 100% 50%;
+      background-position: 0 0;
       @include box-shadow((
         1px 0 0 $orange,
         inset -1px 0 0 rgba(255,255,255,.2)
       ));
+    }
+  }
+  tr.activity {
+    td:first-child:before {
+      @include animation(activity .75s infinite alternate);  
     }
   }
   td {

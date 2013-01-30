@@ -58,14 +58,13 @@
         
         tables : function(){
           if($('table[data-type="datatable"]')){
-            var tableConfig = {
-              "sPaginationType": "full_numbers",
-              "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
-              "iDisplayLength":3,
-              "oLanguage": { "sSearch": "" }
-            }
             $('table[data-type="datatable"]').not('pre > table').each(function() {
-              $(this).dataTable(tableConfig);
+              $(this).dataTable({
+                "sPaginationType": "full_numbers",
+                "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
+                "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
+                "oLanguage": { "sSearch": "" }
+              });
               $('.dataTables_filter input').attr('placeholder','Search');
             });
           }

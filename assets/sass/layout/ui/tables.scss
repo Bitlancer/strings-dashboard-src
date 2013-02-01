@@ -51,11 +51,11 @@ table {
     td {
       padding: 10px 5px;
       &:first-child {
-        padding: 10px 5px 10px 25px;  
+        padding: 10px 5px 10px 20px;  
         &:before {
           content: ' ';
           height: 35px;
-          width: 15px;
+          width: 10px;
           position: absolute;
           left: 0;
           margin-top: -10px;
@@ -67,11 +67,10 @@ table {
     //border-left: 30px solid $red;
     td:first-child:before {
       background: #bbb url('http://assets.ambient.ly/bitlancer/status.png');
-      background-size: 100% 50%;
+      background-size: 200% 50%;
       background-position: 0 0;
       @include box-shadow((
-        1px 0 0 #bbb,
-        inset -1px 0 0 rgba(255,255,255,.2)
+        1px 0 0 #bbb
       ));
     }
   }
@@ -79,11 +78,10 @@ table {
     //border-left: 30px solid $red;
     td:first-child:before {
       background: $red url('http://assets.ambient.ly/bitlancer/status.png');
-      background-size: 100% 50%;
+      background-size: 200% 50%;
       background-position: 0 0;
       @include box-shadow((
-        1px 0 0 $red,
-        inset -1px 0 0 rgba(255,255,255,.2)
+        1px 0 0 $red
       ));
     }
   }
@@ -91,11 +89,10 @@ table {
     //border-left: 30px solid $red;
     td:first-child:before {
       background: $green url('http://assets.ambient.ly/bitlancer/status.png');
-      background-size: 100% 50%;
+      background-size: 200% 50%;
       background-position: 0 0;
       @include box-shadow((
-        1px 0 0 $green,
-        inset -1px 0 0 rgba(255,255,255,.2)
+        1px 0 0 $green
       ));
     }
   }
@@ -103,11 +100,10 @@ table {
     //border-left: 30px solid $red;
     td:first-child:before {
       background: $orange url('http://assets.ambient.ly/bitlancer/status.png');
-      background-size: 100% 50%;
+      background-size: 200% 50%;
       background-position: 0 0;
       @include box-shadow((
-        1px 0 0 $orange,
-        inset -1px 0 0 rgba(255,255,255,.2)
+        1px 0 0 $orange
       ));
     }
   }
@@ -127,7 +123,7 @@ table {
   position: relative;
   .dataTables_length {
     float: left;
-    padding-bottom: 10px;
+    padding: 2px 0 0 0;
   }
   .dataTables_filter {
     float: right;

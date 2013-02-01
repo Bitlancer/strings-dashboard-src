@@ -67,13 +67,18 @@
         border-radius: 5px;
         border-top-right-radius: 0;
         display: none;
-        padding: 10px 15px;
+        padding: 3px 0;
         position: absolute;
         right: 0;
         width: 100%;
+        min-width: 160px;
         @include box-shadow(-3px 3px 0px rgba(0,0,0,0.3));
+        overflow: hidden;
         > li {
-          padding: 5px 0;
+          padding: 7px 15px;
+          &:hover {
+            background: #111;  
+          }
           &:last-child {
           }
           a {

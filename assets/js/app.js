@@ -24,7 +24,20 @@
       });
       $('body').live('click',function() {
         if($('header > div > div#profile').hasClass('active')){$('header > div > div#profile').click();}
+        if($('ul.action-menu.active')){$('ul.action-menu').removeClass('active');}
       });
+      // Action menus
+      if($('ul.action-menu')){
+        $('ul.action-menu').on('click',function(event) {
+          event.stopPropagation();
+          if($(this).attr('data-width')){
+            $(this).children('span').width($(this).attr('data-width'))
+          }
+          if(!$(this).hasClass('active')){
+            $(this).addClass('active');
+          }
+        });
+      }
     },
     
     interface : {

@@ -1,13 +1,19 @@
 ul.action-menu {
   display: inline-block;
   position: relative;
-  vertical-align: middle;
+  //vertical-align: middle;
   > li {
-    //border: 1px solid #ccc;
+    //border: 1px solid #ddd;
     border-radius: 4px;
     display: block;
-    //padding: 5px 10px;
+    padding: 2px 5px;
+    @include gradient(#fafafa, #ededed);
     cursor: pointer;
+    font-weight: 600;
+    @include box-shadow((
+      1px 1px 0 darken(#ededed,5%),
+      inset 1px 1px 0 #ededed
+    ));
     &:after {
       content: '\25BC'; 
       color: #aaa;
@@ -21,17 +27,28 @@ ul.action-menu {
     background: #fff;
     border: 1px solid #ccc;
     display: none; 
+    font-size: 13px;
+    min-width: 140px;
     //padding: 0 5px;
     position: absolute;
     right: 0;
     top: 25px;
     z-index: 33;
+    @include box-shadow(3px 3px 0 rgba(0,0,0,0.1));
     > li {
       display: block;
       padding: 5px;
       border-bottom: 1px solid #eee;
       &:last-of-type {
         border-bottom: 0;  
+      }
+      &:hover {
+        background: $blue_light;
+        cursor: pointer;
+        color: #fff;
+      }
+      a {
+        color: inherit;  
       }
     }
   }

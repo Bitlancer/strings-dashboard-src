@@ -33,6 +33,10 @@
           if($(this).attr('data-width')){
             $(this).children('span').width($(this).attr('data-width'))
           }
+          var align = ($(this).outerWidth() - $(this).children('span').outerWidth()) * .5;
+          $(this).children('span').css({
+            'right':align
+          });
           if(!$(this).hasClass('active')){
             $(this).addClass('active');
           }

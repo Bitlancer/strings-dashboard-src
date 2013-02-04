@@ -495,7 +495,8 @@ table {
     table th.sorting_desc:after {
       content: '\25BC'; }
   table tr[data-status] td {
-    padding: 10px 5px; }
+    padding: 10px 5px;
+    position: relative; }
     table tr[data-status] td:first-child {
       padding: 10px 5px 10px 20px; }
       table tr[data-status] td:first-child:before {
@@ -542,7 +543,6 @@ table {
     border: 1px solid #e3e3e3; }
 
 .dataTables_wrapper {
-  overflow: hidden;
   position: relative; }
   .dataTables_wrapper .dataTables_length {
     float: left;
@@ -563,8 +563,7 @@ table {
   font-weight: 600;
   overflow: hidden;
   padding-top: 10px;
-  position: relative;
-  float: right; }
+  position: relative; }
   .dataTables_paginate > a, .dataTables_paginate > span > a {
     border: 1px solid #e3e3e3;
     color: #777;
@@ -765,12 +764,21 @@ input[type=text], input[type=search], input[type=email] {
 
 ul.action-menu {
   display: inline-block;
-  position: relative;
-  vertical-align: middle; }
+  position: relative; }
   ul.action-menu > li {
     border-radius: 4px;
     display: block;
-    cursor: pointer; }
+    padding: 2px 5px;
+    background-color: #fafafa;
+    background-image: -moz-linear-gradient(#fafafa, #ededed);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#ededed));
+    background-image: -webkit-linear-gradient(#fafafa, #ededed);
+    background-image: -o-linear-gradient(#fafafa, #ededed);
+    cursor: pointer;
+    font-weight: 600;
+    -webkit-box-shadow: 1px 1px 0 #e0e0e0, inset 1px 1px 0 #ededed;
+    -moz-box-shadow: 1px 1px 0 #e0e0e0, inset 1px 1px 0 #ededed;
+    box-shadow: 1px 1px 0 #e0e0e0, inset 1px 1px 0 #ededed; }
     ul.action-menu > li:after {
       content: '\25BC';
       color: #aaa;
@@ -782,15 +790,26 @@ ul.action-menu {
     background: #fff;
     border: 1px solid #cccccc;
     display: none;
+    font-size: 13px;
+    min-width: 140px;
     position: absolute;
     right: 0;
     top: 25px;
-    z-index: 33; }
+    z-index: 33;
+    -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1); }
     ul.action-menu > span > li {
       display: block;
       padding: 5px;
       border-bottom: 1px solid #eeeeee; }
       ul.action-menu > span > li:last-of-type {
         border-bottom: 0; }
+      ul.action-menu > span > li:hover {
+        background: #1e8fe2;
+        cursor: pointer;
+        color: #fff; }
+      ul.action-menu > span > li a {
+        color: inherit; }
   ul.action-menu.active > span {
     display: block; }

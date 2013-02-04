@@ -50,6 +50,7 @@ table {
   tr[data-status]{
     td {
       padding: 10px 5px;
+      position: relative;
       &:first-child {
         padding: 10px 5px 10px 20px;  
         &:before {
@@ -119,7 +120,7 @@ table {
 
 // datatables
 .dataTables_wrapper {
-  overflow: hidden;
+  //overflow: hidden;
   position: relative;
   .dataTables_length {
     float: left;
@@ -148,7 +149,7 @@ table {
   overflow: hidden;
   padding-top: 10px;
   position: relative;
-  float: right;
+  //float: right;
   > a, > span > a {
     border: 1px solid darken($white,5%);
     color: #777;

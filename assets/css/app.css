@@ -322,11 +322,26 @@ body {
     body > section > div#content {
       background: #fff;
       border: 1px solid #dedede;
-      padding: 20px; }
-    body > section > div > span {
+      padding: 20px;
+      position: relative; }
+      body > section > div#content.panel {
+        overflow: hidden; }
+        body > section > div#content.panel > div:first-child {
+          float: left;
+          width: 63%;
+          padding-right: 2%;
+          -webkit-box-shadow: 1px 0 0 #eeeeee;
+          -moz-box-shadow: 1px 0 0 #eeeeee;
+          box-shadow: 1px 0 0 #eeeeee; }
+        body > section > div#content.panel > div:nth-child(2) {
+          float: left;
+          padding-left: 2%;
+          width: 33%; }
+    body > section > div > span, body > section > div div.panel > span {
       display: block;
-      margin-bottom: 30px; }
-      body > section > div > span:last-child {
+      margin-bottom: 30px;
+      position: relative; }
+      body > section > div > span:last-of-type, body > section > div div.panel > span:last-of-type {
         margin-bottom: 0; }
 
 .cta {

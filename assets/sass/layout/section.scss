@@ -9,11 +9,29 @@
       background: #fff; 
       border: 1px solid darken($white, 7%);
       padding: 20px; 
+      position: relative;
+      &.panel {
+        overflow: hidden;
+        > div {
+          &:first-child {
+            float: left;
+            width: 63%;
+            padding-right: 2%;
+            @include box-shadow(1px 0 0 #eee);
+          }
+          &:nth-child(2) {
+            float: left;
+            padding-left: 2%;
+            width: 33%;
+          }
+        }
+      }
     }
-    > span {
+    > span, div.panel > span {
       display: block;
       margin-bottom: 30px;
-      &:last-child {
+      position: relative;
+      &:last-of-type {
         margin-bottom: 0;  
       }
     }

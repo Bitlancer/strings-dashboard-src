@@ -501,11 +501,11 @@ table {
       padding: 10px 5px 10px 20px; }
       table tr[data-status] td:first-child:before {
         content: ' ';
-        height: 35px;
+        height: 37px;
         width: 10px;
         position: absolute;
         left: 0;
-        margin-top: -10px; }
+        margin-top: -11px; }
   table tr[data-status='loading'] td:first-child:before {
     background: #bbbbbb url("http://assets.ambient.ly/bitlancer/status.png");
     background-size: 200% 50%;

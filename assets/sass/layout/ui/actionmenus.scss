@@ -36,20 +36,20 @@ ul.action-menu {
     top: 25px;
     z-index: 33;
     @include box-shadow(3px 3px 0 rgba(0,0,0,0.1));
-    > li {
+    > li, > a {
+      color: #555;
       display: block;
       padding: 5px;
       border-bottom: 1px solid #eee;
-      &:last-of-type {
+      font-weight: 600;
+      font-size: 13px;
+      &:last-child {
         border-bottom: 0;  
       }
       &:hover {
         background: $blue_light;
         cursor: pointer;
         color: #fff;
-      }
-      a {
-        color: inherit;  
       }
     }
   }

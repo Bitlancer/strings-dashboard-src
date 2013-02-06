@@ -18,11 +18,21 @@
             width: 63%;
             padding-right: 2%;
             @include box-shadow(1px 0 0 #eee);
+            > ul#messages {
+                margin-bottom: 45px;    
+            }
           }
           &:nth-child(2) {
             float: left;
             padding-left: 2%;
             width: 33%;
+            span > a {
+              display: block; 
+              margin-bottom: 5px;
+              &:last-of-type {
+                margin-bottom: 0;  
+              }
+            }
           }
         }
       }

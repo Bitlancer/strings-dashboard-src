@@ -84,14 +84,20 @@ section h2 {
   section h2 a {
     font-size: 12px;
     font-weight: 400; }
+section div#content.panel div h2 {
+  margin-top: 30px; }
+  section div#content.panel div h2:first-of-type {
+    margin-top: 0; }
 section p {
   line-height: 20px;
   margin-bottom: 20px; }
-  section p:last-child {
+  section p:last-of-type {
     margin-bottom: 0; }
 section > p {
   line-height: 25px;
   margin-bottom: 45px; }
+  section > p:last-of-type {
+    margin-bottom: 45px; }
 
 body {
   background: #f8f8f8; }
@@ -331,10 +337,17 @@ body {
         -webkit-box-shadow: 1px 0 0 #eeeeee;
         -moz-box-shadow: 1px 0 0 #eeeeee;
         box-shadow: 1px 0 0 #eeeeee; }
+        body > section > div#content.panel > div:first-child > ul#messages {
+          margin-bottom: 45px; }
       body > section > div#content.panel > div:nth-child(2) {
         float: left;
         padding-left: 2%;
         width: 33%; }
+        body > section > div#content.panel > div:nth-child(2) span > a {
+          display: block;
+          margin-bottom: 5px; }
+          body > section > div#content.panel > div:nth-child(2) span > a:last-of-type {
+            margin-bottom: 0; }
     body > section > div > span, body > section > div div.panel > span {
       display: block;
       margin-bottom: 30px;
@@ -813,17 +826,18 @@ ul.action-menu {
     -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
     box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1); }
-    ul.action-menu > span > li {
+    ul.action-menu > span > li, ul.action-menu > span > a {
+      color: #555;
       display: block;
       padding: 5px;
-      border-bottom: 1px solid #eeeeee; }
-      ul.action-menu > span > li:last-of-type {
+      border-bottom: 1px solid #eeeeee;
+      font-weight: 600;
+      font-size: 13px; }
+      ul.action-menu > span > li:last-child, ul.action-menu > span > a:last-child {
         border-bottom: 0; }
-      ul.action-menu > span > li:hover {
+      ul.action-menu > span > li:hover, ul.action-menu > span > a:hover {
         background: #1e8fe2;
         cursor: pointer;
         color: #fff; }
-      ul.action-menu > span > li a {
-        color: inherit; }
   ul.action-menu.active > span {
     display: block; }

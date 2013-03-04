@@ -1,11 +1,9 @@
 @include keyframes(activity){
   0% {
     background-position: 0 0;
-    opacity: 0;
   }
   100% {
-    background-position: 0 -35px;
-    opacity: 1;
+    background-position: 0 37px;
   }
 }
 
@@ -110,7 +108,7 @@ table {
   }
   tr.activity {
     td:first-child:before {
-      @include animation(activity .75s infinite alternate);  
+      @include animation(activity 2s infinite forwards linear);  
     }
   }
   td {

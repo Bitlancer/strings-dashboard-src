@@ -357,39 +357,31 @@ body {
 
 @-webkit-keyframes activity {
   0% {
-    background-position: 0 0;
-    opacity: 0; }
+    background-position: 0 0; }
 
   100% {
-    background-position: 0 -35px;
-    opacity: 1; } }
+    background-position: 0 37px; } }
 
 @-moz-keyframes activity {
   0% {
-    background-position: 0 0;
-    opacity: 0; }
+    background-position: 0 0; }
 
   100% {
-    background-position: 0 -35px;
-    opacity: 1; } }
+    background-position: 0 37px; } }
 
 @-ms-keyframes activity {
   0% {
-    background-position: 0 0;
-    opacity: 0; }
+    background-position: 0 0; }
 
   100% {
-    background-position: 0 -35px;
-    opacity: 1; } }
+    background-position: 0 37px; } }
 
 @keyframes activity {
   0% {
-    background-position: 0 0;
-    opacity: 0; }
+    background-position: 0 0; }
 
   100% {
-    background-position: 0 -35px;
-    opacity: 1; } }
+    background-position: 0 37px; } }
 
 table {
   border: 1px solid #d6d6d6;
@@ -469,10 +461,10 @@ table {
     -moz-box-shadow: 1px 0 0 #ffb33d;
     box-shadow: 1px 0 0 #ffb33d; }
   table tr.activity td:first-child:before {
-    -webkit-animation: activity 0.75s infinite alternate;
-    -moz-animation: activity 0.75s infinite alternate;
-    -o-animation: activity 0.75s infinite alternate;
-    animation: activity 0.75s infinite alternate; }
+    -webkit-animation: activity 2s infinite forwards linear;
+    -moz-animation: activity 2s infinite forwards linear;
+    -o-animation: activity 2s infinite forwards linear;
+    animation: activity 2s infinite forwards linear; }
   table td {
     border: 1px solid #e3e3e3; }
 

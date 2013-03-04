@@ -664,6 +664,9 @@ input[type=text], input[type=search], input[type=email] {
   -webkit-box-shadow: inset 1px 1px 5px #f0f0f0;
   -moz-box-shadow: inset 1px 1px 5px #f0f0f0;
   box-shadow: inset 1px 1px 5px #f0f0f0; }
+input[type=radio] {
+  margin: 0;
+  vertical-align: middle; }
 
 ::-webkit-input-placeholder {
   line-height: 1.4;

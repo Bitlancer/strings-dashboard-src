@@ -10,7 +10,10 @@ input {
     vertical-align: middle;
     @include box-shadow(inset 1px 1px 5px #f0f0f0);
   }
-
+  &[type=radio] {
+    margin: 0;
+    vertical-align: middle;
+  }
 }
 
 ::-webkit-input-placeholder {

@@ -191,7 +191,18 @@ strings.interface.messages(
         <a class="cta primary modal" data-src="#example" data-title="Example Window">Open Window</a>
         <a class="cta modal" data-src="#example" data-title="Custom Width" data-width="800px">Custom Width</a>
         <div style="display:none">
-          <div id="example">I am the example!</div>
+          <div id="example">
+            <form>
+              <div style="padding:5px 0">
+                <input type="radio" name="options" id="option-1" checked=checked />
+                <label for="option-1">Option One</label>
+              </div>
+              <div style="padding:5px 0">
+                <input type="radio" name="options" id="option-2" />
+                <label for="option-2">Option Two</label>
+              </div>
+            </form>          
+          </div>
         </div>
 <!-- Code -->
 <pre data-language="html">
@@ -199,7 +210,11 @@ strings.interface.messages(
 <a class="cta modal" data-src="#example" data-title="Custom Width" data-width="600">Custom Width</a>
 
 <div style="display:none">
-  <div id="example">I am the example!</div>
+  <div id="example">
+    <form>
+      <input type="radio" id="option-1" />
+    </form>
+  </div>
 </div>
 </pre>
       </span>

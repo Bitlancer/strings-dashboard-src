@@ -701,54 +701,19 @@ section ul#pagination {
   section ul#pagination > span {
     border: 1px solid transparent; }
 
-body div#overlay {
-  background: rgba(0, 0, 0, 0.5);
-  display: none;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 999; }
-  body div#overlay > div#modal {
-    background: #fff;
-    display: block;
-    min-width: 360px;
-    max-width: 960px;
-    margin: 0 auto;
-    min-height: 60px;
-    width: 480px;
-    overflow: hidden;
-    padding: 0px;
-    position: relative;
-    -webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5); }
-    body div#overlay > div#modal a.close {
-      background: url("http://assets.ambient.ly/bitlancer/close_dark.png") 2px 2px no-repeat;
-      background-size: 10px 10px;
-      display: block;
-      height: 15px;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      width: 15px;
-      border-radius: 3px;
-      -webkit-box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.1), inset 0 1px 8px rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.1), inset 0 1px 8px rgba(0, 0, 0, 0.2);
-      box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.1), inset 0 1px 8px rgba(0, 0, 0, 0.2); }
-    body div#overlay > div#modal > h2 {
-      background: #323232;
-      color: #fff;
-      display: block;
-      font-weight: 600;
-      padding: 10px; }
-      body div#overlay > div#modal > h2 > a.close {
-        background: url("http://assets.ambient.ly/bitlancer/close.png") 2px 2px no-repeat;
-        background-size: 10px 10px; }
-    body div#overlay > div#modal > span {
-      display: block;
-      padding: 20px; }
+body .strings-modal .ui-dialog-titlebar {
+  border: 0;
+  padding: 5px 10px; }
+  body .strings-modal .ui-dialog-titlebar > a {
+    border: 0;
+    padding: 0;
+    right: 5px; }
+    body .strings-modal .ui-dialog-titlebar > a > span {
+      margin: 1px 0 0 2px; }
+    body .strings-modal .ui-dialog-titlebar > a:hover {
+      background: rgba(0, 0, 0, 0.05); }
+body .strings-modal .ui-dialog-content {
+  padding: 10px; }
 
 input[type=text], input[type=search], input[type=email] {
   border: 1px solid #cccccc;

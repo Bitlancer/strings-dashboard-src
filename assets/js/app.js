@@ -9,7 +9,8 @@
         var modalConfig = {
           modal: true,
           title: $(this).attr('data-title') || 'No Title',
-          width: $(this).attr('data-width') || '360'
+          width: $(this).attr('data-width') || '360',
+          dialogClass:'strings-modal'
         }
         $('.modal').click(function() {
           $($(this).attr('data-src')).dialog(modalConfig);

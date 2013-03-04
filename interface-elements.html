@@ -193,13 +193,21 @@ strings.interface.messages(
         <div style="display:none">
           <div id="example">
             <form>
-              <div style="padding:5px 0">
+              <fieldset>
+                <legend>Section One</legend>
+                <input type="text" placeholder="Type some value" />
+              </fieldset>
+              <fieldset>
+                <legend>Section Two</legend>
                 <input type="radio" name="options" id="option-1" checked=checked />
                 <label for="option-1">Option One</label>
-              </div>
-              <div style="padding:5px 0">
+                <hr class="clear">
                 <input type="radio" name="options" id="option-2" />
                 <label for="option-2">Option Two</label>
+              </fieldset>
+              <div class="submit">
+                <a class="cta primary">Save</a>
+                <a class="cta">Cancel</a>
               </div>
             </form>          
           </div>

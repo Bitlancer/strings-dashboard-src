@@ -10,17 +10,7 @@
           modal: true,
           title: $(this).attr('data-title') || 'No Title',
           width: $(this).attr('data-width') || '360',
-          dialogClass:'strings-modal',
-          buttons: {
-            "delete":{
-              text:'Delete',
-              class:'cta cancel'
-            },
-            cancel:{
-              text:'Cancel',
-              class:'cta'
-            }
-          }
+          dialogClass:'strings-modal'
         }
         $('.modal').click(function() {
           $($(this).attr('data-src')).dialog(modalConfig);

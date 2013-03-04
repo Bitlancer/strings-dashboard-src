@@ -12,11 +12,39 @@ input {
   }
   &[type=radio] {
     margin: 0;
-    vertical-align: middle;
+    vertical-align: top;
   }
 }
 
 ::-webkit-input-placeholder {
   line-height: 1.4;
   text-indent: 1px;
+}
+
+fieldset {
+  border: 1px solid #eee;
+  margin-bottom: 10px;
+  padding: 10px;
+  hr {
+    border: 1px solid #eee;
+    &.clear {
+      border: 0;
+      margin-bottom: 5px;
+    }  
+  }
+  &:last-of-type {
+    margin-bottom: 0;  
+  }
+}
+
+form {
+  div.submit {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;  
+    > .cta {
+      float: right;
+      margin-left: 5px;
+    }
+  }  
 }

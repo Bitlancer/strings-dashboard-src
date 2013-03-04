@@ -658,11 +658,31 @@ input[type=text], input[type=search], input[type=email] {
   box-shadow: inset 1px 1px 5px #f0f0f0; }
 input[type=radio] {
   margin: 0;
-  vertical-align: middle; }
+  vertical-align: top; }
 
 ::-webkit-input-placeholder {
   line-height: 1.4;
   text-indent: 1px; }
+
+fieldset {
+  border: 1px solid #eeeeee;
+  margin-bottom: 10px;
+  padding: 10px; }
+  fieldset hr {
+    border: 1px solid #eeeeee; }
+    fieldset hr.clear {
+      border: 0;
+      margin-bottom: 5px; }
+  fieldset:last-of-type {
+    margin-bottom: 0; }
+
+form div.submit {
+  margin-top: 10px;
+  overflow: hidden;
+  position: relative; }
+  form div.submit > .cta {
+    float: right;
+    margin-left: 5px; }
 
 .ui-tooltip {
   background: rgba(0, 0, 0, 0.9);

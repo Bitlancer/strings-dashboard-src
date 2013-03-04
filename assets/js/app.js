@@ -12,11 +12,13 @@
           width: $(this).attr('data-width') || '360',
           dialogClass:'strings-modal',
           buttons: {
-            "Delete all items": function() {
-              $( this ).dialog( "close" );
+            "delete":{
+              text:'Delete',
+              class:'cta cancel'
             },
-            Cancel: function() {
-              $( this ).dialog( "close" );
+            cancel:{
+              text:'Cancel',
+              class:'cta'
             }
           }
         }

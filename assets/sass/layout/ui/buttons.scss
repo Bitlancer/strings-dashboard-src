@@ -9,7 +9,7 @@
   // default
   background: #f0f0f0;
   border: 1px solid darken(#f0f0f0,8%);
-  border-bottom: 1px solid darken(#f0f0f0,15%);
+  border-bottom: 1px solid darken(#f0f0f0,10%);
   border-top: 1px solid darken(#f0f0f0,2%);
   color: #555;
   text-shadow: 0 1px 0 lighten(#f0f0f0, 5%);
@@ -20,9 +20,9 @@
     inset -1px 0 0 #fff,
     inset 1px 0 0 #fff
   ));
-  @include gradient(#fff, darken(#fff, 8%));
+  @include gradient(#fff, darken(#fff, 3%));
   &:hover {
-    @include gradient(#fff, darken(#fff, 13%));
+    @include gradient(#fff, darken(#fff, 5%));
   }
   &.refresh {
     @include gradient(#ffffff, darken(#ffffff, 5%));

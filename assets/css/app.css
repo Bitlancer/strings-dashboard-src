@@ -701,19 +701,30 @@ section ul#pagination {
   section ul#pagination > span {
     border: 1px solid transparent; }
 
-body .strings-modal .ui-dialog-titlebar {
+body .strings-modal {
   border: 0;
-  padding: 5px 10px; }
-  body .strings-modal .ui-dialog-titlebar > a {
+  padding: 0; }
+  body .strings-modal .ui-dialog-titlebar {
     border: 0;
-    padding: 0;
-    right: 5px; }
-    body .strings-modal .ui-dialog-titlebar > a > span {
-      margin: 1px 0 0 2px; }
-    body .strings-modal .ui-dialog-titlebar > a:hover {
-      background: rgba(0, 0, 0, 0.05); }
-body .strings-modal .ui-dialog-content {
-  padding: 10px; }
+    padding: 10px 15px 9px; }
+    body .strings-modal .ui-dialog-titlebar > a {
+      border: 0;
+      padding: 0;
+      right: 10px; }
+      body .strings-modal .ui-dialog-titlebar > a > span {
+        margin: 1px 0 0 2px; }
+      body .strings-modal .ui-dialog-titlebar > a:hover {
+        background: rgba(0, 0, 0, 0.05); }
+  body .strings-modal .ui-dialog-content {
+    min-height: auto !important;
+    padding: 15px; }
+  body .strings-modal .ui-dialog-buttonpane {
+    border-top: 1px solid #f0f0f0;
+    margin-top: 0;
+    padding: 0; }
+body .ui-widget-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1; }
 
 input[type=text], input[type=search], input[type=email] {
   border: 1px solid #cccccc;

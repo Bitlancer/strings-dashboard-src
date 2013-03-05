@@ -16,7 +16,11 @@
         }); 
         if($('.cta.disabled')){
           $('.cta.disabled').parents('form').find(':password').keyup(function() {
-            $(this).parents('form').find('.disabled').removeClass('disabled');
+            if($(this).val().length > 5){
+              $(this).parents('form').find('.disabled').toggleClass('disabled not-disabled');
+            } else {
+              $(this).parents('form').find('.not-disabled').toggleClass('not-disabled disabled');
+            }
           });
         }
       }

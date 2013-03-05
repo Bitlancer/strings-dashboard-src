@@ -656,7 +656,7 @@ input[type=text], input[type=search], input[type=email], input[type=password] {
   -webkit-box-shadow: inset 1px 1px 5px #f0f0f0;
   -moz-box-shadow: inset 1px 1px 5px #f0f0f0;
   box-shadow: inset 1px 1px 5px #f0f0f0; }
-input[type=radio] {
+input[type=radio], input[type=checkbox] {
   margin: 0;
   vertical-align: top; }
 
@@ -669,15 +669,20 @@ fieldset {
   margin-bottom: 10px;
   padding: 10px; }
   fieldset hr {
-    border: 1px solid #eeeeee; }
+    border: 1px solid #eeeeee;
+    background: transparent;
+    margin: 10px 0; }
     fieldset hr.clear {
       border: 0;
-      margin-bottom: 5px; }
+      margin: 0 0 5px; }
   fieldset:last-of-type {
     margin-bottom: 0; }
   fieldset input[type=text], fieldset input[type=search], fieldset input[type=email], fieldset input[type=password] {
     box-sizing: border-box;
     width: 100%; }
+  fieldset select {
+    box-sizing: border-box;
+    width: 50%; }
 
 form div.submit {
   margin-top: 10px;

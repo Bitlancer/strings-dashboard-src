@@ -25,6 +25,9 @@ fieldset {
   border: 1px solid #eee;
   margin-bottom: 10px;
   padding: 10px;
+  legend {
+    font-weight: 600;  
+  }
   hr {
     border: 1px solid #eee;
     background: transparent;
@@ -35,7 +38,7 @@ fieldset {
     }  
   }
   &:last-of-type {
-    margin-bottom: 0;  
+    //margin-bottom: 0;  
   }
   input {
     &[type=text],&[type=search],&[type=email],&[type=password] {

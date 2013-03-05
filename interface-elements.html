@@ -188,10 +188,11 @@ strings.interface.messages(
       </span>
       <span>
         <h2>Modal Window <a class="view-source">View Source</a></h2>
-        <a class="cta primary modal" data-src="#example" data-title="Example Window">Open Window</a>
-        <a class="cta modal" data-src="#example" data-title="Custom Width" data-width="800px">Custom Width</a>
+        <a class="cta primary modal" data-src="#example-one" data-title="Example One">Example One</a>
+        <a class="cta modal" data-src="#example-two" data-title="Example Two">Example Two</a>
         <div style="display:none">
-          <div id="example">
+          <!-- Example One -->
+          <div id="example-one">
             <form>
               <fieldset>
                 <legend>Section One</legend>
@@ -207,6 +208,19 @@ strings.interface.messages(
               </fieldset>
               <div class="submit">
                 <a class="cta primary">Save</a>
+                <a class="cta">Cancel</a>
+              </div>
+            </form>          
+          </div>
+          <!-- Example Two -->
+          <div id="example-two">
+            <form>
+              <fieldset>
+                <legend>Enter your password</legend>
+                <input type="password" placeholder="password" />
+              </fieldset>
+              <div class="submit">
+                <a class="cta cancel disabled">Delete Instance</a>
                 <a class="cta">Cancel</a>
               </div>
             </form>          

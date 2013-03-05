@@ -6,15 +6,19 @@
       if($('.tooltip').length){$('.tooltip').tooltip()}
       // Modals
       if($('.modal')){
-        var modalConfig = {
-          modal: true,
-          title: $(this).attr('data-title') || 'No Title',
-          width: $(this).attr('data-width') || '360',
-          dialogClass:'strings-modal'
-        }
         $('.modal').click(function() {
-          $($(this).attr('data-src')).dialog(modalConfig);
+          $($(this).attr('data-src')).dialog({
+            modal: true,
+            title: $(this).attr('data-title') || 'No Title',
+            width: $(this).attr('data-width') || '360',
+            dialogClass:'strings-modal'
+          });
         }); 
+        if($('.cta.disabled')){
+          $('.cta.disabled').parents('form').find(':password').keyup(function() {
+            $(this).parents('form').find('.disabled').removeClass('disabled');
+          });
+        }
       }
       // Close messages
       $('ul#messages > li > a.close').live('click', function() {

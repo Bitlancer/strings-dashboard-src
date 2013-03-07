@@ -101,6 +101,16 @@ section > p {
 
 body {
   background: #f8f8f8; }
+  body header.blur {
+    -webkit-box-shadow: inset 10px 0 10px black, -5px 0 5px black;
+    -moz-box-shadow: inset 10px 0 10px black, -5px 0 5px black;
+    box-shadow: inset 10px 0 10px black, -5px 0 5px black; }
+  body > .blur {
+    -webkit-filter: blur(2px);
+    -webkit-transition: all 0.15s;
+    -moz-transition: all 0.15s;
+    -o-transition: all 0.15s;
+    transition: all 0.15s; }
   body.loading {
     background: #f8f8f8 url("http://assets.ambient.ly/bitlancer/loading.gif") center no-repeat; }
     body.loading > section {
@@ -629,7 +639,10 @@ section ul#pagination {
 
 body .strings-modal {
   border: 0;
-  padding: 0; }
+  padding: 0;
+  -webkit-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3); }
   body .strings-modal .ui-dialog-titlebar {
     border: 0;
     padding: 10px 15px 9px; }
@@ -667,7 +680,7 @@ body .strings-modal {
           background-image: -webkit-linear-gradient(#4ba5e8, #1773b6);
           background-image: -o-linear-gradient(#4ba5e8, #1773b6); }
 body .ui-widget-overlay {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.1);
   opacity: 1; }
 
 input[type=text], input[type=search], input[type=email], input[type=password] {

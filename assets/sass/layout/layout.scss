@@ -1,5 +1,12 @@
 body {
   background: #f8f8f8;
+  header.blur {
+    @include box-shadow((inset 10px 0 10px #000,-5px 0 5px #000));
+  }
+  > .blur {
+    -webkit-filter: blur(2px);
+    @include transition(all .15s);
+  }
   &.loading {
     background: #f8f8f8 url('http://assets.ambient.ly/bitlancer/loading.gif') center no-repeat;  
     > section {

@@ -2,6 +2,7 @@ body {
   .strings-modal {
     border: 0;
     padding: 0;
+    @include box-shadow(0 1px 12px rgba(0,0,0,0.3));
     .ui-dialog-titlebar {
       border: 0;  
       padding: 10px 15px 9px;
@@ -42,7 +43,7 @@ body {
     }
   }  
   .ui-widget-overlay {
-    background: rgba(0,0,0,0.5);
+    background: rgba(255,255,255,0.1);
     opacity: 1;  
   }
 }

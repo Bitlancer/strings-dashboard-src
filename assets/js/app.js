@@ -11,7 +11,13 @@
             modal: true,
             title: $(this).attr('data-title') || 'No Title',
             width: $(this).attr('data-width') || '360',
-            dialogClass:'strings-modal'
+            dialogClass:'strings-modal',
+            open: function() {
+              $('body > section, body > nav, body > header').addClass('blur');
+            },
+            close: function(){
+              $('.blur').removeClass('blur');
+            }
           });
         }); 
         if($('.cta.disabled')){

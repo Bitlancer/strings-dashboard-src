@@ -27,16 +27,14 @@
           <ul class="action-menu" style="float:right">
             <li>Actions</li>
             <span>
-              <a href="javascript:strings.interface.messages('success','Success!','Lorem ipsum dolar amet')">Trigger Alert</a>
+              <!-- a href="javascript:strings.interface.messages('success','Success!','Lorem ipsum dolar amet')">Trigger Alert</a -->
               <li>Edit</li>
               <li>Create</li>
-              <li>Destroy</li>
+              <a class="modal" data-src="#destroy" data-title="Please confirm">Destroy</a>
             </span>
           </ul>
         </h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula mollis lacus, ac luctus ipsum scelerisque eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean massa nunc, egestas at cursus eget, ornare at elit. Nulla porta egestas lacus, ultricies venenatis libero eleifend quis.</p>
-        <h2>Lorem Ipsum Dolar</h2>
-        <table id="instances" class="clean">
+        <table class="clean">
           <thead>
             <tr>
               <th>Table Title</th>
@@ -51,7 +49,7 @@
             </tr>
           </tbody>
         </table>
-        <h2>Lorem ipsum dolar</h2>
+        <h2>Lorem Ipsum Dolar</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula mollis lacus, ac luctus ipsum scelerisque eu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean massa nunc, egestas at cursus eget, ornare at elit. Nulla porta egestas lacus, ultricies venenatis libero eleifend quis.</p>
         <p>Morbi eget est neque. Donec id velit vel arcu pulvinar consequat. Donec nulla augue, condimentum quis adipiscing a, iaculis commodo dui. Aenean consequat justo vehicula nibh iaculis dignissim. </p>
       </div>
@@ -72,6 +70,20 @@
     <hr class="space">
     </div>
   </section>
+  <div style="display:none">
+    <div id="destroy">
+      <form>
+        <fieldset>
+          <legend>Enter your password</legend>
+          <input type="password" placeholder="password" />
+        </fieldset>
+        <div class="submit">
+          <a class="cta cancel disabled">Destroy</a>
+          <a class="cta">Cancel</a>
+        </div>
+      </form>          
+    </div>
+  </div>
 <!-- Javascript -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>

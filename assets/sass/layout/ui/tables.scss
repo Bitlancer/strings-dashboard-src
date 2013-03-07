@@ -9,10 +9,8 @@
 
 table {
   border: 1px solid darken($white,10%);
+  clear:both;
   width: 100%;
-  &#instances {
-    margin-top:  20px; 
-  }
   th,td {
     padding: 5px; 
   }
@@ -71,11 +69,15 @@ table {
       &:before {
         box-sizing: border-box;
         content: ' ';
+        display: both;
         height: 26px;
         margin-left: -15px;
         position: absolute;
         margin-top: -5px;
         width: 5px;  
+      }
+      &:after {
+        clear: both;  
       }
     }  
   }
@@ -130,7 +132,22 @@ table {
     }
   }
   td {
-    border: 1px solid darken($white,5%);  
+    border: 1px solid darken($white,10%);  
+  }
+  &.clean {
+    border: 0;
+    th {
+      background: #fff;  
+      border-bottom: 1px solid darken($white, 5%);
+    }
+    td {
+      border: 0;
+      border-bottom: 1px solid $white;  
+    }
+    th,td {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 

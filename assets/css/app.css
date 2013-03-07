@@ -385,9 +385,8 @@ body {
 
 table {
   border: 1px solid #d6d6d6;
+  clear: both;
   width: 100%; }
-  table#instances {
-    margin-top: 20px; }
   table th, table td {
     padding: 5px; }
   table th {
@@ -439,11 +438,14 @@ table {
     table tr[data-status] td:first-of-type:before {
       box-sizing: border-box;
       content: ' ';
+      display: both;
       height: 26px;
       margin-left: -15px;
       position: absolute;
       margin-top: -5px;
       width: 5px; }
+    table tr[data-status] td:first-of-type:after {
+      clear: both; }
   table tr[data-status='loading'] td:first-child:before {
     background: #bbb;
     background-size: 200% 50%;
@@ -479,7 +481,18 @@ table {
     -o-animation: activity 2s infinite forwards linear;
     animation: activity 2s infinite forwards linear; }
   table td {
-    border: 1px solid #e3e3e3; }
+    border: 1px solid #d6d6d6; }
+  table.clean {
+    border: 0; }
+    table.clean th {
+      background: #fff;
+      border-bottom: 1px solid #e3e3e3; }
+    table.clean td {
+      border: 0;
+      border-bottom: 1px solid #f0f0f0; }
+    table.clean th, table.clean td {
+      padding-left: 0;
+      padding-right: 0; }
 
 .dataTables_wrapper {
   position: relative; }

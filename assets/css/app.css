@@ -360,32 +360,34 @@ body {
     background-position: 0 0; }
 
   100% {
-    background-position: 0 37px; } }
+    background-position: 0 26px; } }
 
 @-moz-keyframes activity {
   0% {
     background-position: 0 0; }
 
   100% {
-    background-position: 0 37px; } }
+    background-position: 0 26px; } }
 
 @-ms-keyframes activity {
   0% {
     background-position: 0 0; }
 
   100% {
-    background-position: 0 37px; } }
+    background-position: 0 26px; } }
 
 @keyframes activity {
   0% {
     background-position: 0 0; }
 
   100% {
-    background-position: 0 37px; } }
+    background-position: 0 26px; } }
 
 table {
   border: 1px solid #d6d6d6;
   width: 100%; }
+  table#instances {
+    margin-top: 20px; }
   table th, table td {
     padding: 5px; }
   table th {
@@ -420,47 +422,58 @@ table {
       content: '\25B2'; }
     table th.sorting_desc:after {
       content: '\25BC'; }
-  table tr[data-status] td {
+  table tr[data-status2] td {
     padding: 10px 5px;
     position: relative; }
-    table tr[data-status] td:first-child {
+    table tr[data-status2] td:first-child {
       padding: 10px 5px 10px 20px; }
-      table tr[data-status] td:first-child:before {
+      table tr[data-status2] td:first-child:before {
         content: ' ';
         height: 37px;
         width: 10px;
         position: absolute;
         left: 0;
         margin-top: -11px; }
+  table tr[data-status] td:first-of-type {
+    padding-left: 15px; }
+    table tr[data-status] td:first-of-type:before {
+      box-sizing: border-box;
+      content: ' ';
+      height: 26px;
+      margin-left: -15px;
+      position: absolute;
+      margin-top: -5px;
+      width: 5px; }
   table tr[data-status='loading'] td:first-child:before {
-    background: #bbbbbb url("http://assets.ambient.ly/bitlancer/status.png");
+    background: #bbb;
     background-size: 200% 50%;
     background-position: 0 0;
     -webkit-box-shadow: 1px 0 0 #bbbbbb;
     -moz-box-shadow: 1px 0 0 #bbbbbb;
     box-shadow: 1px 0 0 #bbbbbb; }
   table tr[data-status='error'] td:first-child:before {
-    background: #d94141 url("http://assets.ambient.ly/bitlancer/status.png");
+    background: #d94141;
     background-size: 200% 50%;
     background-position: 0 0;
     -webkit-box-shadow: 1px 0 0 #d94141;
     -moz-box-shadow: 1px 0 0 #d94141;
     box-shadow: 1px 0 0 #d94141; }
   table tr[data-status='running'] td:first-child:before {
-    background: #59b036 url("http://assets.ambient.ly/bitlancer/status.png");
+    background: #59b036;
     background-size: 200% 50%;
     background-position: 0 0;
     -webkit-box-shadow: 1px 0 0 #59b036;
     -moz-box-shadow: 1px 0 0 #59b036;
     box-shadow: 1px 0 0 #59b036; }
   table tr[data-status='warning'] td:first-child:before {
-    background: #ffb33d url("http://assets.ambient.ly/bitlancer/status.png");
+    background: #ffb33d;
     background-size: 200% 50%;
     background-position: 0 0;
     -webkit-box-shadow: 1px 0 0 #ffb33d;
     -moz-box-shadow: 1px 0 0 #ffb33d;
     box-shadow: 1px 0 0 #ffb33d; }
   table tr.activity td:first-child:before {
+    background-image: url("http://assets.ambient.ly/bitlancer/status.png");
     -webkit-animation: activity 2s infinite forwards linear;
     -moz-animation: activity 2s infinite forwards linear;
     -o-animation: activity 2s infinite forwards linear;

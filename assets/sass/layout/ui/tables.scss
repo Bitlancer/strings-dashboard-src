@@ -11,6 +11,9 @@ table {
   border: 1px solid darken($white,10%);
   clear:both;
   width: 100%;
+  ul.action-menu {
+    margin-right: 5px;  
+  }
   th,td {
     padding: 5px; 
   }
@@ -88,7 +91,7 @@ table {
       background-size: 200% 50%;
       background-position: 0 0;
       @include box-shadow((
-        1px 0 0 #bbb
+        inset 0 -1px 0 darken(#bbb, 5%)
       ));
     }
   }
@@ -99,7 +102,7 @@ table {
       background-size: 200% 50%;
       background-position: 0 0;
       @include box-shadow((
-        1px 0 0 $red
+        inset 0 -1px 0 darken($red, 5%)
       ));
     }
   }
@@ -110,7 +113,7 @@ table {
       background-size: 200% 50%;
       background-position: 0 0;
       @include box-shadow((
-        1px 0 0 $green
+        inset 0 -1px 0 darken($green, 5%)
       ));
     }
   }
@@ -121,7 +124,7 @@ table {
       background-size: 200% 50%;
       background-position: 0 0;
       @include box-shadow((
-        1px 0 0 $orange
+        inset 0 -1px 0 darken($orange, 5%)
       ));
     }
   }
@@ -138,11 +141,16 @@ table {
     border: 0;
     th {
       background: #fff;  
-      border-bottom: 1px solid darken($white, 5%);
+      border-bottom: 1px solid darken($white, 10%);
+    }
+    tr {
+      &:nth-child(even) {
+        background-color: #f9f9f9;  
+      }
+      border-bottom: 1px solid $white;
     }
     td {
       border: 0;
-      border-bottom: 1px solid $white;  
     }
     th,td {
       padding-left: 0;

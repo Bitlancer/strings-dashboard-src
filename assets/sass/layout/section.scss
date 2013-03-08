@@ -8,6 +8,7 @@
     &#content {
       background: #fff; 
       border: 1px solid darken($white, 7%);
+      overflow: auto;
       padding: 20px; 
       position: relative;
       &.panel {
@@ -26,12 +27,8 @@
             float: left;
             padding-left: 2%;
             width: 33%;
-            span > a {
-              display: block; 
-              margin-bottom: 5px;
-              &:last-of-type {
-                margin-bottom: 0;  
-              }
+            h3 {
+              font-weight: 600;  
             }
           }
         }

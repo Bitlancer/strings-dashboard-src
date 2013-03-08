@@ -23,7 +23,17 @@ ul.action-menu {
       vertical-align: middle;
       line-height: 15px;
     }
-  }  
+  }
+  &.clean {
+    > li {
+      background: transparent;
+      padding: 0;
+      @include box-shadow(0 0 0 rgba(0,0,0,0));
+    }
+    > span {
+      top: 20px;  
+    }
+  }
   > span {
     background: #fff;
     border: 1px solid #ccc;
@@ -58,4 +68,8 @@ ul.action-menu {
       display: block;  
     }
   }
+}
+
+h2 ul.action-menu {
+  float: right;
 }

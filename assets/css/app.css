@@ -371,7 +371,14 @@ body {
             body > section > div#content.panel > div:nth-child(2) h3 {
               font-weight: 600; }
             body > section > div#content.panel > div:nth-child(2) span {
-              display: block; }
+              display: block;
+              margin-bottom: 30px; }
+              body > section > div#content.panel > div:nth-child(2) span > p, body > section > div#content.panel > div:nth-child(2) span > a {
+                margin-bottom: 10px; }
+              body > section > div#content.panel > div:nth-child(2) span > p.info {
+                background: #fafafa;
+                padding: 5px;
+                border: 1px solid #dadada; }
               body > section > div#content.panel > div:nth-child(2) span > a {
                 display: block;
                 margin-bottom: 3px; }

@@ -53,6 +53,17 @@
             }
             span {
               display: block;
+              margin-bottom: 30px;
+              > p, > a {
+                margin-bottom: 10px;
+              }
+              > p {
+                &.info {
+                  background: #fafafa;
+                  padding: 5px;
+                  border: 1px solid #dadada;  
+                }
+              }
               > a {
                 display: block;
                 margin-bottom: 3px;

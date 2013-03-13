@@ -56,7 +56,7 @@
           }
           var align = ($(this).outerWidth() - $(this).children('span').outerWidth()) * .5;
           $(this).children('span').css({
-            'right':align
+            'right':0
           });
           if(!$(this).hasClass('active')){
             $(this).addClass('active');

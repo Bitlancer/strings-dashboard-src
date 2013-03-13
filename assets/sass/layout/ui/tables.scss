@@ -139,6 +139,17 @@ table {
   }
   td {
     border: 1px solid darken($white,10%);  
+    &.blank {
+      padding: 20px;  
+      text-align: center;
+      color: #999;
+      h3 {
+        color: #777;
+        font-weight: 600;
+        font-size:17px;
+        margin-bottom: 5px;
+      }
+    }
   }
   &.clean {
     border: 0;

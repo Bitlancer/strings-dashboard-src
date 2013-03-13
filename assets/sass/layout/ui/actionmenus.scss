@@ -39,7 +39,7 @@ ul.action-menu {
     border: 1px solid #ccc;
     display: none; 
     font-size: 13px;
-    min-width: 140px;
+    min-width: 120px;
     //padding: 0 5px;
     position: absolute;
     right: 0;
@@ -72,4 +72,10 @@ ul.action-menu {
 
 h2 ul.action-menu {
   float: right;
+}
+
+#content.panel > div > ul.action-menu:first-of-type {
+  position: absolute;
+  right: 2%;
+  top: 0;
 }

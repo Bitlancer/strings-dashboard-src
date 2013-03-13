@@ -51,11 +51,27 @@
             h3 {
               font-weight: 600;  
             }
+            ul {
+              list-style-type: disc;
+              list-style-position:inside;
+              li {
+                margin-bottom: 5px;
+                &:last-of-type {
+                  margin: 0;  
+                }
+              }
+            }
             span {
               display: block;
               margin-bottom: 30px;
+              &:last-of-type {
+                margin: 0;  
+              }
               > p, > a {
                 margin-bottom: 10px;
+                &:last-child {
+                  margin: 0;  
+                }
               }
               > p {
                 &.info {
@@ -64,9 +80,16 @@
                   border: 1px solid #dadada;  
                 }
               }
-              > a {
+              a {
                 display: block;
-                margin-bottom: 3px;
+                &.cta {
+                  display: inline-block;
+                }
+                &.arrow {
+                  &:after {
+                    content: " \00bb"  
+                  }  
+                }
               }
             }
           }

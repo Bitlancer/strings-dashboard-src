@@ -370,18 +370,32 @@ body {
               margin-bottom: 5px; }
             body > section > div#content.panel > div:nth-child(2) h3 {
               font-weight: 600; }
+            body > section > div#content.panel > div:nth-child(2) ul {
+              list-style-type: disc;
+              list-style-position: inside; }
+              body > section > div#content.panel > div:nth-child(2) ul li {
+                margin-bottom: 5px; }
+                body > section > div#content.panel > div:nth-child(2) ul li:last-of-type {
+                  margin: 0; }
             body > section > div#content.panel > div:nth-child(2) span {
               display: block;
               margin-bottom: 30px; }
+              body > section > div#content.panel > div:nth-child(2) span:last-of-type {
+                margin: 0; }
               body > section > div#content.panel > div:nth-child(2) span > p, body > section > div#content.panel > div:nth-child(2) span > a {
                 margin-bottom: 10px; }
+                body > section > div#content.panel > div:nth-child(2) span > p:last-child, body > section > div#content.panel > div:nth-child(2) span > a:last-child {
+                  margin: 0; }
               body > section > div#content.panel > div:nth-child(2) span > p.info {
                 background: #fafafa;
                 padding: 5px;
                 border: 1px solid #dadada; }
-              body > section > div#content.panel > div:nth-child(2) span > a {
-                display: block;
-                margin-bottom: 3px; }
+              body > section > div#content.panel > div:nth-child(2) span a {
+                display: block; }
+                body > section > div#content.panel > div:nth-child(2) span a.cta {
+                  display: inline-block; }
+                body > section > div#content.panel > div:nth-child(2) span a.arrow:after {
+                  content: " \00bb"; }
     body > section > div > span, body > section > div div.panel > span {
       display: block;
       margin-bottom: 30px;

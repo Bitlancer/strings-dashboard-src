@@ -1,0 +1,67 @@
+body#account {
+  &:before {
+    background: red;
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; 
+  } 
+  form#login {
+    background: #fff;
+    display: inline-block;
+    left: 50%;
+    margin: 0 auto 0 -150px;
+    min-height: 60px;
+    padding: 20px;
+    position: relative;
+    width: 260px;
+    vertical-align: middle;
+    @include box-shadow(0 1px 4px #ccc);
+    h1 {
+      box-sizing: border-box;
+      color: #444;
+      font-family: 'Pacifico';
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    input[type=text],input[type=email],input[type=password] {
+      box-sizing: border-box;
+      font-size: 100%;
+      margin-bottom: 5px;
+      padding: 5px;
+      width: 100%;
+      &:last-of-type {
+        margin-bottom: 0;  
+      }
+    }
+    > .buttons {
+      display: block;
+      margin-top: 20px;
+      > * {
+        vertical-align: middle;  
+      }
+      label {
+        font-size: 80%;  
+      }
+      .cta {
+        margin-right: 5px;  
+      }
+    }
+    #recovery {
+      background: rgba(0,0,0,0.05);
+      box-sizing:border-box;
+      display: block;
+      bottom: -35px;
+      font-size: 80%;
+      left: 0;
+      height: 30px;
+      line-height: 28px;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

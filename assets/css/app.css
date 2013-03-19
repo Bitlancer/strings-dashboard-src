@@ -57,7 +57,7 @@ html {
 
 body {
   color: #555;
-  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 15px;
   font-weight: 400;
   -webkit-font-smoothing: antialiased; }
@@ -99,6 +99,64 @@ section > p {
   section > p:last-of-type {
     margin-bottom: 45px; }
 
+body#account:before {
+  background: red;
+  content: ' ';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; }
+body#account form#login {
+  background: #fff;
+  display: inline-block;
+  left: 50%;
+  margin: 0 auto 0 -150px;
+  min-height: 60px;
+  padding: 20px;
+  position: relative;
+  width: 260px;
+  vertical-align: middle;
+  -webkit-box-shadow: 0 1px 4px #cccccc;
+  -moz-box-shadow: 0 1px 4px #cccccc;
+  box-shadow: 0 1px 4px #cccccc; }
+  body#account form#login h1 {
+    box-sizing: border-box;
+    color: #444;
+    font-family: 'Pacifico';
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center; }
+  body#account form#login input[type=text], body#account form#login input[type=email], body#account form#login input[type=password] {
+    box-sizing: border-box;
+    font-size: 100%;
+    margin-bottom: 5px;
+    padding: 5px;
+    width: 100%; }
+    body#account form#login input[type=text]:last-of-type, body#account form#login input[type=email]:last-of-type, body#account form#login input[type=password]:last-of-type {
+      margin-bottom: 0; }
+  body#account form#login > .buttons {
+    display: block;
+    margin-top: 20px; }
+    body#account form#login > .buttons > * {
+      vertical-align: middle; }
+    body#account form#login > .buttons label {
+      font-size: 80%; }
+    body#account form#login > .buttons .cta {
+      margin-right: 5px; }
+  body#account form#login #recovery {
+    background: rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    display: block;
+    bottom: -35px;
+    font-size: 80%;
+    left: 0;
+    height: 30px;
+    line-height: 28px;
+    position: absolute;
+    width: 100%;
+    text-align: center; }
+
 body {
   background: #f8f8f8; }
   body header.blur {
@@ -132,7 +190,7 @@ body {
     overflow: hidden; }
   body > header {
     background: #222222 url("http://assets.ambient.ly/bitlancer/dark_stripes.png");
-    border-bottom: 1px solid #111111;
+    border-bottom: 1px solid #111;
     height: 50px;
     left: 0;
     position: fixed;
@@ -156,7 +214,7 @@ body {
         font-family: 'Pacifico';
         font-weight: 300;
         line-height: 40px;
-        text-shadow: 1px 2px 0 black; }
+        text-shadow: 1px 2px 0 #000; }
       body > header > div div#profile {
         background-color: rgba(0, 0, 0, 0);
         background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), black);
@@ -175,7 +233,7 @@ body {
         margin-top: 5px;
         padding: 5px 10px;
         position: relative;
-        text-shadow: 1px 1px 0 black;
+        text-shadow: 1px 1px 0 #000;
         -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(255, 255, 255, 0.2), 0 -1px 1px black;
         -moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(255, 255, 255, 0.2), 0 -1px 1px black;
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(255, 255, 255, 0.2), 0 -1px 1px black; }
@@ -183,7 +241,7 @@ body {
           cursor: pointer; }
           body > header > div div#profile > span > img {
             background: #eee;
-            border: 1px solid #111111;
+            border: 1px solid #111;
             border-radius: 3px;
             height: 20px;
             margin-right: 5px;
@@ -288,7 +346,7 @@ body {
         overflow: hidden;
         padding: 10px 20px;
         position: relative;
-        text-shadow: 1px 1px 0 white; }
+        text-shadow: 1px 1px 0 #fff; }
         body > nav > span > a:before {
           background-position: center;
           background-repeat: no-repeat;
@@ -354,7 +412,7 @@ body {
             body > section > div#content.panel > div:first-child > ul#messages {
               margin-bottom: 45px; }
             body > section > div#content.panel > div:first-child > div.details {
-              border: 1px dashed #cccccc;
+              border: 1px dashed #ccc;
               padding: 15px; }
               body > section > div#content.panel > div:first-child > div.details p {
                 margin: 0; }
@@ -438,7 +496,7 @@ table {
   table ul.action-menu {
     float: right;
     margin-right: 5px;
-    border-left: 1px solid #cccccc;
+    border-left: 1px solid #ccc;
     padding-left: 5px; }
   table th, table td {
     padding: 5px; }
@@ -739,9 +797,9 @@ body .ui-widget-overlay {
   opacity: 1; }
 
 input[type=text], input[type=search], input[type=email], input[type=password] {
-  border: 1px solid #cccccc;
-  border-bottom: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #eee;
   border-radius: 2px;
   color: #555;
   font-family: inherit;
@@ -759,13 +817,13 @@ input[type=radio], input[type=checkbox] {
   text-indent: 1px; }
 
 fieldset {
-  border: 1px solid #eeeeee;
+  border: 1px solid #eee;
   margin-bottom: 10px;
   padding: 10px; }
   fieldset legend {
     font-weight: 600; }
   fieldset hr {
-    border: 1px solid #eeeeee;
+    border: 1px solid #eee;
     background: transparent;
     margin: 10px 0; }
     fieldset hr.clear {
@@ -842,7 +900,7 @@ ul.action-menu {
     top: 20px; }
   ul.action-menu > span {
     background: #fff;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
     display: none;
     font-size: 13px;
     min-width: 120px;
@@ -857,7 +915,7 @@ ul.action-menu {
       color: #555;
       display: block;
       padding: 5px;
-      border-bottom: 1px solid #eeeeee;
+      border-bottom: 1px solid #eee;
       font-weight: 600;
       font-size: 13px; }
       ul.action-menu > span > li:last-child, ul.action-menu > span > a:last-child {

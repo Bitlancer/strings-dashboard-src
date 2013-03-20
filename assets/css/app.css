@@ -99,63 +99,108 @@ section > p {
   section > p:last-of-type {
     margin-bottom: 45px; }
 
-body#account:before {
-  background: red;
-  content: ' ';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-  margin-right: -0.25em; }
-body#account form#login {
-  background: #fff;
-  display: inline-block;
-  left: 50%;
-  margin: 0 auto 0 -150px;
-  min-height: 60px;
-  padding: 20px;
-  position: relative;
-  width: 260px;
-  vertical-align: middle;
-  -webkit-box-shadow: 0 1px 4px #cccccc;
-  -moz-box-shadow: 0 1px 4px #cccccc;
-  box-shadow: 0 1px 4px #cccccc; }
-  body#account form#login h1 {
-    box-sizing: border-box;
-    color: #444;
-    font-family: 'Pacifico';
-    font-size: 25px;
-    font-weight: 400;
-    margin-bottom: 20px;
-    text-align: center; }
-  body#account form#login input[type=text], body#account form#login input[type=email], body#account form#login input[type=password] {
-    box-sizing: border-box;
-    font-size: 100%;
-    margin-bottom: 5px;
-    padding: 5px;
-    width: 100%; }
-    body#account form#login input[type=text]:last-of-type, body#account form#login input[type=email]:last-of-type, body#account form#login input[type=password]:last-of-type {
-      margin-bottom: 0; }
-  body#account form#login > .buttons {
-    display: block;
-    margin-top: 20px; }
-    body#account form#login > .buttons > * {
-      vertical-align: middle; }
-    body#account form#login > .buttons label {
-      font-size: 80%; }
-    body#account form#login > .buttons .cta {
-      margin-right: 5px; }
-  body#account form#login #recovery {
-    background: rgba(0, 0, 0, 0.05);
-    box-sizing: border-box;
-    display: block;
-    bottom: -35px;
-    font-size: 80%;
-    left: 0;
-    height: 30px;
-    line-height: 28px;
-    position: absolute;
-    width: 100%;
-    text-align: center; }
+body#account {
+  background: url("http://assets.ambient.ly/bitlancer/wall3.jpg") center no-repeat;
+  background-size: 100% auto; }
+  body#account #profile {
+    display: none; }
+  body#account header, body#account nav {
+    display: none; }
+  body#account:before {
+    content: ' ';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; }
+  body#account form#login {
+    background: #fff;
+    border-radius: 7px 7px 0 0;
+    display: inline-block;
+    left: 50%;
+    margin: -55px auto 0 -150px;
+    min-height: 60px;
+    padding: 20px;
+    position: relative;
+    width: 260px;
+    vertical-align: middle;
+    -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); }
+    body#account form#login h1 {
+      box-sizing: border-box;
+      color: #444;
+      font-family: 'Pacifico';
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 25px;
+      text-align: center; }
+    body#account form#login input[type=text], body#account form#login input[type=email], body#account form#login input[type=password] {
+      box-sizing: border-box;
+      font-size: 90%;
+      margin-bottom: 5px;
+      padding: 5px;
+      width: 100%; }
+      body#account form#login input[type=text]:last-of-type, body#account form#login input[type=email]:last-of-type, body#account form#login input[type=password]:last-of-type {
+        margin-bottom: 0; }
+    body#account form#login > .buttons {
+      display: block;
+      margin-top: 20px; }
+      body#account form#login > .buttons > * {
+        vertical-align: middle; }
+      body#account form#login > .buttons label {
+        font-size: 80%; }
+      body#account form#login > .buttons .cta {
+        margin-right: 5px; }
+    body#account form#login #recovery {
+      background-color: rgba(255, 255, 255, 0.1);
+      background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.3)));
+      background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+      background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+      -webkit-box-shadow: inset 0 2px 7px rgba(0, 0, 0, 0);
+      -moz-box-shadow: inset 0 2px 7px rgba(0, 0, 0, 0);
+      box-shadow: inset 0 2px 7px rgba(0, 0, 0, 0);
+      border-radius: 0 0 7px 7px;
+      display: -webkit-box;
+      -webkit-box-orient: horizontal;
+      border-top: 1px solid #e8e8e8;
+      box-sizing: border-box;
+      left: 0;
+      line-height: 28px;
+      margin: 20px auto -20px;
+      padding: 0;
+      position: absolute;
+      width: 300px;
+      text-align: center; }
+      body#account form#login #recovery > * {
+        display: block;
+        font-size: 80%;
+        line-height: 1;
+        color: #fff;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+        padding: 10px;
+        -webkit-box-flex: 1;
+        width: 0;
+        text-align: center;
+        font-weight: 700; }
+        body#account form#login #recovery > *:first-child {
+          border-right: 1px solid rgba(0, 0, 0, 0.2);
+          border-radius: 0 0 0 7px; }
+        body#account form#login #recovery > *:last-child {
+          border-left: 1px solid rgba(255, 255, 255, 0.2);
+          border-radius: 0 0 7px 0; }
+        body#account form#login #recovery > *:hover {
+          background-color: #fefefe;
+          background-image: -moz-linear-gradient(#fefefe, white);
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fefefe), to(white));
+          background-image: -webkit-linear-gradient(#fefefe, white);
+          background-image: -o-linear-gradient(#fefefe, white);
+          -webkit-box-shadow: 0 -1px 0 white;
+          -moz-box-shadow: 0 -1px 0 white;
+          box-shadow: 0 -1px 0 white;
+          border: 0;
+          color: #555;
+          text-shadow: none; }
 
 body {
   background: #f8f8f8; }

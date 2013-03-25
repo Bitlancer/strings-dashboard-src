@@ -46,14 +46,6 @@ html {
     html body a {
       text-decoration: none;
       cursor: pointer; }
-    html body .clearfix {
-      zoom: 1; }
-      html body .clearfix:before {
-        clear: both;
-        content: '';
-        display: table; }
-      html body .clearfix:after {
-        clear: both; }
 
 body {
   color: #555;
@@ -87,3 +79,61 @@ body {
     margin-top: 30px; }
     body section div#content h2:first-of-type {
       margin-top: 0; }
+
+body {
+  background: #f8f8f8; }
+  body > nav {
+    left: 0; }
+  body > header {
+    top: 0; }
+  body.loading {
+    background: #f8f8f8 url("http://assets.ambient.ly/bitlancer/loading.gif") center no-repeat; }
+    body.loading > section {
+      display: none; }
+    body.loading > nav {
+      left: -241px; }
+    body.loading > header {
+      top: -51px; }
+  body .clearfix {
+    zoom: 1; }
+    body .clearfix:before {
+      clear: both;
+      content: '';
+      display: table; }
+    body .clearfix:after {
+      clear: both; }
+  body .float-left {
+    float: left; }
+  body .float-right {
+    float: right; }
+  body .overflow-hidden {
+    overflow: hidden; }
+
+body > header {
+  background: #222222 url("http://assets.ambient.ly/bitlancer/dark_stripes.png");
+  border-bottom: 1px solid #111;
+  height: 50px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  -webkit-transition: top 0.1s ease-in-out;
+  -moz-transition: top 0.1s ease-in-out;
+  -o-transition: top 0.1s ease-in-out;
+  transition: top 0.1s ease-in-out;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  -moz-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.2); }
+  body > header > div {
+    height: 40px;
+    padding: 5px 20px;
+    min-width: 920px; }
+    body > header > div a#logo {
+      color: #fff;
+      font-size: 22px;
+      font-family: 'Pacifico';
+      font-weight: 300;
+      line-height: 40px;
+      text-shadow: 1px 2px 0 #000; }
+    body > header > div #profile {
+      display: none; }

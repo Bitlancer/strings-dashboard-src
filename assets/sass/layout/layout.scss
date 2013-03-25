@@ -1,42 +1,23 @@
 body {
   background: #f8f8f8;
-  header.blur {
-    @include box-shadow((inset 10px 0 10px #000,-5px 0 5px #000));
-  }
-  > .blur {
-    -webkit-filter: blur(2px);
-    @include transition(all .15s);
-  }
+  > nav { left: 0 }
+  > header { top: 0 }
   &.loading {
     background: #f8f8f8 url('http://assets.ambient.ly/bitlancer/loading.gif') center no-repeat;  
-    > section {
-      display: none;  
-    }
-    > nav {
-      left: -241px;
-    }
-    > header {
-      top: -51px;  
-    }
+    > section { display: none }
+    > nav { left: -241px }
+    > header { top: -51px }
   }
-  hr {
-    &.space {
-      border: 1px solid transparent;
+  .clearfix {
+    zoom: 1;
+    &:before {
       clear: both;
-      display: block;  
-      margin: 0; 
+      content: '';
+      display: table;
     }
+    &:after { clear: both }
   }
-  .float-left {
-    float: left;  
-  }
-  .float-right {
-    float: right;  
-  }
-  .overflow-hidden {
-    overflow: hidden;  
-  }
-  @import 'header.scss';
-  @import 'nav.scss';
-  @import 'section.scss';
+  .float-left { float: left }
+  .float-right { float: right }
+  .overflow-hidden { overflow: hidden }
 }

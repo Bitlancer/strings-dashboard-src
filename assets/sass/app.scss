@@ -1,13 +1,19 @@
-// app.scss
-// Last modified Dec 29 2012 by Axel Sears
-
+// jQuery
 @import url('http://assets.ambient.ly/bitlancer/jquery.ui.theme.css');
+
+// Defaults
 @import 'reset.scss';
 @import 'colors.scss';
 @import 'mixins.scss';
 @import 'layout/typography.scss';
-//@import 'account.scss';
-//@import 'layout/layout.scss';
+
+// Layout
+@import 'layout/layout.scss';
+@import 'layout/header.scss';
+//@import 'nav.scss';
+//@import 'section.scss';
+
+// Elements
 //@import 'layout/ui/tables.scss';
 //@import 'layout/ui/messages.scss';
 //@import 'layout/ui/pagination.scss';
@@ -16,3 +22,6 @@
 //@import 'layout/ui/tooltips.scss';
 //@import 'layout/ui/actionmenus.scss';
 //@import 'layout/ui/buttons.scss';
+
+// Views
+//@import 'account.scss';

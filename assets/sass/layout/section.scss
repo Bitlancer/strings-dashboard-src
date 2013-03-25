@@ -1,4 +1,13 @@
-> section {
+
+  hr {
+    &.space {
+      border: 1px solid transparent;
+      clear: both;
+      display: block;  
+      margin: 0; 
+    }
+  }
+> section.asdfsdaf {
   max-width: 1200px;
   min-width: 630px;
   //margin: 95px 0 30px 300px;

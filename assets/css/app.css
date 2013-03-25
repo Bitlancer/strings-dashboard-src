@@ -137,3 +137,146 @@ body > header {
       text-shadow: 1px 2px 0 #000; }
     body > header > div #profile {
       display: none; }
+
+body > nav {
+  background: #f0f0f0 url("http://assets.ambient.ly/bitlancer/stripe.png") center -5px no-repeat;
+  height: 100%;
+  padding-top: 5px;
+  position: fixed;
+  width: 240px;
+  top: 50px;
+  z-index: 15;
+  -webkit-box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  -webkit-transition: left 0.2s 0.15s ease-in-out;
+  -moz-transition: left 0.2s 0.15s ease-in-out;
+  -o-transition: left 0.2s 0.15s ease-in-out;
+  transition: left 0.2s 0.15s ease-in-out; }
+  body > nav > span {
+    display: block;
+    margin-right: 1px; }
+    body > nav > span > span {
+      display: none; }
+    body > nav > span > a {
+      display: block;
+      height: 20px;
+      line-height: 20px;
+      padding: 10px 20px;
+      -webkit-box-shadow: inset 0 1px 0 #fdfdfd, inset 0 -1px 0 #e3e3e3;
+      -moz-box-shadow: inset 0 1px 0 #fdfdfd, inset 0 -1px 0 #e3e3e3;
+      box-shadow: inset 0 1px 0 #fdfdfd, inset 0 -1px 0 #e3e3e3; }
+    body > nav > span:last-of-type {
+      border-bottom: 1px solid #fdfdfd; }
+
+> nav.asdasdsa {
+  background: #f0f0f0 url("http://assets.ambient.ly/bitlancer/stripe.png") top center no-repeat;
+  height: 100%;
+  left: 0;
+  -webkit-box-shadow: 1px 0 0 #dedede;
+  -moz-box-shadow: 1px 0 0 #dedede;
+  box-shadow: 1px 0 0 #dedede;
+  padding-top: 5px;
+  position: fixed;
+  width: 240px;
+  top: 50px;
+  z-index: 98;
+  -webkit-transition: left 0.3s ease-in-out;
+  -moz-transition: left 0.3s ease-in-out;
+  -o-transition: left 0.3s ease-in-out;
+  transition: left 0.3s ease-in-out;
+  -webkit-transition-delay: .15s; }
+  > nav.asdasdsa > span {
+    display: block; }
+    > nav.asdasdsa > span > span {
+      display: none; }
+    > nav.asdasdsa > span#dashboard > a:before {
+      background-image: url("http://assets.ambient.ly/bitlancer/dashboard.png"); }
+    > nav.asdasdsa > span#devices > a:before {
+      background-image: url("http://assets.ambient.ly/bitlancer/cabinet.png");
+      background-size: auto 20px; }
+    > nav.asdasdsa > span#formations > a:before {
+      background-image: url("http://assets.ambient.ly/bitlancer/cloud.png"); }
+    > nav.asdasdsa > span#user-management > a:before {
+      background-image: url("http://assets.ambient.ly/bitlancer/user.png"); }
+    > nav.asdasdsa > span.active > span {
+      display: block;
+      overflow: hidden;
+      padding: 5px 0;
+      -webkit-box-shadow: inset -1px 1px 12px rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: inset -1px 1px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: inset -1px 1px 12px rgba(0, 0, 0, 0.15); }
+      > nav.asdasdsa > span.active > span > a {
+        border-bottom: 1px solid #fefefe;
+        color: #555;
+        padding: 10px 20px;
+        display: block;
+        font-size: 13px;
+        font-weight: 700;
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+        -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+        box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.07); }
+        > nav.asdasdsa > span.active > span > a:last-of-type {
+          border: 0;
+          -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
+          -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0); }
+    > nav.asdasdsa > span > a {
+      background-color: #f8f8f8;
+      background-image: -moz-linear-gradient(#f8f8f8, #f0f0f0);
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#f0f0f0));
+      background-image: -webkit-linear-gradient(#f8f8f8, #f0f0f0);
+      background-image: -o-linear-gradient(#f8f8f8, #f0f0f0);
+      border-bottom: 1px solid #e8e8e8;
+      border-top: 1px solid white;
+      color: #666;
+      display: block;
+      font-size: 15px;
+      font-weight: 600;
+      height: 20px;
+      line-height: 20px;
+      overflow: hidden;
+      padding: 10px 20px;
+      position: relative;
+      text-shadow: 1px 1px 0 #fff; }
+      > nav.asdasdsa > span > a:before {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px auto;
+        content: ' ';
+        display: inline-block;
+        height: 20px;
+        margin-right: 10px;
+        width: 20px;
+        vertical-align: top; }
+    > nav.asdasdsa > span.active > a {
+      border-bottom: none;
+      border-top: 1px solid #f0f0f0;
+      cursor: default;
+      width: 201px;
+      background-color: white;
+      background-image: -moz-linear-gradient(white, #f0f0f0);
+      background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#f0f0f0));
+      background-image: -webkit-linear-gradient(white, #f0f0f0);
+      background-image: -o-linear-gradient(white, #f0f0f0);
+      -webkit-box-shadow: inset 0 1px 0 #dddddd, inset 0 -1px 0 white;
+      -moz-box-shadow: inset 0 1px 0 #dddddd, inset 0 -1px 0 white;
+      box-shadow: inset 0 1px 0 #dddddd, inset 0 -1px 0 white; }
+      > nav.asdasdsa > span.active > a:after {
+        background: #f8f8f8;
+        border-left: 1px solid #d6d6d6;
+        border-bottom: 1px solid #d6d6d6;
+        content: ' ';
+        display: block;
+        height: 40px;
+        position: absolute;
+        right: -28px;
+        top: 0;
+        width: 40px;
+        -webkit-box-shadow: 0 5px 10px #e5e5e5;
+        -moz-box-shadow: 0 5px 10px #e5e5e5;
+        box-shadow: 0 5px 10px #e5e5e5;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }

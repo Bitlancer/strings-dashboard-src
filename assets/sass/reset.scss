@@ -16,9 +16,8 @@ html {
   * {
     line-height: 1;    
   }
-  ::selection {
-    background: rgba(0,0,0,0);
-  }
+  ::selection { background: rgba(0,0,0,0) }
+  //::-webkit-scrollbar { display: none }
   pre ::selection, code ::selection {
     background: rgba(255,255,255,.1); 
   }

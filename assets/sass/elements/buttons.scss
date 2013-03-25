@@ -68,7 +68,7 @@
       inset -1px 0px 0 lighten($red, 5%),
       inset 1px 0px 0 lighten($red, 5%)
     ));
-    @include gradient($red, darken($red, 15%));
+    @include gradient($red, darken($red, 10%));
     &:hover {
       @include gradient(lighten($red,5%), darken($red, 10%));  
     }

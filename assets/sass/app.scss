@@ -15,12 +15,12 @@
 
 // Elements
 @import 'elements/tables.scss';
-//@import 'layout/ui/messages.scss';
+@import 'elements/messages.scss';
 //@import 'layout/ui/pagination.scss';
 @import 'elements/modal.scss';
 @import 'elements/form.scss';
 @import 'elements/tooltips.scss';
-//@import 'layout/ui/actionmenus.scss';
+@import 'elements/actionmenus.scss';
 @import 'elements/buttons.scss';
 
 // Views

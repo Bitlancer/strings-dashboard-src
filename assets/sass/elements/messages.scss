@@ -28,7 +28,8 @@ ul#messages {
     &.error {
       color: #fff;
       border: 1px solid darken($red,10%);
-      background: $red url('http://assets.ambient.ly/bitlancer/msg-stripes.png');
+      //background: $red url('http://assets.ambient.ly/bitlancer/msg-stripes.png');
+      background: $red;
       @include box-shadow((
         inset 0 -1px 1px lighten($red,15%),
         inset 0 1px 1px lighten($red,15%),
@@ -39,7 +40,8 @@ ul#messages {
     &.success {
       color: #fff;
       border: 1px solid darken($green,10%);
-      background: $green url('http://assets.ambient.ly/bitlancer/msg-stripes.png');
+      //background: $green url('http://assets.ambient.ly/bitlancer/msg-stripes.png');
+      background: $green;
       @include box-shadow((
         inset 0 -1px 1px lighten($green,10%),
         inset 0 1px 1px lighten($green,10%),
@@ -50,7 +52,8 @@ ul#messages {
     &.warning {
       color: #fff;
       border: 1px solid darken($orange,10%);
-      background: $orange url('http://assets.ambient.ly/bitlancer/msg-stripes.png');
+      //background: $orange url('http://assets.ambient.ly/bitlancer/msg-stripes.png');
+      background: $orange;
       @include box-shadow((
         inset 0 -1px 1px lighten($orange,15%),
         inset 0 1px 1px lighten($orange,20%),

@@ -456,6 +456,57 @@ table {
   100% {
     background-position: 0 26px; } }
 
+ul#messages > li {
+  border-radius: 3px;
+  display: block;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  max-width: 600px;
+  overflow: hidden;
+  padding: 10px 10px 15px;
+  position: relative;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+  ul#messages > li > a.close {
+    background: url("http://assets.ambient.ly/bitlancer/close.png") 2px 2px no-repeat;
+    background-size: 10px 10px;
+    display: block;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    border-radius: 3px;
+    -webkit-box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 8px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 8px rgba(0, 0, 0, 0.2); }
+  ul#messages > li.error {
+    color: #fff;
+    border: 1px solid #c12727;
+    background: #d94141;
+    -webkit-box-shadow: inset 0 -1px 1px #e68181, inset 0 1px 1px #e68181, 0 3px 0 #dddddd, 3px 3px 0 #dddddd;
+    -moz-box-shadow: inset 0 -1px 1px #e68181, inset 0 1px 1px #e68181, 0 3px 0 #dddddd, 3px 3px 0 #dddddd;
+    box-shadow: inset 0 -1px 1px #e68181, inset 0 1px 1px #e68181, 0 3px 0 #dddddd, 3px 3px 0 #dddddd; }
+  ul#messages > li.success {
+    color: #fff;
+    border: 1px solid #45892a;
+    background: #59b036;
+    -webkit-box-shadow: inset 0 -1px 1px #73c950, inset 0 1px 1px #73c950, 0 3px 0 #dddddd, 3px 3px 0 #dddddd;
+    -moz-box-shadow: inset 0 -1px 1px #73c950, inset 0 1px 1px #73c950, 0 3px 0 #dddddd, 3px 3px 0 #dddddd;
+    box-shadow: inset 0 -1px 1px #73c950, inset 0 1px 1px #73c950, 0 3px 0 #dddddd, 3px 3px 0 #dddddd; }
+  ul#messages > li.warning {
+    color: #fff;
+    border: 1px solid #ff9f0a;
+    background: #ffb33d;
+    -webkit-box-shadow: inset 0 -1px 1px #ffd18a, inset 0 1px 1px #ffdba3, 0 3px 0 #dddddd, 3px 3px 0 #dddddd;
+    -moz-box-shadow: inset 0 -1px 1px #ffd18a, inset 0 1px 1px #ffdba3, 0 3px 0 #dddddd, 3px 3px 0 #dddddd;
+    box-shadow: inset 0 -1px 1px #ffd18a, inset 0 1px 1px #ffdba3, 0 3px 0 #dddddd, 3px 3px 0 #dddddd; }
+  ul#messages > li > span {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: capitalize; }
+
 body .strings-modal {
   border: 0;
   padding: 0;
@@ -499,7 +550,7 @@ body .strings-modal {
           background-image: -webkit-linear-gradient(#4ba5e8, #1773b6);
           background-image: -o-linear-gradient(#4ba5e8, #1773b6); }
 body .ui-widget-overlay {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
   opacity: 1; }
 
 form fieldset {
@@ -512,6 +563,8 @@ form hr {
   border: 1px solid #eee;
   background: transparent;
   margin: 10px 0; }
+  form hr.clear {
+    margin-bottom: 5px; }
 form select {
   box-sizing: border-box;
   width: 50%; }
@@ -522,6 +575,8 @@ form div.submit {
   form div.submit > .cta {
     float: right;
     margin-left: 5px; }
+form input[type=text], form input[type=search], form input[type=email], form input[type=password], form input textarea {
+  width: 100%; }
 
 input[type=text], input[type=search], input[type=email], input[type=password], input textarea {
   border: 1px solid #cacaca;
@@ -563,6 +618,62 @@ input[type=radio], input[type=checkbox] {
     -moz-transform: scaleX(1.5);
     -o-transform: scaleX(1.5);
     transform: scaleX(1.5); }
+
+ul.action-menu {
+  display: inline-block;
+  position: relative; }
+  ul.action-menu > li {
+    border-radius: 4px;
+    display: block;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 5px 5px 3px 9px;
+    -webkit-box-shadow: 1px 1px 0 #d9d9d9, inset 1px 1px 0 #e3e3e3;
+    -moz-box-shadow: 1px 1px 0 #d9d9d9, inset 1px 1px 0 #e3e3e3;
+    box-shadow: 1px 1px 0 #d9d9d9, inset 1px 1px 0 #e3e3e3;
+    background-color: #fafafa;
+    background-image: -moz-linear-gradient(#fafafa, #ededed);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#ededed));
+    background-image: -webkit-linear-gradient(#fafafa, #ededed);
+    background-image: -o-linear-gradient(#fafafa, #ededed); }
+    ul.action-menu > li:after {
+      content: '\25BC';
+      color: #aaa;
+      font-size: 10px;
+      margin-left: 2px;
+      vertical-align: middle;
+      line-height: 15px; }
+  ul.action-menu > span {
+    background: #fff;
+    border: 1px solid #ccc;
+    display: none;
+    font-size: 13px;
+    min-width: 120px;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    z-index: 33;
+    -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1); }
+    ul.action-menu > span > li, ul.action-menu > span > a {
+      color: #555;
+      display: block;
+      border-bottom: 1px solid #eee;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 1.2;
+      margin: 0;
+      padding: 5px; }
+      ul.action-menu > span > li:last-child, ul.action-menu > span > a:last-child {
+        border-bottom: 0; }
+      ul.action-menu > span > li:hover, ul.action-menu > span > a:hover {
+        background: #1e8fe2;
+        cursor: pointer;
+        color: #fff; }
+  ul.action-menu.active > span {
+    display: block; }
 
 .cta {
   border-radius: 3px;
@@ -640,10 +751,10 @@ input[type=radio], input[type=checkbox] {
     -moz-box-shadow: inset 0 -1px 0 #dd5656, inset 0 1px 0 #e68181, inset -1px 0px 0 #dd5656, inset 1px 0px 0 #dd5656;
     box-shadow: inset 0 -1px 0 #dd5656, inset 0 1px 0 #e68181, inset -1px 0px 0 #dd5656, inset 1px 0px 0 #dd5656;
     background-color: #d94141;
-    background-image: -moz-linear-gradient(#d94141, #ab2222);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d94141), to(#ab2222));
-    background-image: -webkit-linear-gradient(#d94141, #ab2222);
-    background-image: -o-linear-gradient(#d94141, #ab2222); }
+    background-image: -moz-linear-gradient(#d94141, #c12727);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d94141), to(#c12727));
+    background-image: -webkit-linear-gradient(#d94141, #c12727);
+    background-image: -o-linear-gradient(#d94141, #c12727); }
     .cta.cancel:hover {
       background-color: #dd5656;
       background-image: -moz-linear-gradient(#dd5656, #c12727);

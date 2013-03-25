@@ -10,7 +10,8 @@ form {
   hr {
     border: 1px solid #eee;
     background: transparent;
-    margin: 10px 0; 
+    margin: 10px 0;
+    &.clear { margin-bottom: 5px }
   }
   select {
     box-sizing: border-box;
@@ -24,6 +25,9 @@ form {
       float: right;
       margin-left: 5px;
     }
+  }
+  input {
+    &[type=text],&[type=search],&[type=email],&[type=password], textarea { width: 100% }
   }
 }
 

@@ -25,7 +25,6 @@ body {
       font-size: 30px;
       font-weight: 300;
       line-height: 40px;
-      margin-bottom: 15px;
       > strong {
         font-weight: 400;  
       }
@@ -40,7 +39,7 @@ body {
         font-weight: 400;
       }
     }
-    div#content h2 {
+    div h2 {
       margin-top: 30px;
       &:first-of-type { margin-top: 0 }
     }

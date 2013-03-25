@@ -1,12 +1,47 @@
-
+body > section {
+  max-width: 1200px;
+  min-width: 600px;
+  padding: 90px 60px 30px 300px;
+  position: relative;
+  > div {
+    margin-top: 20px;
+    position: relative;
+    &.columns > div {
+      &:first-of-type {
+        float: left;
+        width: 65%;
+      }
+      &:last-of-type {
+        float: left;
+        padding-left: 3%;
+        width: 32%;
+      }
+      .action-menu { display: none }
+      .details {
+        border: 1px dashed #ccc;
+        padding: 15px;
+        p {
+          margin: 0;
+          > strong {
+            display: inline-block;
+            margin-right: 2%;
+            min-width: 30%;
+          }
+        }  
+      }
+    }
+  }
   hr {
-    &.space {
+    &.clear {
       border: 1px solid transparent;
       clear: both;
       display: block;  
       margin: 0; 
     }
   }
+}
+
+
 > section.asdfsdaf {
   max-width: 1200px;
   min-width: 630px;

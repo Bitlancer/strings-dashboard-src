@@ -155,17 +155,42 @@ body > nav {
   transition: left 0.2s 0.15s ease-in-out; }
   body > nav > span {
     display: block;
-    margin-right: 1px; }
+    margin-right: 1px;
+    overflow: hidden;
+    position: relative;
+    background-color: whitesmoke;
+    background-image: -moz-linear-gradient(whitesmoke, #f0f0f0);
+    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(whitesmoke), to(#f0f0f0));
+    background-image: -webkit-linear-gradient(whitesmoke, #f0f0f0);
+    background-image: -o-linear-gradient(whitesmoke, #f0f0f0); }
     body > nav > span > span {
       display: none; }
     body > nav > span > a {
+      color: #666;
       display: block;
+      font-weight: 600;
       height: 20px;
       line-height: 20px;
       padding: 10px 20px;
-      -webkit-box-shadow: inset 0 1px 0 #fdfdfd, inset 0 -1px 0 #e3e3e3;
-      -moz-box-shadow: inset 0 1px 0 #fdfdfd, inset 0 -1px 0 #e3e3e3;
-      box-shadow: inset 0 1px 0 #fdfdfd, inset 0 -1px 0 #e3e3e3; }
+      text-shadow: 1px 1px 0 #fff;
+      -webkit-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e3e3e3;
+      -moz-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e3e3e3;
+      box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e3e3e3; }
+    body > nav > span.active {
+      background: #fafafa; }
+      body > nav > span.active:after {
+        background: red;
+        content: '';
+        display: block;
+        height: 30px;
+        position: absolute;
+        right: -15px;
+        top: 5px;
+        width: 30px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg); }
     body > nav > span:last-of-type {
       border-bottom: 1px solid #fdfdfd; }
 

@@ -14,14 +14,14 @@
 @import 'layout/section.scss';
 
 // Elements
-//@import 'layout/ui/tables.scss';
+@import 'elements/tables.scss';
 //@import 'layout/ui/messages.scss';
 //@import 'layout/ui/pagination.scss';
 //@import 'layout/ui/modal.scss';
 //@import 'layout/ui/form.scss';
 //@import 'layout/ui/tooltips.scss';
 //@import 'layout/ui/actionmenus.scss';
-//@import 'layout/ui/buttons.scss';
+@import 'elements/buttons.scss';
 
 // Views
 //@import 'account.scss';

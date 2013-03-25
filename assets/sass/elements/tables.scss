@@ -1,3 +1,39 @@
+table {
+  border: 1px solid darken($white,10%);
+  clear:both;
+  width: 100%;
+  thead {
+    background: $white;
+    border-bottom: 1px solid darken($white,5%);
+    th { font-weight: 600 }
+  }
+  tbody {
+    background: #fcfcfc;
+    tr { 
+      border-bottom: 1px solid darken($white,5%);
+      &:last-of-type { border: 0 }
+      td {
+        border-right: 1px solid darken($white,5%);
+        &:last-of-type { border: 0 }
+        &.blank {
+          font-size: 90%;
+          padding: 20px;  
+          text-align: center;
+          h3 {
+            font-weight: 600;
+            font-size: 17px;
+            margin-bottom: 5px;
+          }
+        }  
+      }
+    }
+  }
+  th,td { 
+    padding: 5px;
+    text-align: left;
+  }
+}
+
 @include keyframes(activity){
   0% {
     background-position: 0 0;
@@ -7,7 +43,7 @@
   }
 }
 
-table {
+table.adfdasf {
   border: 1px solid darken($white,10%);
   clear:both;
   width: 100%;

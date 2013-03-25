@@ -1,10 +1,39 @@
+form {
+  fieldset {
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    padding: 10px;
+    legend {
+      font-weight: 600;  
+    }
+  }
+  hr {
+    border: 1px solid #eee;
+    background: transparent;
+    margin: 10px 0; 
+  }
+  select {
+    box-sizing: border-box;
+    width: 50%;  
+  }
+  div.submit {
+    margin-top: 10px;
+    overflow: hidden;
+    position: relative;  
+    > .cta {
+      float: right;
+      margin-left: 5px;
+    }
+  }
+}
+
 input {
-  &[type=text],&[type=search],&[type=email],&[type=password] {
-    border: 1px solid #ccc;
+  &[type=text],&[type=search],&[type=email],&[type=password], textarea {
+    border: 1px solid #cacaca;
     border-bottom: 1px solid #eee;
     border-right: 1px solid #eee;
-    border-radius: 2px;
-    color: #555;
+    border-radius: 3px;
+    box-sizing: border-box;
     font-family: inherit;
     padding: 3px;
     vertical-align: middle;
@@ -19,47 +48,4 @@ input {
 ::-webkit-input-placeholder {
   line-height: 1.4;
   text-indent: 1px;
-}
-
-fieldset {
-  border: 1px solid #eee;
-  margin-bottom: 10px;
-  padding: 10px;
-  legend {
-    font-weight: 600;  
-  }
-  hr {
-    border: 1px solid #eee;
-    background: transparent;
-    margin: 10px 0;
-    &.clear {
-      border: 0;
-      margin: 0 0 5px;
-    }  
-  }
-  &:last-of-type {
-    //margin-bottom: 0;  
-  }
-  input {
-    &[type=text],&[type=search],&[type=email],&[type=password] {
-      box-sizing: border-box;
-      width: 100%;
-    }
-  }
-  select {
-    box-sizing: border-box;
-    width: 50%;  
-  }
-}
-
-form {
-  div.submit {
-    margin-top: 10px;
-    overflow: hidden;
-    position: relative;  
-    > .cta {
-      float: right;
-      margin-left: 5px;
-    }
-  }  
 }

@@ -119,6 +119,11 @@ body {
       margin-bottom: 5px; }
       body ul li:last-of-type {
         margin: 0; }
+  body hr.clear {
+    border: 1px solid transparent;
+    clear: both;
+    display: block;
+    margin: 0; }
 
 body > header {
   background: #222222 url("http://assets.ambient.ly/bitlancer/dark_stripes.png");
@@ -278,11 +283,6 @@ body > section {
       border: 1px solid #eee;
       margin: 10px 0;
       padding: 5px; }
-  body > section hr.clear {
-    border: 1px solid transparent;
-    clear: both;
-    display: block;
-    margin: 0; }
 
 > section.asdfsdaf {
   max-width: 1200px;
@@ -456,6 +456,52 @@ table {
   100% {
     background-position: 0 26px; } }
 
+body .strings-modal {
+  border: 0;
+  padding: 0;
+  -webkit-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.3); }
+  body .strings-modal .ui-dialog-titlebar {
+    border: 0;
+    padding: 10px 15px 9px; }
+    body .strings-modal .ui-dialog-titlebar > a {
+      border: 0;
+      padding: 0;
+      right: 10px; }
+      body .strings-modal .ui-dialog-titlebar > a > span {
+        margin: 1px 0 0 2px; }
+      body .strings-modal .ui-dialog-titlebar > a:hover {
+        background: rgba(0, 0, 0, 0.05); }
+  body .strings-modal .ui-dialog-content {
+    min-height: auto !important;
+    padding: 15px; }
+  body .strings-modal .ui-dialog-buttonpane {
+    border-top: 1px solid #f0f0f0;
+    margin-top: 0;
+    padding: 0; }
+    body .strings-modal .ui-dialog-buttonpane button {
+      background: inherit; }
+      body .strings-modal .ui-dialog-buttonpane button.cta {
+        height: auto;
+        font-weight: 600;
+        outline: none; }
+        body .strings-modal .ui-dialog-buttonpane button.cta.cancel {
+          background-color: #d94141;
+          background-image: -moz-linear-gradient(#d94141, #ab2222);
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#d94141), to(#ab2222));
+          background-image: -webkit-linear-gradient(#d94141, #ab2222);
+          background-image: -o-linear-gradient(#d94141, #ab2222); }
+        body .strings-modal .ui-dialog-buttonpane button.cta.primary {
+          background-color: #4ba5e8;
+          background-image: -moz-linear-gradient(#4ba5e8, #1773b6);
+          background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4ba5e8), to(#1773b6));
+          background-image: -webkit-linear-gradient(#4ba5e8, #1773b6);
+          background-image: -o-linear-gradient(#4ba5e8, #1773b6); }
+body .ui-widget-overlay {
+  background: rgba(255, 255, 255, 0.1);
+  opacity: 1; }
+
 form fieldset {
   border: 1px solid #eee;
   margin-bottom: 10px;
@@ -496,6 +542,27 @@ input[type=radio], input[type=checkbox] {
 ::-webkit-input-placeholder {
   line-height: 1.4;
   text-indent: 1px; }
+
+.ui-tooltip {
+  background: rgba(0, 0, 0, 0.9);
+  border: 0;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 6px 6px;
+  color: white;
+  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); }
+  .ui-tooltip:after {
+    color: rgba(0, 0, 0, 0.9);
+    content: "\25B2";
+    display: block;
+    position: absolute;
+    top: -10px;
+    -webkit-transform: scaleX(1.5);
+    -moz-transform: scaleX(1.5);
+    -o-transform: scaleX(1.5);
+    transform: scaleX(1.5); }
 
 .cta {
   border-radius: 3px;

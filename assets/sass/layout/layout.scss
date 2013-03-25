@@ -31,6 +31,14 @@ body {
       &:last-of-type { margin: 0 }
     }
   }
+  hr {
+    &.clear {
+      border: 1px solid transparent;
+      clear: both;
+      display: block;  
+      margin: 0; 
+    }
+  }
   //::-webkit-scrollbar { display: inherit; width: 12px; }
   //::-webkit-scrollbar-track { background: transparent; border: 0; }
   //::-webkit-scrollbar-thumb { background: #888; border: 3px solid #333; border-radius: 6px; }

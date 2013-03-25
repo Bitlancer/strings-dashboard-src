@@ -10,12 +10,8 @@ body {
         border: 0; 
         padding: 0;
         right: 10px;
-        > span {
-          margin: 1px 0 0 2px;  
-        }
-        &:hover {
-          background: rgba(0,0,0,.05);  
-        }
+        > span { margin: 1px 0 0 2px }
+        &:hover { background: rgba(0,0,0,.05) }
       }
     }
     .ui-dialog-content {
@@ -32,12 +28,8 @@ body {
           height: auto;
           font-weight: 600;
           outline: none;
-          &.cancel {
-            @include gradient($red, darken($red, 15%)); 
-          }
-          &.primary {
-            @include gradient(lighten($blue_light,10%), darken($blue_light, 10%));
-          }
+          &.cancel { @include gradient($red, darken($red, 15%)) }
+          &.primary { @include gradient(lighten($blue_light,10%), darken($blue_light, 10%)) }
         }
       }
     }

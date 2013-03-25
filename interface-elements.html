@@ -22,6 +22,15 @@
   <section>
     <h1>Interface Elements</h1>
     <style>
+    section div > span {
+      display: block;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #eaeaea;
+      padding-bottom: 30px;
+    }
+    section div > span:last-of-type {
+      margin-bottom: 0;
+    }
     span > pre {
       display: none;  
     }
@@ -53,7 +62,7 @@
       </span>
       <span>
         <h2>Tooltips <a class="view-source">View Source</a></h2>
-        <a class="tooltip" title="That was simple, wasn't it?" style="padding: 10px;border: 1px dashed #ccc;display:inline-block">Hover Over Me</a>
+        <a class="tooltip info" title="That was simple, wasn't it?">Hover Over Me</a>
 <!-- Code -->
 <pre data-language="html">
 <a class="tooltip" title="That was simple, wasn't it?">Hover Over Me</a>
@@ -273,34 +282,6 @@ strings.interface.messages(
     </form>
   </div>
 </div>
-</pre>
-      </span>
-      <span>
-        <h2>Pagination <a class="view-source">View Source</a></h2>
-        <ul id="pagination">
-          <a id="prev"></a>
-          <li><a href="#/1">1</a></li>
-          <li class="active">2</li>
-          <li><a href="#/3">3</a></li>
-          <li><a href="#/4">4</a></li>
-          <li><a href="#/5">5</a></li>
-          <span>&hellip;</span>
-          <li><a href="#/18">18</a></li>
-          <a id="next" href="#/3"></a>
-        </ul>
-<!-- Code -->
-<pre data-language="html">
-<ul id="pagination">
-  <a id="prev"></a>
-  <li><a href="#/1">1</a></li>
-  <li class="active">2</li>
-  <li><a href="#/3">3</a></li>
-  <li><a href="#/4">4</a></li>
-  <li><a href="#/5">5</a></li>
-  <span>&hellip;</span>
-  <li><a href="#/18">18</a></li>
-  <a id="next" href="#/3"></a>
-</ul>
 </pre>
       </span>
     </div>

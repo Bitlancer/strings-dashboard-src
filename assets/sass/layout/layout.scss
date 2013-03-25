@@ -32,11 +32,15 @@ body {
     }
   }
   hr {
+    clear: both;
+    display: block;  
+    margin: 0; 
     &.clear {
       border: 1px solid transparent;
-      clear: both;
-      display: block;  
-      margin: 0; 
+    }
+    &.space {
+      border: 1px solid transparent;
+      margin-bottom: 10px;
     }
   }
   //::-webkit-scrollbar { display: inherit; width: 12px; }

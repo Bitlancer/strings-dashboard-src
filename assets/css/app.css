@@ -177,16 +177,20 @@ body > nav {
       -moz-box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e3e3e3;
       box-shadow: inset 0 1px 0 white, inset 0 -1px 0 #e3e3e3; }
     body > nav > span.active {
-      background: #fafafa; }
+      background: #fafafa;
+      margin-right: 0; }
       body > nav > span.active:after {
-        background: red;
+        background: #f8f8f8;
         content: '';
         display: block;
         height: 30px;
         position: absolute;
         right: -15px;
-        top: 5px;
-        width: 30px;
+        top: 4px;
+        width: 28px;
+        -webkit-box-shadow: -1px 1px 5px #d6d6d6;
+        -moz-box-shadow: -1px 1px 5px #d6d6d6;
+        box-shadow: -1px 1px 5px #d6d6d6;
         -webkit-transform: rotate(45deg);
         -moz-transform: rotate(45deg);
         -o-transform: rotate(45deg);

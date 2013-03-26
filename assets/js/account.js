@@ -1,9 +1,11 @@
 var account = {
   
   tabs : function() {
-    $('#tabs a').live('click',function() {
+    $('#tabs a, .cta[data-id]').live('click',function() {
       $('form div[data-id]').hide();
       $('form div[data-id='+$(this).attr('data-id')+']').show();
+      $('#tabs a.active').removeClass('active');
+      $('#tabs a[data-id='+$(this).attr('data-id')+']').addClass('active');
     });
   },
   

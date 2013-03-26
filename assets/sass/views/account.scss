@@ -55,10 +55,14 @@ body#account {
       &[data-id=password],&[data-id=register] {
         display: none;
       }
+      p {
+        font-size: 85%;
+        margin-bottom: 15px;
+      }
     }
     div > .buttons {
       display: block;
-      margin-top: 20px;
+      margin-top: 15px;
       > * {
         vertical-align: middle;  
       }
@@ -108,7 +112,7 @@ body#account {
           border-left: 1px solid rgba(255,255,255,0.2);
           border-radius: 0 0 7px 0;
         }
-        &:hover {
+        &:hover, &.active {
           @include gradient(#fefefe,#ffffff);
           @include box-shadow(0 -1px 0 #fff);
           border: 0;

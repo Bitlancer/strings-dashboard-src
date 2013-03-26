@@ -843,9 +843,12 @@ body#account {
         margin-bottom: 0; }
     body#account form#login div[data-id][data-id=password], body#account form#login div[data-id][data-id=register] {
       display: none; }
+    body#account form#login div[data-id] p {
+      font-size: 85%;
+      margin-bottom: 15px; }
     body#account form#login div > .buttons {
       display: block;
-      margin-top: 20px; }
+      margin-top: 15px; }
       body#account form#login div > .buttons > * {
         vertical-align: middle; }
       body#account form#login div > .buttons label {
@@ -890,7 +893,7 @@ body#account {
         body#account form#login #tabs > *:last-child {
           border-left: 1px solid rgba(255, 255, 255, 0.2);
           border-radius: 0 0 7px 0; }
-        body#account form#login #tabs > *:hover {
+        body#account form#login #tabs > *:hover, body#account form#login #tabs > *.active {
           background-color: #fefefe;
           background-image: -moz-linear-gradient(#fefefe, white);
           background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fefefe), to(white));

@@ -115,14 +115,16 @@
               strings.interface.messages("warning","Alert!","Nothings wrong, but something's not right. Please don't ignore me");
             });
           </script>
-          <ul id="messages"></ul>
         </span>
+          <ul id="messages"></ul>
       </span>
       <span>
         <h2>Modal Window <a class="view-source">View Source</a></h2>
-        <a class="cta modal" data-src="#example-one" data-title="Example One">Example One</a>
-        <a class="cta modal" data-src="#example-two" data-title="Example Two">Example Two</a>
-        <a class="cta modal" data-src="#example-three" data-title="Example Three" data-width="480px">Example Three</a>
+        <span>
+          <a class="cta modal" data-src="#example-one" data-title="Example One">Example One</a>
+          <a class="cta modal" data-src="#example-two" data-title="Example Two">Example Two</a>
+          <a class="cta modal" data-src="#example-three" data-title="Example Three" data-width="480px">Example Three</a>
+        </span>
         <div style="display:none">
           <!-- Example One -->
           <div id="example-one">
@@ -194,25 +196,11 @@
             </form>          
           </div>
         </div>
-<!-- Code -->
-<pre data-language="html">
-<a class="cta primary modal" data-src="#example" data-title="Example Window">Open Window</a>
-<a class="cta modal" data-src="#example" data-title="Custom Width" data-width="600">Custom Width</a>
-
-<div style="display:none">
-  <div id="example">
-    <form>
-      <input type="radio" id="option-1" />
-    </form>
-  </div>
-</div>
-</pre>
       </span>
     </div>
   </section>
 <!-- Javascript -->
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
-<script src="/strings/assets/js/jquery.nicescroll.js"></script>
 <script src="http://assets.ambient.ly/js/rainbow.min.js"></script>
 <script type="text/javascript" src="/strings/assets/js/app.js"></script>
 <!-- JS for syntax highlighting -->
@@ -237,7 +225,7 @@
         $(this).text('Hide Source');
       }
       parent.find('pre').toggle();
-    });
+    }).trigger('click');
   })(jQuery);  
   //]]>
 </script>

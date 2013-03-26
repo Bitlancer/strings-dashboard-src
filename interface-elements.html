@@ -5,6 +5,8 @@
   <title>Strings</title>
   <link id="style" rel="stylesheet" type="text/css" href="/strings/assets/css/app.css">
   <link rel="stylesheet" type="text/css" href="/strings/assets/css/twilight.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
   <style>
     section > div > span {
       display: block;
@@ -55,130 +57,66 @@
         </span>
       </span>
       <span>
-        <h2>Action! Menus</h2>
-        <ul class="action-menu">
-          <li>Hey! I just met you</li>
-          <span>
-            <li>This is crazy</li>
-            <li>But here's my number</li>
-            <li>So call me maybe?</li>
-          </span>
-        </ul>
+        <h2>Action! Menus <a class="view-source">View Source</a></h2>
+        <span>
+          <ul class="action-menu">
+            <li>Hey! I just met you</li>
+            <span>
+              <li>This is crazy</li>
+              <li>But here's my number</li>
+              <li>So call me maybe?</li>
+            </span>
+          </ul>
+        </span>
       </span>
       <span>
-        <h2>Tables <a class="view-source">View Source</a></h2>
-        <table data-type="datatable" id="fruit" data-length="3">
-          <thead>
-            <tr>
-              <th data-sort="fruit">Fruit</th>
-              <th>Color</th>
-              <th data-sort="rating">Rating</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Orange</td>
-              <td>Orange</td>
-              <td>5/5</td>
-            </tr>
-            <tr>
-              <td>Apple</td>
-              <td>Red</td>
-              <td>3/5</td>
-            </tr>
-            <tr>
-              <td>Banana</td>
-              <td>Yellow</td>
-              <td>4/5</td>
-            </tr>
-            <tr>
-              <td>Avocado</td>
-              <td>Green</td>
-              <td>5/5</td>
-            </tr>
-          </tbody>
-        </table>
-<!-- Code -->
-<pre data-language="html">
-<table data-type="datatable" data-length="5" id="fruit">
-  <thead>
-    <tr>
-      <th data-sort="fruit">Fruit</th>
-      <th>Color</th>
-      <th data-sort="rating">Rating</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Orange</td>
-      <td>Orange</td>
-      <td>5/5</td>
-    </tr>
-    <tr>
-      <td>Apple</td>
-      <td>Red</td>
-      <td>3/5</td>
-    </tr>
-    <tr>
-      <td>Banana</td>
-      <td>Yellow</td>
-      <td>4/5</td>
-    </tr>
-    <tr>
-      <td>Avocado</td>
-      <td>Green</td>
-      <td>5/5</td>
-    </tr>
-  </tbody>
-</table>
-</pre>
+        <h2>Tables</h2>
+        <span>
+          <table data-type="datatable" id="fruit" data-length="3">
+            <thead>
+              <tr>
+                <th data-sort="fruit">Fruit</th>
+                <th>Color</th>
+                <th data-sort="rating">Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Orange</td>
+                <td>Orange</td>
+                <td>5/5</td>
+              </tr>
+              <tr>
+                <td>Apple</td>
+                <td>Red</td>
+                <td>3/5</td>
+              </tr>
+              <tr>
+                <td>Banana</td>
+                <td>Yellow</td>
+                <td>4/5</td>
+              </tr>
+              <tr>
+                <td>Avocado</td>
+                <td>Green</td>
+                <td>5/5</td>
+              </tr>
+            </tbody>
+          </table>
+        </span>
       </span>
       <span>
         <h2>Messages <a class="view-source">View Source</a></h2>
-        <ul id="messages">
-          <li class="success"><span>Success!</span>I only appear when things go well. It's nice to see you, too.<a class="close"></a></li>
-          <li class="error"><span>Error</span>Did you notice me? I bet you did.<a class="close"></a></li>
-          <li class="warning"><span>Warning!</span>Nothings wrong, but something's not right. Please don't ignore me :/<a class="close"></a></li>
-        </ul>
-<!-- Code -->
-<pre data-language="javascript">
-strings.interface.messages(
-"success",
-"Success!",
-"I only appear when things go well. It's nice to see you, too."
-);
-
-strings.interface.messages(
-"error",
-"",
-"Did you notice me? I bet you did."
-);
-
-strings.interface.messages(
-"warning",
-"Warning!",
-"Nothings wrong, but something's not right. Please don't ignore me :/"
-);
-</pre>
-<pre data-language="html">
-<li class="success">
-  <span>Success!</span>
-  I only appear when things go well. It's nice to see you, too.
-  <a class="close"></a>
-</li>
-
-<li class="error">
-  <span>Error</span>
-  Did you notice me? I bet you did.
-  <a class="close"></a>
-</li>
-
-<li class="warning">
-  <span>Warning!</span>
-  Nothings wrong, but something's not right. Please don't ignore me :/
-  <a class="close"></a>
-</li>
-</pre>
+        <span>
+          <script>
+            $(window).load(function() {
+              strings.interface.messages("success","Success!","I only appear when things go well. It's nice to see you, too.");
+              strings.interface.messages("error","","Did you notice me? I bet you did.");
+              strings.interface.messages("warning","Alert!","Nothings wrong, but something's not right. Please don't ignore me");
+            });
+          </script>
+          <ul id="messages"></ul>
+        </span>
       </span>
       <span>
         <h2>Modal Window <a class="view-source">View Source</a></h2>
@@ -273,8 +211,6 @@ strings.interface.messages(
     </div>
   </section>
 <!-- Javascript -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
 <script src="/strings/assets/js/jquery.nicescroll.js"></script>
 <script src="http://assets.ambient.ly/js/rainbow.min.js"></script>
@@ -291,8 +227,7 @@ strings.interface.messages(
         $(this).text('View Source');
       } else {
         parent.append('<pre data-language="html"></pre>');
-        var html = $(this).parents('span').find('span').html();
-        html = html.split('\n');
+        var html = $(this).parents('span').find('span').html().split('\n');
         for(var i=0; i < html.length; i++) {
           html[i] = $.trim(html[i]);
         }

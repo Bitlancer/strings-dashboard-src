@@ -79,16 +79,15 @@
         if(!title){title=type}
         // Check for messages container
         if(!$('ul#messages').length){
-          if($('div#content.panel').length){
-            var contentArea = $('body > section > div#content.panel > div').first();
-          } else {
-            var contentArea = $('body > section');
+          var contentArea = $('body > section > div');
+          if($('section > div.columns').length){
+            contentArea = $('body > section > div.columns > div').first();
           }
           contentArea.prepend('<ul id="messages"></ul>');
         }
         // Create message
         $('body section ul#messages').prepend('<li class="'+type+'"><span>'+title+'</span>'+msg+'<a class="close"></a></span>');
-        $('html, body').animate({scrollTop:0}, 'medium');
+        //$('html, body').animate({scrollTop:0}, 'medium');
       },
       
       enable : {

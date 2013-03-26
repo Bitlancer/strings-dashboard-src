@@ -9,16 +9,31 @@
   <header></header>
   <form id="login">
     <h1>Strings</h1>
-    <input type="text" placeholder="organization" />
-    <input type="email" placeholder="email address" />
-    <input type="password" placeholder="password" />
-    <span class="buttons">
-      <a class="cta">login</a>
-      <input id="remember-me" type="checkbox" checked=checked />
-      <label for="remember-me">remember me</label>
-    </span>
+    <div data-id="login">
+      <input type="text" placeholder="organization" />
+      <input type="email" placeholder="email address" />
+      <input type="password" placeholder="password" />
+      <span class="buttons">
+        <a class="cta">login</a>
+        <input id="remember-me" type="checkbox" checked=checked />
+        <label for="remember-me">remember me</label>
+      </span>
+    </div>
+    <div data-id="register">
+      <p>Lorem ipsum dolar sit amet</p>
+      <input type="email" placeholder="email address" />
+      <span class="buttons">
+        <a class="cta">register</a>
+      </span>
+    </div>
+    <div data-id="password">
+      <input type="email" placeholder="email address" />
+      <span class="buttons">
+        <a class="cta">reset password</a>
+      </span>
+    </div>
     <span id="tabs">
-      <a href="#">register</a><a href="#">forgot password</a>
+      <a data-id="register">register</a><a data-id="password">forgot password</a>
     </span>
   </form>
 <!-- Javascript -->

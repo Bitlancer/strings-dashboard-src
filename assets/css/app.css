@@ -841,14 +841,16 @@ body#account {
       width: 100%; }
       body#account form#login input[type=text]:last-of-type, body#account form#login input[type=email]:last-of-type, body#account form#login input[type=password]:last-of-type {
         margin-bottom: 0; }
-    body#account form#login > .buttons {
+    body#account form#login div[data-id][data-id=password], body#account form#login div[data-id][data-id=register] {
+      display: none; }
+    body#account form#login div > .buttons {
       display: block;
       margin-top: 20px; }
-      body#account form#login > .buttons > * {
+      body#account form#login div > .buttons > * {
         vertical-align: middle; }
-      body#account form#login > .buttons label {
+      body#account form#login div > .buttons label {
         font-size: 80%; }
-      body#account form#login > .buttons .cta {
+      body#account form#login div > .buttons .cta {
         margin-right: 5px; }
     body#account form#login #tabs {
       background-color: rgba(0, 0, 0, 0.05);

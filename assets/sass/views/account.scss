@@ -51,7 +51,12 @@ body#account {
         margin-bottom: 0;  
       }
     }
-    > .buttons {
+    div[data-id] {
+      &[data-id=password],&[data-id=register] {
+        display: none;
+      }
+    }
+    div > .buttons {
       display: block;
       margin-top: 20px;
       > * {

@@ -609,9 +609,9 @@ input[type=radio], input[type=checkbox] {
   font-size: 12px;
   padding: 6px 6px;
   color: white;
-  -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2); }
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
   .ui-tooltip:after {
     color: rgba(0, 0, 0, 0.9);
     content: "\25B2";
@@ -627,6 +627,18 @@ ul.action-menu {
   display: inline-block;
   position: relative; }
   ul.action-menu > li {
+    list-style-type: none; }
+    ul.action-menu > li:after {
+      content: '\25BC';
+      color: inherit;
+      display: inline-block;
+      margin-left: 3px;
+      opacity: .75;
+      -webkit-transform: scaleY(0.75);
+      -moz-transform: scaleY(0.75);
+      -o-transform: scaleY(0.75);
+      transform: scaleY(0.75); }
+  ul.action-menu > li.orig {
     border-radius: 4px;
     display: block;
     cursor: pointer;
@@ -641,7 +653,7 @@ ul.action-menu {
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#ededed));
     background-image: -webkit-linear-gradient(#fafafa, #ededed);
     background-image: -o-linear-gradient(#fafafa, #ededed); }
-    ul.action-menu > li:after {
+    ul.action-menu > li.orig:after {
       content: '\25BC';
       color: #aaa;
       font-size: 10px;
@@ -650,7 +662,7 @@ ul.action-menu {
       line-height: 15px; }
   ul.action-menu > span {
     background: #fff;
-    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     display: none;
     font-size: 13px;
     min-width: 120px;
@@ -658,13 +670,14 @@ ul.action-menu {
     right: 0;
     top: 25px;
     z-index: 33;
-    -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
-    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1); }
+    -webkit-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.05); }
     ul.action-menu > span > li, ul.action-menu > span > a {
       color: #555;
       display: block;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
       font-weight: 600;
       font-size: 13px;
       line-height: 1.2;

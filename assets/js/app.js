@@ -3,7 +3,7 @@
     
     events : function() {
       // Tooltips
-      if($('.tooltip').length){$('.tooltip').tooltip()}
+      if($('.tooltip').length){$('.tooltip').tooltip({ position: { my: "left+2 top+12", at: "left top+12" } })}
       // Modals
       if($('.modal')){
         $('.modal').click(function() {
@@ -56,7 +56,7 @@
           }
           var align = ($(this).outerWidth() - $(this).children('span').outerWidth()) * .5;
           $(this).children('span').css({
-            'right':0
+            'right':align
           });
           if(!$(this).hasClass('active')){
             $(this).addClass('active');

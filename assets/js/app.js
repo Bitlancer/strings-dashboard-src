@@ -49,12 +49,13 @@
       });
       // Action menus
       if($('ul.action-menu')){
-        $('ul.action-menu').on('click',function(event) {
+        $('ul.action-menu').live('click',function(event) {
           event.stopPropagation();
+          var align = ($(this).outerWidth() - $(this).children('span').outerWidth()) * .5;
           if($(this).attr('data-width')){
             $(this).children('span').width($(this).attr('data-width'))
+            align = 0
           }
-          var align = ($(this).outerWidth() - $(this).children('span').outerWidth()) * .5;
           $(this).children('span').css({
             'right':align
           });

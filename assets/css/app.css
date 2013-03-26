@@ -155,8 +155,10 @@ body > header {
       font-weight: 300;
       line-height: 40px;
       text-shadow: 1px 2px 0 #000; }
-    body > header > div #profile {
-      display: none; }
+  body > header #menu {
+    color: #fff;
+    float: right;
+    margin-top: 10px; }
 
 body > nav {
   background: #f0f0f0 url("http://assets.ambient.ly/bitlancer/stripe.png") center -5px no-repeat;
@@ -628,7 +630,12 @@ ul.action-menu {
   position: relative; }
   ul.action-menu > li {
     cursor: pointer;
+    overflow: hidden;
     list-style-type: none; }
+    ul.action-menu > li > img {
+      height: 20px;
+      margin-right: 5px;
+      vertical-align: middle; }
     ul.action-menu > li:after {
       content: '\25BC';
       color: inherit;

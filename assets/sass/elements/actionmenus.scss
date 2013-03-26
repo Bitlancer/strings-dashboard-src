@@ -3,7 +3,13 @@ ul.action-menu {
   position: relative;
   > li {
     cursor: pointer;
+    overflow: hidden;
     list-style-type: none;
+    > img {
+      height: 20px;  
+      margin-right: 5px;
+      vertical-align: middle;
+    }
     &:after {
       content: '\25BC';
       color: inherit;

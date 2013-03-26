@@ -5,12 +5,24 @@
   <title>Strings</title>
   <link id="style" rel="stylesheet" type="text/css" href="/strings/assets/css/app.css">
   <link rel="stylesheet" type="text/css" href="/strings/assets/css/twilight.css">
+  <style>
+    section > div > span {
+      display: block;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 30px;
+    }
+    section div > span:last-of-type {
+      margin-bottom: 0;
+    }
+    span > pre {
+      display: none;  
+    }
+  </style>
   <script type="text/javascript">
     //<![CDATA[
     var config = {
-      name : 'interface-elements',
-      address : window.location.href,
-      path : window.location.pathname
+      name : 'interface-elements'
     };
     //]]>
   </script>
@@ -21,52 +33,26 @@
   <!-- Content -->
   <section>
     <h1>Interface Elements</h1>
-    <style>
-    section > div > span {
-      display: block;
-      margin-bottom: 30px;
-      border-bottom: 1px solid #eaeaea;
-      padding-bottom: 30px;
-    }
-    section div > span:last-of-type {
-      margin-bottom: 0;
-    }
-    span > pre {
-      display: none;  
-    }
-    </style>
-    <div id="content">
+    <div>
       <span>
         <h2>Buttons <a class="view-source">View Source</a></h2>
-        <a class="cta">Default Button</a>
-        <a class="cta primary">Primary Button</a>
-        <a class="cta cancel">Cancel Button</a>
-        <hr class="space">
-        <a class="cta small">Default Button</a>
-        <a class="cta small primary">Primary Button</a>
-        <a class="cta small cancel">Cancel Button</a>
-        <hr class="space">
-        <a class="cta refresh tooltip" title="Click to refresh"></a>
-      <!-- Code -->
-<pre data-language="html">
-<a class="cta">Default Button</a>
-<a class="cta primary">Primary Button</a>
-<a class="cta cancel">Cancel Button</a>
-
-<a class="cta small">Default Button</a>
-<a class="cta small primary">Primary Button</a>
-<a class="cta small cancel">Cancel Button</a>
-
-<a class="cta refresh tooltip" title="Click to refresh"></a>
-</pre>
+        <span>
+          <a class="cta">Default Button</a>
+          <a class="cta primary">Primary Button</a>
+          <a class="cta cancel">Cancel Button</a>
+          <hr class="space">
+          <a class="cta small">Default Button</a>
+          <a class="cta small primary">Primary Button</a>
+          <a class="cta small cancel">Cancel Button</a>
+          <hr class="space">
+          <a class="cta refresh tooltip" title="Click to refresh"></a>
+        </span>
       </span>
       <span>
         <h2>Tooltips <a class="view-source">View Source</a></h2>
-        <a class="tooltip" title="That was simple, wasn't it?">Hover Over Me</a>
-<!-- Code -->
-<pre data-language="html">
-<a class="tooltip" title="That was simple, wasn't it?">Hover Over Me</a>
-</pre>
+        <span>
+          <a class="tooltip" title="That was simple, wasn't it?">Hover Over Me</a>
+        </span>
       </span>
       <span>
         <h2>Action! Menus</h2>
@@ -297,15 +283,25 @@ strings.interface.messages(
 <script>
   //<![CDATA[
   (function($) {
-    Rainbow.color();
-    $('div#content > span > h2 > a.view-source').click(function() {
+    $('div > span > h2 > a.view-source').click(function() {
       var pre = $(this).parents('span').find('pre');
-      if(pre.is(':visible')){
+      var parent = $(this).parents('span');
+      if(pre.length){
+        pre.remove();
         $(this).text('View Source');
       } else {
+        parent.append('<pre data-language="html"></pre>');
+        var html = $(this).parents('span').find('span').html();
+        html = html.split('\n');
+        for(var i=0; i < html.length; i++) {
+          html[i] = $.trim(html[i]);
+        }
+        html = $.trim(html.join('\n'));
+        parent.find('pre').text(html);
+        Rainbow.color();
         $(this).text('Hide Source');
       }
-      pre.toggle();
+      parent.find('pre').toggle();
     });
   })(jQuery);  
   //]]>

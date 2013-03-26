@@ -2,6 +2,7 @@ ul.action-menu {
   display: inline-block;
   position: relative;
   > li {
+    cursor: pointer;
     list-style-type: none;
     &:after {
       content: '\25BC';
@@ -11,27 +12,6 @@ ul.action-menu {
       opacity: .75;
       //vertical-align: top;
       @include transform(scaleY(.75));
-    }
-  }
-  > li.orig {
-    border-radius: 4px;
-    display: block;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 13px;
-    padding: 5px 5px 3px 9px;
-    @include box-shadow((
-      1px 1px 0 darken(#ededed,8%),
-      inset 1px 1px 0 darken(#ededed,4%)
-    ));
-    @include gradient(#fafafa, #ededed);
-    &:after {
-      content: '\25BC'; 
-      color: #aaa;
-      font-size: 10px;
-      margin-left: 2px;
-      vertical-align: middle;
-      line-height: 15px;
     }
   }
   > span {

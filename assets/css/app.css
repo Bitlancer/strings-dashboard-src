@@ -627,6 +627,7 @@ ul.action-menu {
   display: inline-block;
   position: relative; }
   ul.action-menu > li {
+    cursor: pointer;
     list-style-type: none; }
     ul.action-menu > li:after {
       content: '\25BC';
@@ -638,28 +639,6 @@ ul.action-menu {
       -moz-transform: scaleY(0.75);
       -o-transform: scaleY(0.75);
       transform: scaleY(0.75); }
-  ul.action-menu > li.orig {
-    border-radius: 4px;
-    display: block;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 13px;
-    padding: 5px 5px 3px 9px;
-    -webkit-box-shadow: 1px 1px 0 #d9d9d9, inset 1px 1px 0 #e3e3e3;
-    -moz-box-shadow: 1px 1px 0 #d9d9d9, inset 1px 1px 0 #e3e3e3;
-    box-shadow: 1px 1px 0 #d9d9d9, inset 1px 1px 0 #e3e3e3;
-    background-color: #fafafa;
-    background-image: -moz-linear-gradient(#fafafa, #ededed);
-    background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fafafa), to(#ededed));
-    background-image: -webkit-linear-gradient(#fafafa, #ededed);
-    background-image: -o-linear-gradient(#fafafa, #ededed); }
-    ul.action-menu > li.orig:after {
-      content: '\25BC';
-      color: #aaa;
-      font-size: 10px;
-      margin-left: 2px;
-      vertical-align: middle;
-      line-height: 15px; }
   ul.action-menu > span {
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.2);

@@ -40,17 +40,27 @@ var strings = {
       $('body').click(function() {
         $('ul.action-menu.active').removeClass('active');
       });
+    },
+    modal : function(obj) {
+      $(obj.attr('data-src')).dialog({
+        modal: true,
+        title: obj.attr('data-title') || 'No Title',
+        width: obj.attr('data-width') || '360',
+        dialogClass:'strings-modal'
+      });
     }
   },
   
   events : {
     clicks : function() {
-      // Close message boxes
+      // close message boxes
       $('ul#messages li a.close').live('click', function() { $(this).parent().remove() });
-      // Tooltips
+      // tooltips
       $('.tooltip').tooltip({ position: { my: "left+2 top+12", at: "left top+12" } });
-      // Action! Menus
+      // action! menus
       if($('ul.action-menu').length) strings.ui.actionmenu();
+      // modal windows
+      $('.modal').click(function(){strings.ui.modal($(this))});
     }
   }
   

@@ -25,17 +25,14 @@ var account = {
           account.wallpaper();
           clearInterval(preload);
         } 
-      }, 3000);
+      }, 1500);
     }
   }
   
 };
 
-(function($) {
-  account.init();
-  $(window).resize(function() {
-    setTimeout(function() {
-      account.wallpaper();
-    }, 50);
-  });
-})(jQuery);
+$(window).load(account.init()).resize(function() {
+  setTimeout(function() {
+    account.wallpaper();
+  }, 50);
+});

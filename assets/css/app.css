@@ -570,7 +570,7 @@ form hr {
   background: transparent;
   margin: 10px 0; }
   form hr.clear {
-    margin-bottom: 5px; }
+    margin: 0 0 5px; }
 form select {
   box-sizing: border-box;
   width: 50%; }

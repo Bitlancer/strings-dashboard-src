@@ -4,6 +4,8 @@ var strings = {
     init : function() {
       if(!$('header').html().length) strings.client.include();
       strings.events.clicks();
+      if($('table[data-type="datatable"]').length) strings.ui.tables();
+      if($('form .cta.disabled').length) strings.events.forms();
     },
     loaded : function() {
       if($('body').hasClass('loading')) $('body').removeClass('loading');
@@ -48,6 +50,15 @@ var strings = {
         width: obj.attr('data-width') || '360',
         dialogClass:'strings-modal'
       });
+    },
+    tables : function() {
+      $('table[data-type="datatable"]').dataTable({
+        "sPaginationType": "full_numbers",
+        "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
+        "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
+        "oLanguage": { "sSearch": "" }
+      });
+      $('.dataTables_filter input').attr('placeholder','Search');
     }
   },
   
@@ -61,6 +72,15 @@ var strings = {
       if($('ul.action-menu').length) strings.ui.actionmenu();
       // modal windows
       $('.modal').click(function(){strings.ui.modal($(this))});
+    },
+    forms : function() {
+      $('.cta.disabled').parents('form').find(':password').keyup(function() {
+        if($(this).val().length > 5){
+          $(this).parents('form').find('.disabled').toggleClass('disabled not-disabled');
+        } else {
+          $(this).parents('form').find('.not-disabled').toggleClass('not-disabled disabled');
+        }
+      });
     }
   }
   

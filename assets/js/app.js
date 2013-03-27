@@ -3,9 +3,10 @@ var strings = {
   client : {
     init : function() {
       if(!$('header').html().length) strings.client.include();
-      strings.events.clicks();
       if($('table[data-type="datatable"]').length) strings.ui.tables();
       if($('form .cta.disabled').length) strings.events.forms();
+      strings.events.clicks();
+      strings.ui.actionmenu();
     },
     loaded : function() {
       if($('body').hasClass('loading')) $('body').removeClass('loading');
@@ -68,8 +69,6 @@ var strings = {
       $('ul#messages li a.close').live('click', function() { $(this).parent().remove() });
       // tooltips
       $('.tooltip').tooltip({ position: { my: "left+2 top+12", at: "left top+12" } });
-      // action! menus
-      if($('ul.action-menu').length) strings.ui.actionmenu();
       // modal windows
       $('.modal').click(function(){strings.ui.modal($(this))});
     },

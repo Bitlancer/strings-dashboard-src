@@ -82,15 +82,17 @@ var strings = {
         }
       });
       // auto-complete
-      $('.autocomplete').textext({
-        plugins : 'ajax autocomplete prompt suggestions tags',
-        prompt : 'Type a new tag',
-        ajax : {
-            url : 'assets/json/autocomplete.json',
-            dataType : 'json',
-            cacheResults : true
-        }
-      });
+      if($('.autocomplete').length){
+        $('.autocomplete').textext({
+          plugins : 'ajax autocomplete prompt suggestions tags',
+          prompt : $('.autocomplete').attr('data-prompt'),
+          ajax : {
+              url : $('.autocomplete').attr('data-src'),
+              dataType : 'json',
+              cacheResults : true
+          }
+        });
+      }
     }
   }
   

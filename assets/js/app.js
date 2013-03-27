@@ -3,13 +3,13 @@ var strings = {
   client : {
     init : function() {
       if(!$('header').html().length) strings.client.include();
-      if($('table[data-type="datatable"]').length) strings.ui.tables();
-      if($('form .cta.disabled').length) strings.events.forms();
-      strings.events.clicks();
-      strings.ui.actionmenu();
     },
     loaded : function() {
       if($('body').hasClass('loading')) $('body').removeClass('loading');
+      strings.ui.tables();
+      strings.events.forms();
+      strings.events.clicks();
+      strings.ui.actionmenu();
     },
     include : function() {
       $('body > header').load('assets/html/header.html');
@@ -73,11 +73,22 @@ var strings = {
       $('.modal').click(function(){strings.ui.modal($(this))});
     },
     forms : function() {
+      // count type validation
       $('.cta.disabled').parents('form').find(':password').keyup(function() {
         if($(this).val().length > 5){
           $(this).parents('form').find('.disabled').toggleClass('disabled not-disabled');
         } else {
           $(this).parents('form').find('.not-disabled').toggleClass('not-disabled disabled');
+        }
+      });
+      // auto-complete
+      $('.autocomplete').textext({
+        plugins : 'ajax autocomplete prompt suggestions tags',
+        prompt : 'Type a new tag',
+        ajax : {
+            url : 'assets/json/autocomplete.json',
+            dataType : 'json',
+            cacheResults : true
         }
       });
     }

@@ -18,9 +18,10 @@
       margin-bottom: 0;
     }
     span pre {
-      display: none;
+      //display: none;
       margin-bottom: 10px;
     }
+    .hidden { display: none }
   </style>
   <script type="text/javascript">
     //<![CDATA[
@@ -38,8 +39,8 @@
     <h1>Interface Elements</h1>
     <div>
       <span>
-        <h2>Buttons <a class="view-source">View Source</a></h2>
-        <span>
+        <h2>Buttons</h2>
+        <span class="example">
           <a class="cta">Default Button</a>
           <a class="cta primary">Primary Button</a>
           <a class="cta cancel">Cancel Button</a>
@@ -52,14 +53,14 @@
         </span>
       </span>
       <span>
-        <h2>Tooltips <a class="view-source">View Source</a></h2>
-        <span>
+        <h2>Tooltips</h2>
+        <span class="example">
           <a class="tooltip" title="That was simple, wasn't it?">Hover Over Me</a>
         </span>
       </span>
       <span>
-        <h2>Action! Menus <a class="view-source">View Source</a></h2>
-        <span>
+        <h2>Action! Menus</h2>
+        <span class="example">
           <ul class="action-menu">
             <li>Hey! I just met you</li>
             <span>
@@ -72,11 +73,12 @@
       </span>
       <span>
         <h2>Autocomplete</h2>
+        <span class="hidden example"><textarea class="autocomplete" data-prompt="Type a state..." data-src="assets/json/autocomplete.json"></textarea></span>
         <textarea class="autocomplete" data-prompt="Type a state..." data-src="assets/json/autocomplete.json"></textarea>
       </span>
       <span>
         <h2>Tables</h2>
-        <span>
+        <span class="hidden example">
           <table data-type="datatable" id="fruit" data-length="3">
             <thead>
               <tr>
@@ -109,10 +111,41 @@
             </tbody>
           </table>
         </span>
+        <table data-type="datatable" id="fruit" data-length="3">
+            <thead>
+              <tr>
+                <th data-sort="fruit">Fruit</th>
+                <th>Color</th>
+                <th data-sort="rating">Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Orange</td>
+                <td>Orange</td>
+                <td>5/5</td>
+              </tr>
+              <tr>
+                <td>Apple</td>
+                <td>Red</td>
+                <td>3/5</td>
+              </tr>
+              <tr>
+                <td>Banana</td>
+                <td>Yellow</td>
+                <td>4/5</td>
+              </tr>
+              <tr>
+                <td>Avocado</td>
+                <td>Green</td>
+                <td>5/5</td>
+              </tr>
+            </tbody>
+          </table>
       </span>
       <span>
-        <h2>Messages <a class="view-source">View Source</a></h2>
-        <span>
+        <h2>Messages</h2>
+        <span class="example">
           <script>
             $(window).load(function() {
               strings.ui.messages("success","Success!","I only appear when things go well. It's nice to see you, too.");
@@ -121,11 +154,11 @@
             });
           </script>
         </span>
-          <ul id="messages"></ul>
+        <ul id="messages"></ul>
       </span>
       <span>
-        <h2>Modal Window <a class="view-source">View Source</a></h2>
-        <span>
+        <h2>Modal Window</h2>
+        <span class="example">
           <a class="cta modal" data-src="#example-one" data-title="Example One">Example One</a>
           <a class="cta modal" data-src="#example-two" data-title="Example Two">Example Two</a>
           <a class="cta modal" data-src="#example-three" data-title="Example Three" data-width="480px">Example Three</a>
@@ -213,25 +246,16 @@
 <script>
   //<![CDATA[
   (function($) {
-    $('div > span > h2 > a.view-source').click(function() {
-      var pre = $(this).parents('span').find('pre');
-      var parent = $(this).parents('span');
-      if(pre.length){
-        pre.remove();
-        $(this).text('View Source');
-      } else {
-        parent.append('<pre data-language="html"></pre>');
-        var html = $(this).parents('span').find('span').html().split('\n');
-        for(var i=0; i < html.length; i++) {
-          html[i] = $.trim(html[i]);
-        }
-        html = $.trim(html.join('\n'));
-        parent.find('pre').text(html);
-        Rainbow.color();
-        $(this).text('Hide Source');
+    $('div > span > .example').each(function() {
+      $(this).parent().append('<pre data-language="html"></pre>');
+      var html = $(this).parent('span').find('.example').html().split('\n');
+      for(var i=0; i < html.length; i++) {
+        html[i] = $.trim(html[i]);
       }
-      parent.find('pre').toggle();
-    }).trigger('click').remove();
+      html = $.trim(html.join('\n'));
+      $(this).parent().find('pre').text(html);
+    });
+    Rainbow.color();
   })(jQuery);  
   //]]>
 </script>

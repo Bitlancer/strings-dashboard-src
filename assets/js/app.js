@@ -53,7 +53,7 @@ var strings = {
       });
     },
     tables : function() {
-      $('table[data-type="datatable"]').dataTable({
+      $('table[data-type="datatable"]').not('.example table').dataTable({
         "sPaginationType": "full_numbers",
         "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
         "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
@@ -83,7 +83,7 @@ var strings = {
       });
       // auto-complete
       if($('.autocomplete').length){
-        $('.autocomplete').textext({
+        $('.autocomplete').not('.example > .autocomplete').textext({
           plugins : 'ajax autocomplete prompt suggestions tags',
           prompt : $('.autocomplete').attr('data-prompt'),
           ajax : {

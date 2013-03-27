@@ -87,7 +87,7 @@ body {
   body > header {
     top: 0; }
   body.loading {
-    background: #f8f8f8 url("http://assets.ambient.ly/bitlancer/loading.gif") center no-repeat; }
+    background: #f8f8f8 url("../img/loading.gif") center no-repeat; }
     body.loading > section {
       display: none; }
     body.loading > nav {
@@ -130,7 +130,7 @@ body {
       margin-bottom: 10px; }
 
 body > header {
-  background: #222222 url("http://assets.ambient.ly/bitlancer/dark_stripes.png");
+  background: #222222 url("../img/dark_stripes.png");
   border-bottom: 1px solid #111;
   height: 50px;
   left: 0;
@@ -161,7 +161,7 @@ body > header {
     margin-top: 10px; }
 
 body > nav {
-  background: #f0f0f0 url("http://assets.ambient.ly/bitlancer/stripe.png") center -5px no-repeat;
+  background: #f0f0f0 url("../img/stripe.png") center -5px no-repeat;
   height: 100%;
   padding-top: 5px;
   position: fixed;
@@ -209,14 +209,14 @@ body > nav {
         width: 20px;
         vertical-align: top; }
     body > nav > span#dashboard > a:before {
-      background-image: url("http://assets.ambient.ly/bitlancer/dashboard.png"); }
+      background-image: url("../img/dashboard.png"); }
     body > nav > span#devices > a:before {
-      background-image: url("http://assets.ambient.ly/bitlancer/cabinet.png");
+      background-image: url("../img/cabinet.png");
       background-size: auto 20px; }
     body > nav > span#formations > a:before {
-      background-image: url("http://assets.ambient.ly/bitlancer/cloud.png"); }
+      background-image: url("../img/cloud.png"); }
     body > nav > span#user-management > a:before {
-      background-image: url("http://assets.ambient.ly/bitlancer/user.png"); }
+      background-image: url("../img/user.png"); }
     body > nav > span.active {
       background: #fafafa;
       margin-right: 0; }
@@ -473,7 +473,7 @@ ul#messages > li {
   position: relative;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
   ul#messages > li > a.close {
-    background: url("http://assets.ambient.ly/bitlancer/close.png") 2px 2px no-repeat;
+    background: url("../img/close.png") 2px 2px no-repeat;
     background-size: 10px 10px;
     display: block;
     height: 15px;
@@ -728,7 +728,7 @@ ul.action-menu {
     height: 20px;
     padding: 0 5px; }
     .cta.refresh:before {
-      background: url("http://assets.ambient.ly/bitlancer/refresh.png") center 2px no-repeat;
+      background: url("../img/refresh.png") center 2px no-repeat;
       background-size: 13px 15px;
       content: ' ';
       display: inline-block;

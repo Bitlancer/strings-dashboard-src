@@ -68,7 +68,7 @@ var strings = {
       // close message boxes
       $('ul#messages li a.close').live('click', function() { $(this).parent().remove() });
       // tooltips
-      $('.tooltip').tooltip({ position: { my: "left+2 top+12", at: "left top+12" } });
+      $('.tooltip').tooltip({ position: { my: "left+2 top+14", at: "left top+14" } });
       // modal windows
       $('.modal').click(function(){strings.ui.modal($(this))});
     },

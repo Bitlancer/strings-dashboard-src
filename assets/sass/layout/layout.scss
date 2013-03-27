@@ -3,7 +3,7 @@ body {
   > nav { left: 0 }
   > header { top: 0 }
   &.loading {
-    background: #f8f8f8 url('http://assets.ambient.ly/bitlancer/loading.gif') center no-repeat;  
+    background: #f8f8f8 url('../img/loading.gif') center no-repeat;  
     > section { display: none }
     > nav { left: -241px }
     > header { top: -51px }

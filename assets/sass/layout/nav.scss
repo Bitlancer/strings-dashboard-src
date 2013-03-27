@@ -1,5 +1,5 @@
 body > nav {
-  background: $white url('http://assets.ambient.ly/bitlancer/stripe.png') center -5px no-repeat;
+  background: $white url('../img/stripe.png') center -5px no-repeat;
   height: 100%;
   padding-top: 5px;
   position: fixed;
@@ -40,17 +40,17 @@ body > nav {
       }
     }
     &#dashboard > a:before {
-      background-image: url('http://assets.ambient.ly/bitlancer/dashboard.png');
+      background-image: url('../img/dashboard.png');
     }
     &#devices > a:before {
-      background-image: url('http://assets.ambient.ly/bitlancer/cabinet.png'); 
+      background-image: url('../img/cabinet.png'); 
       background-size: auto 20px;
     }
     &#formations > a:before {
-      background-image: url('http://assets.ambient.ly/bitlancer/cloud.png'); 
+      background-image: url('../img/cloud.png'); 
     }
     &#user-management > a:before {
-      background-image: url('http://assets.ambient.ly/bitlancer/user.png'); 
+      background-image: url('../img/user.png'); 
     }
     &.active {
       background: lighten($white,4%);

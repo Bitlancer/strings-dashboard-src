@@ -50,6 +50,14 @@ ul.action-menu {
         cursor: pointer;
         color: #fff;
       }
+      &.disabled {
+        cursor: default;
+        color: #999;
+        &:hover {
+          background: inherit;
+          color: #999;  
+        }
+      }
     }
   }
   &.active {

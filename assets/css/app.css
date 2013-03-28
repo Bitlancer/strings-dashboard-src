@@ -698,6 +698,12 @@ ul.action-menu {
         background: #1e8fe2;
         cursor: pointer;
         color: #fff; }
+      ul.action-menu > span > li.disabled, ul.action-menu > span > a.disabled {
+        cursor: default;
+        color: #999; }
+        ul.action-menu > span > li.disabled:hover, ul.action-menu > span > a.disabled:hover {
+          background: inherit;
+          color: #999; }
   ul.action-menu.active > span {
     display: block; }
 

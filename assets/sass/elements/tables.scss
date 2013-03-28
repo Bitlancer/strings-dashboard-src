@@ -36,15 +36,28 @@ table {
 
 .dataTables_wrapper {
   position: relative;
-  .dataTables_length {
+  .dataTables_length2 {
     float: left;
     padding: 2px 0 0 0;
   }
-  .dataTables_filter {
+  .top {
+    overflow: hidden;
+    position: relative;
+    h2 {
+      float: left; 
+      margin: 0;
+      line-height: 30px;
+    }
+    .dataTables_filter {
+      float: right;
+      margin-bottom: 10px;
+    }
+  }
+  .dataTables_filter2 {
     float: right;
     padding-bottom: 10px;
   }
-  .dataTables_info { display: none }
+  .dataTables_info2 { display: none }
   .dataTables_paginate {
     color: #777;
     display: block;

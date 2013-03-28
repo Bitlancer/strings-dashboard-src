@@ -396,13 +396,23 @@ table {
 
 .dataTables_wrapper {
   position: relative; }
-  .dataTables_wrapper .dataTables_length {
+  .dataTables_wrapper .dataTables_length2 {
     float: left;
     padding: 2px 0 0 0; }
-  .dataTables_wrapper .dataTables_filter {
+  .dataTables_wrapper .top {
+    overflow: hidden;
+    position: relative; }
+    .dataTables_wrapper .top h2 {
+      float: left;
+      margin: 0;
+      line-height: 30px; }
+    .dataTables_wrapper .top .dataTables_filter {
+      float: right;
+      margin-bottom: 10px; }
+  .dataTables_wrapper .dataTables_filter2 {
     float: right;
     padding-bottom: 10px; }
-  .dataTables_wrapper .dataTables_info {
+  .dataTables_wrapper .dataTables_info2 {
     display: none; }
   .dataTables_wrapper .dataTables_paginate {
     color: #777;

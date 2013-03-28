@@ -66,10 +66,16 @@ var strings = {
           "sPaginationType": "full_numbers",
           "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
           "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
-          "oLanguage": { "sSearch": "" }
+          "oLanguage": { "sSearch": "" },
+          "sDom": '<"top"f>rt<"bottom"p><"clear">',
+          "fnInitComplete": function(oSettings) {
+            var parent = $(this).parents('.dataTables_wrapper');
+            if($(this).attr('data-title')) parent.find('.top').prepend('<h2>'+$(this).attr('data-title')+'</h2>');
+            parent.find('.dataTables_filter input').attr('placeholder','Search');
+          }
         });
       });
-      $('.dataTables_filter input').attr('placeholder','Search');
+      //$('.dataTables_length').remove();
     }
   },
   

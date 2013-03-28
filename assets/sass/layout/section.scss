@@ -38,114 +38,21 @@ body > section {
     margin: 10px 0;  
     padding: 5px;
   }
-}
-
-
-> section.asdfsdaf {
-  max-width: 1200px;
-  min-width: 630px;
-  //margin: 95px 0 30px 300px;
-  padding: 90px 60px 30px 300px;
-  position: relative;
-  > div {
-    &#content {
-      background: #fff; 
-      border: 1px solid darken($white, 7%);
-      //overflow: auto;
-      padding: 20px; 
-      position: relative;
-      &.panel {
-        overflow: hidden;
-        > div {
-          position: relative;
-          &:first-child {
-            float: left;
-            width: 63%;
-            padding-right: 2%;
-            @include box-shadow(1px 0 0 #eee);
-            > ul#messages {
-                margin-bottom: 45px;    
-            }
-            > div {
-              &:nth-child(even) {
-                //background: #f0f0f0;  
-              }
-              &.details {
-                border: 1px dashed #ccc;
-                padding: 15px;
-                p {
-                  margin: 0;
-                  > strong {
-                    display: inline-block;
-                    padding-right: 2%;
-                    width: 25%;
-                  }
-                }  
-              }
-            }
-          }
-          &:nth-child(2) {
-            float: left;
-            padding-left: 2%;
-            width: 33%;
-            h2 {
-              margin-bottom: 5px;  
-            }
-            h3 {
-              font-weight: 600;  
-            }
-            ul {
-              list-style-type: disc;
-              list-style-position:inside;
-              li {
-                margin-bottom: 5px;
-                &:last-of-type {
-                  margin: 0;  
-                }
-              }
-            }
-            span {
-              display: block;
-              margin-bottom: 30px;
-              &:last-of-type {
-                margin: 0;  
-              }
-              > p, > a {
-                margin-bottom: 10px;
-                &:last-child {
-                  margin: 0;  
-                }
-              }
-              > p {
-                &.info {
-                  background: #fafafa;
-                  padding: 5px;
-                  border: 1px solid #dadada;  
-                }
-              }
-              a {
-                display: block;
-                &.cta {
-                  display: inline-block;
-                }
-                &.arrow {
-                  &:after {
-                    content: " \00bb"  
-                  }  
-                }
-              }
-            }
-          }
-        }
+  ul {
+    &#activity {
+      li {
+        border-bottom: 1px solid #eaeaea;
+        font-size: 90%;
+        list-style: none;
+        margin-bottom: 10px;
+        padding-bottom: 15px;
+        &:last-of-type { margin: 0 }
+        small { 
+          display: block;
+          font-weight: 700;
+          margin: 5px 0 0;
+        }  
       }
-    }
-    > span, div.panel > span {
-      display: block;
-      margin-bottom: 30px;
-      position: relative;
-      &:last-of-type {
-        margin-bottom: 0;  
-      }
-    }
+    }  
   }
 }

@@ -287,79 +287,18 @@ body > section {
     border: 1px solid #eee;
     margin: 10px 0;
     padding: 5px; }
-
-> section.asdfsdaf {
-  max-width: 1200px;
-  min-width: 630px;
-  padding: 90px 60px 30px 300px;
-  position: relative; }
-  > section.asdfsdaf > div#content {
-    background: #fff;
-    border: 1px solid #dedede;
-    padding: 20px;
-    position: relative; }
-    > section.asdfsdaf > div#content.panel {
-      overflow: hidden; }
-      > section.asdfsdaf > div#content.panel > div {
-        position: relative; }
-        > section.asdfsdaf > div#content.panel > div:first-child {
-          float: left;
-          width: 63%;
-          padding-right: 2%;
-          -webkit-box-shadow: 1px 0 0 #eeeeee;
-          -moz-box-shadow: 1px 0 0 #eeeeee;
-          box-shadow: 1px 0 0 #eeeeee; }
-          > section.asdfsdaf > div#content.panel > div:first-child > ul#messages {
-            margin-bottom: 45px; }
-          > section.asdfsdaf > div#content.panel > div:first-child > div.details {
-            border: 1px dashed #ccc;
-            padding: 15px; }
-            > section.asdfsdaf > div#content.panel > div:first-child > div.details p {
-              margin: 0; }
-              > section.asdfsdaf > div#content.panel > div:first-child > div.details p > strong {
-                display: inline-block;
-                padding-right: 2%;
-                width: 25%; }
-        > section.asdfsdaf > div#content.panel > div:nth-child(2) {
-          float: left;
-          padding-left: 2%;
-          width: 33%; }
-          > section.asdfsdaf > div#content.panel > div:nth-child(2) h2 {
-            margin-bottom: 5px; }
-          > section.asdfsdaf > div#content.panel > div:nth-child(2) h3 {
-            font-weight: 600; }
-          > section.asdfsdaf > div#content.panel > div:nth-child(2) ul {
-            list-style-type: disc;
-            list-style-position: inside; }
-            > section.asdfsdaf > div#content.panel > div:nth-child(2) ul li {
-              margin-bottom: 5px; }
-              > section.asdfsdaf > div#content.panel > div:nth-child(2) ul li:last-of-type {
-                margin: 0; }
-          > section.asdfsdaf > div#content.panel > div:nth-child(2) span {
-            display: block;
-            margin-bottom: 30px; }
-            > section.asdfsdaf > div#content.panel > div:nth-child(2) span:last-of-type {
-              margin: 0; }
-            > section.asdfsdaf > div#content.panel > div:nth-child(2) span > p, > section.asdfsdaf > div#content.panel > div:nth-child(2) span > a {
-              margin-bottom: 10px; }
-              > section.asdfsdaf > div#content.panel > div:nth-child(2) span > p:last-child, > section.asdfsdaf > div#content.panel > div:nth-child(2) span > a:last-child {
-                margin: 0; }
-            > section.asdfsdaf > div#content.panel > div:nth-child(2) span > p.info {
-              background: #fafafa;
-              padding: 5px;
-              border: 1px solid #dadada; }
-            > section.asdfsdaf > div#content.panel > div:nth-child(2) span a {
-              display: block; }
-              > section.asdfsdaf > div#content.panel > div:nth-child(2) span a.cta {
-                display: inline-block; }
-              > section.asdfsdaf > div#content.panel > div:nth-child(2) span a.arrow:after {
-                content: " \00bb"; }
-  > section.asdfsdaf > div > span, > section.asdfsdaf > div div.panel > span {
-    display: block;
-    margin-bottom: 30px;
-    position: relative; }
-    > section.asdfsdaf > div > span:last-of-type, > section.asdfsdaf > div div.panel > span:last-of-type {
-      margin-bottom: 0; }
+  body > section ul#activity li {
+    border-bottom: 1px solid #eaeaea;
+    font-size: 90%;
+    list-style: none;
+    margin-bottom: 10px;
+    padding-bottom: 15px; }
+    body > section ul#activity li:last-of-type {
+      margin: 0; }
+    body > section ul#activity li small {
+      display: block;
+      font-weight: 700;
+      margin: 5px 0 0; }
 
 table {
   border: 1px solid #d6d6d6;

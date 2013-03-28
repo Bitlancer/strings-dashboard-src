@@ -45,19 +45,27 @@ var strings = {
       });
     },
     modal : function(obj) {
+      var unique = 'modal-'+(new Date().getMilliseconds() * 100);
       $(obj.attr('data-src')).dialog({
         modal: true,
         title: obj.attr('data-title') || 'No Title',
         width: obj.attr('data-width') || '360',
-        dialogClass:'strings-modal'
+        dialogClass:'strings-modal '+unique,
+        open: function() {
+          $('.ui-dialog.'+unique+' form .submit .cta:not(".cancel,.primary")').click(function() {
+            $(this).parents('.'+unique).dialog('close');
+          });
+        }
       });
     },
     tables : function() {
-      $('table[data-type="datatable"]').not('.example table').dataTable({
-        "sPaginationType": "full_numbers",
-        "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
-        "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
-        "oLanguage": { "sSearch": "" }
+      $('table[data-type="datatable"]').not('.example table').each(function() {
+        $(this).dataTable({
+          "sPaginationType": "full_numbers",
+          "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
+          "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
+          "oLanguage": { "sSearch": "" }
+        });
       });
       $('.dataTables_filter input').attr('placeholder','Search');
     }
@@ -74,25 +82,27 @@ var strings = {
     },
     forms : function() {
       // count type validation
-      $('.cta.disabled').parents('form').find(':password').keyup(function() {
-        if($(this).val().length > 5){
-          $(this).parents('form').find('.disabled').toggleClass('disabled not-disabled');
-        } else {
-          $(this).parents('form').find('.not-disabled').toggleClass('not-disabled disabled');
-        }
+      $('.cta.disabled').each(function() {
+        $(this).parents('form').find(':password').keyup(function() {
+          if($(this).val().length > 5){
+            $(this).parents('form').find('.disabled').toggleClass('disabled not-disabled');
+          } else {
+            $(this).parents('form').find('.not-disabled').toggleClass('not-disabled disabled');
+          }
+        });
       });
       // auto-complete
-      if($('.autocomplete').length){
-        $('.autocomplete').not('.example > .autocomplete').textext({
-          plugins : 'ajax autocomplete prompt suggestions tags',
-          prompt : $('.autocomplete').attr('data-prompt'),
+      $('.autocomplete').not('.example > .autocomplete').each(function() {
+        $(this).textext({
+          plugins : 'ajax autocomplete prompt tags',
+          prompt : $(this).attr('data-prompt'),
           ajax : {
-              url : $('.autocomplete').attr('data-src'),
+              url : $(this).attr('data-src'),
               dataType : 'json',
               cacheResults : true
           }
         });
-      }
+      });
     }
   }
   

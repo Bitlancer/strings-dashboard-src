@@ -14,6 +14,16 @@ table {
       &:last-of-type { border: 0 }
       td {
         border-right: 1px solid darken($white,5%);
+        ul.action-menu { 
+          float: right;
+          > span {
+            top: 15px;
+          }
+          > li {
+            font-size: 80%;  
+          }
+          &.active > li { color: #999 }
+        }
         &:last-of-type { border: 0 }
         &.blank {
           font-size: 90%;
@@ -36,10 +46,6 @@ table {
 
 .dataTables_wrapper {
   position: relative;
-  .dataTables_length2 {
-    float: left;
-    padding: 2px 0 0 0;
-  }
   .top {
     overflow: hidden;
     position: relative;
@@ -57,7 +63,6 @@ table {
     float: right;
     padding-bottom: 10px;
   }
-  .dataTables_info2 { display: none }
   .dataTables_paginate {
     color: #777;
     display: block;

@@ -272,8 +272,6 @@ body > section {
       width: 32%; }
       body > section > div.columns > div:last-of-type .cta {
         margin-top: 10px; }
-    body > section > div.columns > div .action-menu {
-      display: none; }
   body > section .details {
     background: #fbfbfb;
     border: 1px dashed #ddd;
@@ -380,6 +378,14 @@ table {
         border: 0; }
       table tbody tr td {
         border-right: 1px solid #e3e3e3; }
+        table tbody tr td ul.action-menu {
+          float: right; }
+          table tbody tr td ul.action-menu > span {
+            top: 15px; }
+          table tbody tr td ul.action-menu > li {
+            font-size: 80%; }
+          table tbody tr td ul.action-menu.active > li {
+            color: #999999; }
         table tbody tr td:last-of-type {
           border: 0; }
         table tbody tr td.blank {
@@ -396,9 +402,6 @@ table {
 
 .dataTables_wrapper {
   position: relative; }
-  .dataTables_wrapper .dataTables_length2 {
-    float: left;
-    padding: 2px 0 0 0; }
   .dataTables_wrapper .top {
     overflow: hidden;
     position: relative; }
@@ -412,8 +415,6 @@ table {
   .dataTables_wrapper .dataTables_filter2 {
     float: right;
     padding-bottom: 10px; }
-  .dataTables_wrapper .dataTables_info2 {
-    display: none; }
   .dataTables_wrapper .dataTables_paginate {
     color: #777;
     display: block;

@@ -45,17 +45,19 @@ var strings = {
       });
     },
     modal : function(obj) {
-      var unique = 'modal-'+(new Date().getMilliseconds() * 100);
-      $(obj.attr('data-src')).dialog({
+      var modal = $(obj.attr('data-src'));
+      var opt = {
         modal: true,
         title: obj.attr('data-title') || 'No Title',
         width: obj.attr('data-width') || '360',
-        dialogClass:'strings-modal '+unique,
+        dialogClass:'strings-modal',
         open: function() {
-          $('.ui-dialog.'+unique+' form .submit .cta:not(".cancel,.primary")').click(function() {
-            $(this).parents('.'+unique).dialog('close');
-          });
+          console.log(modal);
         }
+      };
+      modal.dialog(opt).dialog('open');
+      modal.find('.cta:not(".cancel,.primary")').bind('click', function() {
+        modal.dialog('destroy');
       });
     },
     tables : function() {

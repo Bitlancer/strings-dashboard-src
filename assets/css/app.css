@@ -288,15 +288,16 @@ body > section {
     margin: 10px 0;
     padding: 5px; }
   body > section ul#activity li {
-    border-bottom: 1px solid #eaeaea;
-    font-size: 90%;
+    border-left: 3px solid #e5e5e5;
+    font-size: 85%;
     list-style: none;
-    margin-bottom: 10px;
-    padding-bottom: 15px; }
+    margin: 0 0 10px;
+    padding-left: 7px; }
     body > section ul#activity li:last-of-type {
       margin: 0; }
     body > section ul#activity li small {
       display: block;
+      font-size: 90%;
       font-weight: 700;
       margin: 5px 0 0; }
 
@@ -346,8 +347,7 @@ table {
     position: relative; }
     .dataTables_wrapper .top h2 {
       float: left;
-      margin: 0;
-      line-height: 30px; }
+      margin: 0; }
     .dataTables_wrapper .top .dataTables_filter {
       float: right;
       margin-bottom: 10px; }

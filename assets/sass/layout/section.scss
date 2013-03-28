@@ -41,14 +41,15 @@ body > section {
   ul {
     &#activity {
       li {
-        border-bottom: 1px solid #eaeaea;
-        font-size: 90%;
+        border-left: 3px solid #e5e5e5;
+        font-size: 85%;
         list-style: none;
-        margin-bottom: 10px;
-        padding-bottom: 15px;
+        margin: 0 0 10px;
+        padding-left: 7px;
         &:last-of-type { margin: 0 }
         small { 
           display: block;
+          font-size: 90%;
           font-weight: 700;
           margin: 5px 0 0;
         }  

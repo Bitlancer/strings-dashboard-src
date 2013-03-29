@@ -57,7 +57,7 @@ var strings = {
       };
       modal.dialog(opt).dialog('open');
       modal.find('.cta:not(".cancel,.primary")').bind('click', function() {
-        modal.dialog('destroy');
+        modal.dialog('close');
       });
     },
     tables : function() {

@@ -75,10 +75,10 @@
                 <ul class="action-menu" data-width="120">
                   <li>Actions</li>
                   <span>
-                    <a class="disabled">Edit User</a>
-                    <a>Edit Permissions</a>
-                    <a class="modal" data-src="#reset-password" data-title="Reset password">Reset Password</a>
-                    <a class="modal" data-src="#disable" data-title="Confirm">Disable</a>
+                    <a class="modal" data-src="#edit-user" data-title="Edit User">Edit User</a>
+                    <a class="modal" data-src="#edit-permissions" data-title="Edit Permissions">Edit Permissions</a>
+                    <a class="modal" data-src="#reset-password" data-title="Reset Password">Reset Password</a>
+                    <a class="modal" data-src="#disable-user" data-title="Disable User">Disable</a>
                   </span>
                 </ul>  
               </td>
@@ -102,7 +102,7 @@
   </section>
   <div style="display:none">
     <!-- disable user -->
-    <div id="disable">
+    <div id="disable-user">
       <form>
         <p>Are you sure you want to disable #{username}?</p>
         <div class="submit">
@@ -115,9 +115,32 @@
     <div id="reset-password">
       <form>
           <input type="password" placeholder="new password" />
-          <input type="password" placeholder="new password (confirm)" />
+          <input type="password" placeholder="new password (verify)" />
         <div class="submit">
           <a class="cta primary disabled">Reset password</a>
+          <a class="cta">Cancel</a>
+        </div>
+      </form>          
+    </div>
+    <!-- edit user -->
+    <div id="edit-user">
+      <form>
+        <input type="email" placeholder="email address" />
+        <input type="text" placeholder="first name" />
+        <input type="text" placeholder="last name" />
+        <input type="text" placeholder="phone number (xxx-xxx-xxxx)" />
+        <div class="submit">
+          <a class="cta primary">Save</a>
+          <a class="cta">Cancel</a>
+        </div>
+      </form>          
+    </div>
+    <!-- edit permissions -->
+    <div id="edit-permissions">
+      <form>
+       
+        <div class="submit">
+          <a class="cta primary">Save</a>
           <a class="cta">Cancel</a>
         </div>
       </form>          

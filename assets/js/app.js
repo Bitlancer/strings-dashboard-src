@@ -106,8 +106,9 @@ var strings = {
       });
       // auto-complete
       $('.autocomplete').not('.example > .autocomplete').each(function() {
-        var json = $(this).attr('data-src')
-        $(this).fcbkcomplete({json_url: json, cache: false, filter_hide: true, newel: true});
+        var json = $(this).attr('data-src');
+        var placeholder = $(this).attr('data-placeholder') || 'Enter a tag...';
+        $(this).fcbkcomplete({json_url: json, cache: false, filter_hide: true, newel: true, complete_text: placeholder});
       });
     }
   }

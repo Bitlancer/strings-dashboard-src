@@ -108,7 +108,8 @@ var strings = {
       $('.autocomplete').not('.example > .autocomplete').each(function() {
         var json = $(this).attr('data-src');
         var placeholder = $(this).attr('data-placeholder') || 'Enter a tag...';
-        $(this).fcbkcomplete({json_url: json, cache: false, filter_hide: true, newel: true, complete_text: placeholder});
+        var width = $(this).attr('data-width') || '500px';
+        $(this).fcbkcomplete({width: width,json_url: json, cache: false, filter_hide: true, newel: true, complete_text: placeholder});
       });
     }
   }

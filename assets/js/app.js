@@ -52,7 +52,11 @@ var strings = {
         width: obj.attr('data-width') || '360',
         dialogClass:'strings-modal',
         open: function() {
+          if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').parents('.ui-dialog-content').css('overflow','visible');
           console.log(modal);
+        },
+        close: function() {
+          if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').parents('.ui-dialog-content').css('overflow','auto');
         }
       };
       modal.dialog(opt).dialog('open');
@@ -106,10 +110,37 @@ var strings = {
       });
       // auto-complete
       $('.autocomplete').not('.example > .autocomplete').each(function() {
-        var json = $(this).attr('data-src');
+        var json = $(this).attr('data-src') || null;
         var placeholder = $(this).attr('data-placeholder') || 'Enter a tag...';
         var width = $(this).attr('data-width') || '500px';
-        $(this).fcbkcomplete({width: width,json_url: json, cache: false, filter_hide: true, newel: true, complete_text: placeholder});
+        var options = {
+          json_url: json,
+          width: width,
+          cache: false,
+          height: "10",
+          newel: true,
+          addontab: true,
+          addoncomma: true,
+          firstselected: false,
+          filter_case: false,
+          filter_selected: false,
+          filter_begin: false,
+          filter_hide: true,
+          complete_text: placeholder,
+          select_all_text:  null,
+          maxshownitems: 30,
+          maxitems: 150,
+          oncreate: null,
+          onselect: null,
+          onremove: null,
+          attachto: null,
+          delay: 200,
+          input_tabindex: 0,
+          input_min_size: 1,
+          input_name: "",
+          bricket: true
+        }
+        $(this).fcbkcomplete(options);
       });
     }
   }

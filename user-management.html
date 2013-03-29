@@ -48,7 +48,7 @@
                   <li>Actions</li>
                   <span>
                     <a class="disabled">Edit User</a>
-                    <a class="modal" data-src="#edit-permissions" data-title="Edit Permissions" data-width="500">Edit Permissions</a>
+                    <a class="modal" data-src="#edit-permissions" data-title="Edit Permissions" data-width="600">Edit Permissions</a>
                     <a class="modal" data-src="#reset-password" data-title="Reset Password">Reset Password</a>
                     <a class="modal" data-src="#disable-user" data-title="Disable User">Disable</a>
                   </span>
@@ -62,7 +62,7 @@
                   <li>Actions</li>
                   <span>
                     <a class="modal" data-src="#edit-user" data-title="Edit User">Edit User</a>
-                    <a class="modal" data-src="#edit-permissions" data-title="Edit Permissions" data-width="500">Edit Permissions</a>
+                    <a class="modal" data-src="#edit-permissions" data-title="Edit Permissions" data-width="600">Edit Permissions</a>
                     <a class="disabled">Reset Password</a>
                     <a class="modal" data-src="#disable-user" data-title="Disable User">Disable</a>
                   </span>
@@ -140,7 +140,19 @@
       <form>
         <fieldset>
           <legend>System</legend>
-          <textarea class="autocomplete" data-src="/strings/assets/json/autocomplete.json" data-width="548px"></textarea>
+          <input id="auto-system" class="autocomplete" data-src="/strings/assets/json/autocomplete.json" data-width="548px" />
+        </fieldset>
+        <fieldset>
+          <legend>Infrastructure</legend>
+          <input id="auto-infrastructure" class="autocomplete" data-src="/strings/assets/json/autocomplete.json" data-width="548px" />
+        </fieldset>
+        <fieldset>
+          <legend>Application</legend>
+          <input id="auto-application" class="autocomplete" data-src="/strings/assets/json/autocomplete.json" data-width="548px" />
+        </fieldset>
+        <fieldset>
+          <legend>User</legend>
+          <input id="auto-user" class="autocomplete" data-src="/strings/assets/json/autocomplete.json" data-width="548px" />
         </fieldset>
         <div class="submit">
           <a class="cta primary">Save</a>

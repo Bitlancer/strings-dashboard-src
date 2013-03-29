@@ -696,6 +696,11 @@ ul.action-menu {
     background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(white), to(#f2f2f2));
     background-image: -webkit-linear-gradient(white, #f2f2f2);
     background-image: -o-linear-gradient(white, #f2f2f2); }
+  .cta:active {
+    border: 1px solid #cacaca;
+    -webkit-box-shadow: inset 0 2px 8px #cccccc;
+    -moz-box-shadow: inset 0 2px 8px #cccccc;
+    box-shadow: inset 0 2px 8px #cccccc; }
   .cta.refresh {
     background-color: white;
     background-image: -moz-linear-gradient(white, #f2f2f2);
@@ -732,6 +737,11 @@ ul.action-menu {
       background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#62b1eb), to(#1773b6));
       background-image: -webkit-linear-gradient(#62b1eb, #1773b6);
       background-image: -o-linear-gradient(#62b1eb, #1773b6); }
+    .cta.primary:active {
+      border: 1px solid #1567a4;
+      -webkit-box-shadow: inset 0 2px 8px #1773b6;
+      -moz-box-shadow: inset 0 2px 8px #1773b6;
+      box-shadow: inset 0 2px 8px #1773b6; }
   .cta.cancel {
     background: #d94141;
     border: 1px solid #c12727;
@@ -753,6 +763,11 @@ ul.action-menu {
       background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#dd5656), to(#c12727));
       background-image: -webkit-linear-gradient(#dd5656, #c12727);
       background-image: -o-linear-gradient(#dd5656, #c12727); }
+    .cta.cancel:active {
+      border: 1px solid #a32121;
+      -webkit-box-shadow: inset 0 2px 8px #c12727;
+      -moz-box-shadow: inset 0 2px 8px #c12727;
+      box-shadow: inset 0 2px 8px #c12727; }
   .cta.disabled, .cta.disabled:hover {
     background: #f0f0f0;
     border: 1px solid gainsboro;

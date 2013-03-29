@@ -778,7 +778,7 @@ ul.holder {
   overflow: hidden;
   height: auto !important;
   height: 1%;
-  padding: 4px 5px; }
+  padding: 4px 5px 0; }
 
 *:first-child + html ul.holder {
   padding-bottom: 2px; }
@@ -787,14 +787,22 @@ ul.holder {
   padding-bottom: 2px; }
 
 /* ie7 and below */
-ul.holder li {
+ul.holder li, ul.holder li:last-of-type {
   float: left;
   list-style-type: none;
   margin: 0 5px 4px 0;
   white-space: nowrap; }
 
 ul.holder li.bit-box, ul.holder li.bit-input input {
-  font-size: 90%; }
+  font: 11px "Lucida Grande", "Verdana"; }
+
+ul.holder li.bit-box {
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 1px solid #CAD8F3;
+  background: #DEE7F8;
+  padding: 2px 5px; }
 
 ul.holder li.bit-box-focus {
   border-color: #598BEC;

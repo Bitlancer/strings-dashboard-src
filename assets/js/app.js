@@ -106,7 +106,8 @@ var strings = {
       });
       // auto-complete
       $('.autocomplete').not('.example > .autocomplete').each(function() {
-        $(this).attr('placeholder','autocomplete');
+        var json = $(this).attr('data-src')
+        $(this).fcbkcomplete({json_url: json, cache: false, filter_hide: true, newel: true});
       });
     }
   }

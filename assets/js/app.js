@@ -74,6 +74,7 @@ var strings = {
           "sDom": '<"top"f>rt<"bottom"p><"clear">',
           "fnInitComplete": function(oSettings) {
             var parent = $(this).parents('.dataTables_wrapper');
+            if($(this).attr('data-cta')) parent.find('.top').prepend($(this).attr('data-cta'))
             if($(this).attr('data-title')) parent.find('.top').prepend('<h2>'+$(this).attr('data-title')+'</h2>');
             parent.find('.dataTables_filter input').attr('placeholder','Search');
           }

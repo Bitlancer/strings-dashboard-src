@@ -50,13 +50,20 @@ table {
     overflow: hidden;
     position: relative;
     h2 {
-      float: left; 
-      margin: 0;
+      //float: left; 
+      margin: 0 0 15px;
       //line-height: 30px;
+    }
+    .cta {
+      float: left;  
     }
     .dataTables_filter {
       float: right;
       margin-bottom: 10px;
+      input {
+        margin: 0;  
+        padding: 6px;
+      }
     }
   }
   .dataTables_filter2 {

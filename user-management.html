@@ -76,7 +76,7 @@
                   <li>Actions</li>
                   <span>
                     <a class="modal" data-src="#edit-user" data-title="Edit User">Edit User</a>
-                    <a class="modal" data-src="#edit-permissions" data-title="Edit Permissions">Edit Permissions</a>
+                    <a class="modal" data-src="#edit-permissions" data-title="Edit Permissions" data-width="500">Edit Permissions</a>
                     <a class="modal" data-src="#reset-password" data-title="Reset Password">Reset Password</a>
                     <a class="modal" data-src="#disable-user" data-title="Disable User">Disable</a>
                   </span>
@@ -138,7 +138,10 @@
     <!-- edit permissions -->
     <div id="edit-permissions">
       <form>
-       
+        <fieldset>
+          <legend>test</legend>
+          <textarea class="autocomplete" data-prompt="Type a state..." data-src="assets/json/autocomplete.json"></textarea>
+        </fieldset>
         <div class="submit">
           <a class="cta primary">Save</a>
           <a class="cta">Cancel</a>
@@ -150,6 +153,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/strings/assets/js/textext.min.js"></script>
 <script type="text/javascript" src="/strings/assets/js/app.js"></script>
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

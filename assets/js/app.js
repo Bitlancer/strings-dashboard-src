@@ -91,9 +91,14 @@ var strings = {
     forms : function() {
       // count type validation
       $('.cta.disabled').each(function() {
-        $(this).parents('form').find(':password').keyup(function() {
+        $(this).parents('form').find(':password').last().keyup(function() {
           if($(this).val().length > 5){
             $(this).parents('form').find('.disabled').toggleClass('disabled not-disabled');
+            if($(this).parents('form').find(':password').length > 1) {
+              var p1 = $(this).parents('form').find(':password').first().val();
+              var p2 = $(this).parents('form').find(':password').last().val();
+              if(p1 !== p2) $(this).parents('form').find('.not-disabled').toggleClass('not-disabled disabled');
+            }
           } else {
             $(this).parents('form').find('.not-disabled').toggleClass('not-disabled disabled');
           }

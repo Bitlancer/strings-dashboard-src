@@ -77,7 +77,7 @@
                   <span>
                     <a class="disabled">Edit User</a>
                     <a>Edit Permissions</a>
-                    <a>Reset Password</a>
+                    <a class="modal" data-src="#reset-password" data-title="Reset password">Reset Password</a>
                     <a class="modal" data-src="#disable" data-title="Confirm">Disable</a>
                   </span>
                 </ul>  
@@ -101,11 +101,23 @@
     <hr class="clear">
   </section>
   <div style="display:none">
+    <!-- disable user -->
     <div id="disable">
       <form>
         <p>Are you sure you want to disable #{username}?</p>
         <div class="submit">
           <a class="cta primary">Confirm</a>
+          <a class="cta">Cancel</a>
+        </div>
+      </form>          
+    </div>
+    <!-- reset password -->
+    <div id="reset-password">
+      <form>
+          <input type="password" placeholder="new password" />
+          <input type="password" placeholder="new password (confirm)" />
+        <div class="submit">
+          <a class="cta primary disabled">Reset password</a>
           <a class="cta">Cancel</a>
         </div>
       </form>          

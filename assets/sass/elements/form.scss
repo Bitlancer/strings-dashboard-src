@@ -18,16 +18,23 @@ form {
     width: 50%;  
   }
   div.submit {
-    margin-top: 10px;
+    margin-top: 15px;
     overflow: hidden;
-    position: relative;  
+    position: relative; 
     > .cta {
       float: right;
       margin-left: 5px;
     }
   }
+  fieldset ~ div.submit {
+    margin-top: 15px; 
+  }
   input {
-    &[type=text],&[type=search],&[type=email],&[type=password], textarea { width: 100% }
+    &[type=text],&[type=search],&[type=email],&[type=password], {
+      margin-bottom: 5px;
+      width: 100%;
+      &:last-of-type { margin-bottom: 0 }
+    }
   }
 }
 

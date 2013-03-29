@@ -529,14 +529,19 @@ form select {
   box-sizing: border-box;
   width: 50%; }
 form div.submit {
-  margin-top: 10px;
+  margin-top: 15px;
   overflow: hidden;
   position: relative; }
   form div.submit > .cta {
     float: right;
     margin-left: 5px; }
-form input[type=text], form input[type=search], form input[type=email], form input[type=password], form input textarea {
+form fieldset ~ div.submit {
+  margin-top: 15px; }
+form input[type=text], form input[type=search], form input[type=email], form input[type=password] {
+  margin-bottom: 5px;
   width: 100%; }
+  form input[type=text]:last-of-type, form input[type=search]:last-of-type, form input[type=email]:last-of-type, form input[type=password]:last-of-type {
+    margin-bottom: 0; }
 
 input[type=text], input[type=search], input[type=email], input[type=password] {
   border: 1px solid #cacaca;

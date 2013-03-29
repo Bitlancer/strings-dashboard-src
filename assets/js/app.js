@@ -106,15 +106,7 @@ var strings = {
       });
       // auto-complete
       $('.autocomplete').not('.example > .autocomplete').each(function() {
-        $(this).textext({
-          plugins : 'ajax autocomplete prompt tags',
-          prompt : $(this).attr('data-prompt'),
-          ajax : {
-              url : $(this).attr('data-src'),
-              dataType : 'json',
-              cacheResults : true
-          }
-        });
+        $(this).attr('placeholder','autocomplete');
       });
     }
   }

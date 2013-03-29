@@ -29,12 +29,19 @@ form {
   fieldset ~ div.submit {
     margin-top: 15px; 
   }
+  input,textarea {
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    outline: none;
+    &:last-of-type { margin-bottom: 0 }
+  }
   input {
     &[type=text],&[type=search],&[type=email],&[type=password], {
-      margin-bottom: 5px;
       width: 100%;
-      &:last-of-type { margin-bottom: 0 }
     }
+  }
+  textarea {
+    width: 100%;
   }
 }
 
@@ -56,15 +63,16 @@ input {
   }
 }
 
-.autocomplete {
+textarea {
   border: 1px solid #cacaca;
   border-bottom: 1px solid #eee;
   border-right: 1px solid #eee;
   border-radius: 3px;
   box-sizing: border-box;
   font-family: inherit;
+  padding: 3px;
+  vertical-align: middle;
   @include box-shadow(inset 1px 1px 5px #f0f0f0);
-  min-width: 360px;
 }
 
 ::-webkit-input-placeholder {

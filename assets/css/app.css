@@ -537,11 +537,16 @@ form div.submit {
     margin-left: 5px; }
 form fieldset ~ div.submit {
   margin-top: 15px; }
-form input[type=text], form input[type=search], form input[type=email], form input[type=password] {
+form input, form textarea {
+  box-sizing: border-box;
   margin-bottom: 5px;
-  width: 100%; }
-  form input[type=text]:last-of-type, form input[type=search]:last-of-type, form input[type=email]:last-of-type, form input[type=password]:last-of-type {
+  outline: none; }
+  form input:last-of-type, form textarea:last-of-type {
     margin-bottom: 0; }
+form input[type=text], form input[type=search], form input[type=email], form input[type=password] {
+  width: 100%; }
+form textarea {
+  width: 100%; }
 
 input[type=text], input[type=search], input[type=email], input[type=password] {
   border: 1px solid #cacaca;
@@ -559,17 +564,18 @@ input[type=radio], input[type=checkbox] {
   margin: 0;
   vertical-align: top; }
 
-.autocomplete {
+textarea {
   border: 1px solid #cacaca;
   border-bottom: 1px solid #eee;
   border-right: 1px solid #eee;
   border-radius: 3px;
   box-sizing: border-box;
   font-family: inherit;
+  padding: 3px;
+  vertical-align: middle;
   -webkit-box-shadow: inset 1px 1px 5px #f0f0f0;
   -moz-box-shadow: inset 1px 1px 5px #f0f0f0;
-  box-shadow: inset 1px 1px 5px #f0f0f0;
-  min-width: 360px; }
+  box-shadow: inset 1px 1px 5px #f0f0f0; }
 
 ::-webkit-input-placeholder {
   font-size: 90%;

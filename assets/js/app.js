@@ -9,6 +9,7 @@ var strings = {
       strings.ui.tables();
       strings.events.forms();
       strings.events.clicks();
+      strings.events.keypress();
       strings.ui.actionmenu();
     },
     include : function() {
@@ -94,6 +95,16 @@ var strings = {
       $('.tooltip').tooltip({ position: { my: "left+2 top+14", at: "left top+14" } });
       // modal windows
       $('.modal').click(function(){strings.ui.modal($(this))});
+      // form ctas
+      $('form .cta.submit').click(function(){ $(this).closest('form').submit() });
+    },
+    keypress : function() {
+      $(':input').keypress(function (e) {
+        if (e.which == 13) {
+          e.preventDefault();
+          $(this).closest('form').submit();
+        }
+      });
     },
     forms : function() {
       // count type validation

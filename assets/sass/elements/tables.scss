@@ -55,7 +55,10 @@ table {
       //line-height: 30px;
     }
     .cta {
-      float: left;  
+      float: left;
+      ~ .cta {
+        margin-left: 5px;
+      }
     }
     .dataTables_filter {
       float: right;

@@ -54,7 +54,7 @@ var strings = {
         dialogClass:'strings-modal',
         open: function() {
           if(!$('body').hasClass('blur')) $('body').addClass('blur');
-          if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').parents('.ui-dialog-content').css('overflow','visible');
+          if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').blur().parents('.ui-dialog-content').css('overflow','visible');
         },
         close: function() {
           if($('body').hasClass('blur')) $('body').removeClass('blur');

@@ -364,6 +364,8 @@ table {
       margin: 0 0 15px; }
     .dataTables_wrapper .top .cta {
       float: left; }
+      .dataTables_wrapper .top .cta ~ .cta {
+        margin-left: 5px; }
     .dataTables_wrapper .top .dataTables_filter {
       float: right;
       margin-bottom: 10px; }

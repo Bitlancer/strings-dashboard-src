@@ -19,6 +19,13 @@
   transform: $val;
 }
 
+@mixin filter($val){
+  -webkit-filter: $val;
+  -moz-filter: $val;
+  -o-filter: $val;
+  filter: $val;
+}
+
 @mixin transition($val) {
   -webkit-transition: $val;
   -moz-transition: $val;

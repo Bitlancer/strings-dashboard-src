@@ -52,10 +52,12 @@ var strings = {
         width: obj.attr('data-width') || '360',
         dialogClass:'strings-modal',
         open: function() {
+          if(!$('body').hasClass('blur')) $('body').addClass('blur');
           if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').parents('.ui-dialog-content').css('overflow','visible');
           console.log(modal);
         },
         close: function() {
+          if($('body').hasClass('blur')) $('body').removeClass('blur');
           if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').parents('.ui-dialog-content').css('overflow','auto');
         }
       };

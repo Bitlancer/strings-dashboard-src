@@ -81,7 +81,11 @@ body {
       margin-top: 0; }
 
 body {
-  background: #f8f8f8; }
+  background: #f8f8f8;
+  -webkit-filter: blur(0);
+  -moz-filter: blur(0);
+  -o-filter: blur(0);
+  filter: blur(0); }
   body > nav {
     left: 0; }
   body > header {
@@ -94,6 +98,15 @@ body {
       left: -241px; }
     body.loading > header {
       top: -51px; }
+  body.blur > header, body.blur > nav, body.blur > section {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    filter: blur(2px); }
+  body.blur > header {
+    -webkit-box-shadow: -10px 0 0 black;
+    -moz-box-shadow: -10px 0 0 black;
+    box-shadow: -10px 0 0 black; }
   body .clearfix {
     zoom: 1; }
     body .clearfix:before {
@@ -514,7 +527,7 @@ body .strings-modal {
           background-image: -webkit-linear-gradient(#4ba5e8, #1773b6);
           background-image: -o-linear-gradient(#4ba5e8, #1773b6); }
 body .ui-widget-overlay {
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.1);
   opacity: 1; }
 
 form fieldset {

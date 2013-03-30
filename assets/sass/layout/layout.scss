@@ -1,5 +1,6 @@
 body {
   background: #f8f8f8;
+  @include filter(blur(0));  
   > nav { left: 0 }
   > header { top: 0 }
   &.loading {
@@ -7,6 +8,14 @@ body {
     > section { display: none }
     > nav { left: -241px }
     > header { top: -51px }
+  }
+  &.blur {
+    > header, > nav, > section {
+      @include filter(blur(2px));  
+    }  
+    > header { 
+      @include box-shadow(-10px 0 0 #000)  
+    }
   }
   .clearfix {
     zoom: 1;

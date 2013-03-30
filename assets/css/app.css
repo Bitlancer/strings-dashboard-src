@@ -67,6 +67,8 @@ body {
     line-height: 40px; }
     body section h1 > strong {
       font-weight: 400; }
+    body section h1#splash {
+      padding-bottom: 20px; }
   body section h2 {
     font-size: 17px;
     font-weight: 600;
@@ -343,6 +345,21 @@ table {
             font-size: 80%; }
           table tbody tr td ul.action-menu.active > li {
             color: #999999; }
+        table tbody tr td[data-status] {
+          position: relative;
+          text-indent: 10px; }
+          table tbody tr td[data-status]:before {
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            width: 10px;
+            top: 0; }
+        table tbody tr td[data-status=running]:before {
+          background: #59b036; }
+        table tbody tr td[data-status=error]:before {
+          background: #d94141; }
         table tbody tr td:last-of-type {
           border: 0; }
         table tbody tr td.blank {

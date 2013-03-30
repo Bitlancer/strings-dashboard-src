@@ -20,9 +20,28 @@ table {
             top: 15px;
           }
           > li {
-            font-size: 80%;  
+            font-size: 80%; 
           }
           &.active > li { color: #999 }
+        }
+        &[data-status] {
+          position: relative;
+          text-indent: 10px;
+          &:before {
+            content: '';
+            display: block;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            width: 10px; 
+            top: 0;
+          }
+        }
+        &[data-status=running]:before {
+          background: $green;  
+        }
+        &[data-status=error]:before {
+          background: $red;  
         }
         &:last-of-type { border: 0 }
         &.blank {

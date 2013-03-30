@@ -350,12 +350,12 @@ table {
           text-indent: 7px; }
           table tbody tr td[data-status]:before {
             content: '';
-            display: block;
+            display: table-cell;
             height: 26px;
             left: 0;
             position: absolute;
             width: 7px;
-            top: 0; }
+            margin-top: -5px; }
         table tbody tr td[data-status=running]:before {
           background-color: #59b036; }
         table tbody tr td[data-status=error]:before {

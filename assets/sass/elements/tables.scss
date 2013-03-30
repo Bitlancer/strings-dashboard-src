@@ -26,22 +26,31 @@ table {
         }
         &[data-status] {
           position: relative;
-          text-indent: 10px;
+          text-indent: 7px;
           &:before {
             content: '';
             display: block;
-            height: 100%;
+            height: 26px;
             left: 0;
             position: absolute;
-            width: 10px; 
+            width: 7px; 
             top: 0;
           }
         }
         &[data-status=running]:before {
-          background: $green;  
+          background-color: $green;  
         }
         &[data-status=error]:before {
-          background: $red;  
+          background-color: $red;  
+        }
+        &[data-status=default]:before {
+          background-color: #ccc;  
+        }
+        &[data-status].activity:before {
+          background-image: url('../img/status.png');
+          background-size: 7px auto;
+          background-position: 0;
+          @include animation(activity 2s infinite linear);
         }
         &:last-of-type { border: 0 }
         &.blank {
@@ -162,6 +171,6 @@ table {
     background-position: 0 0;
   }
   100% {
-    background-position: 0 26px;
+    background-position: 0 27px;
   }
 }

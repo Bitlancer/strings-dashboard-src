@@ -41,6 +41,34 @@ table {
   th,td { 
     padding: 5px;
     text-align: left;
+    &.sorting,&.sorting_desc,&.sorting_asc { cursor: default }
+    &.sorting:after {
+      content: '\25BC';
+      color: inherit;
+      display: inline-block;
+      margin: -1px 0 0 3px;
+      opacity: .25;
+      vertical-align: top;
+      @include transform(scaleY(.75));
+    }
+    &.sorting_desc:after {
+      content: '\25BC';
+      color: inherit;
+      display: inline-block;
+      margin: -1px 0 0 3px;
+      opacity: .75;
+      vertical-align: top;
+      @include transform(scaleY(.75));
+    }
+    &.sorting_asc:after {
+      content: '\25B2';
+      color: inherit;
+      display: inline-block;
+      margin: -1px 0 0 3px;
+      opacity: .75;
+      vertical-align: top;
+      @include transform(scaleY(.75));
+    }
   }
 }
 

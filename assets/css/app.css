@@ -356,6 +356,41 @@ table {
   table th, table td {
     padding: 5px;
     text-align: left; }
+    table th.sorting, table th.sorting_desc, table th.sorting_asc, table td.sorting, table td.sorting_desc, table td.sorting_asc {
+      cursor: default; }
+    table th.sorting:after, table td.sorting:after {
+      content: '\25BC';
+      color: inherit;
+      display: inline-block;
+      margin: -1px 0 0 3px;
+      opacity: .25;
+      vertical-align: top;
+      -webkit-transform: scaleY(0.75);
+      -moz-transform: scaleY(0.75);
+      -o-transform: scaleY(0.75);
+      transform: scaleY(0.75); }
+    table th.sorting_desc:after, table td.sorting_desc:after {
+      content: '\25BC';
+      color: inherit;
+      display: inline-block;
+      margin: -1px 0 0 3px;
+      opacity: .75;
+      vertical-align: top;
+      -webkit-transform: scaleY(0.75);
+      -moz-transform: scaleY(0.75);
+      -o-transform: scaleY(0.75);
+      transform: scaleY(0.75); }
+    table th.sorting_asc:after, table td.sorting_asc:after {
+      content: '\25B2';
+      color: inherit;
+      display: inline-block;
+      margin: -1px 0 0 3px;
+      opacity: .75;
+      vertical-align: top;
+      -webkit-transform: scaleY(0.75);
+      -moz-transform: scaleY(0.75);
+      -o-transform: scaleY(0.75);
+      transform: scaleY(0.75); }
 
 .dataTables_wrapper {
   position: relative; }

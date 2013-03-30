@@ -57,6 +57,9 @@ input {
     padding: 3px;
     vertical-align: middle;
     @include box-shadow(inset 1px 1px 5px #f0f0f0);
+    &.error {
+      border: 1px solid $red;  
+    }
   }
   &[type=radio],&[type=checkbox] {
     margin: 0;

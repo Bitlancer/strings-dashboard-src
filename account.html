@@ -9,9 +9,13 @@
   <header></header>
   <form id="login">
     <h1>Strings</h1>
+    <ul id="notice">
+      <li class="error">There was a problem.</li>
+      <li class="success">Everything looks great!</li>
+    </ul>
     <div data-id="login">
       <input type="text" placeholder="organization" />
-      <input type="email" placeholder="email address" />
+      <input type="email" placeholder="email address" class="error" />
       <input type="password" placeholder="password" />
       <span class="buttons">
         <a class="cta">login</a>

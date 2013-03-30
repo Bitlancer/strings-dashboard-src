@@ -55,7 +55,6 @@ var strings = {
         open: function() {
           if(!$('body').hasClass('blur')) $('body').addClass('blur');
           if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').parents('.ui-dialog-content').css('overflow','visible');
-          console.log(modal);
         },
         close: function() {
           if($('body').hasClass('blur')) $('body').removeClass('blur');
@@ -97,6 +96,7 @@ var strings = {
       $('.modal').click(function(){strings.ui.modal($(this))});
       // form ctas
       $('form .cta.submit').click(function(){ $(this).closest('form').submit() });
+      //$('form .cta.submit').live('click',function(){ $(this).closest('form').submit() });
     },
     keypress : function() {
       $(':input').keypress(function (e) {

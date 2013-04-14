@@ -1,2 +1,4 @@
-== strings-dashboard
-Bitlancer Strings Dashboard
+strings-dashboard-src
+=====================
+
+Bitlancer Strings Dashboard Source(s)

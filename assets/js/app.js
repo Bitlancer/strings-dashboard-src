@@ -46,12 +46,23 @@ var strings = {
       });
     },
     modal : function(obj) {
-      var modal = $(obj.attr('data-src'));
+      var modal;
+      if(obj.attr('data-src')[0] == '#') {
+        modal = $(obj.attr('data-src'));
+      } else {
+        if($('#ajax-modal').length) $('#ajax-modal').remove();
+        $('body').append('<div id="ajax-modal" class="hidden"></div>');
+        modal = $('#ajax-modal');
+        //modal.load(obj.attr('data-src'));
+        //var int = setInterval(function(){ if($(".ui-dialog").dialog("isOpen") === true) clearInterval(int) },100);
+      }
+      //console.log(modal);
       var opt = {
         modal: true,
         title: obj.attr('data-title') || 'No Title',
         width: obj.attr('data-width') || '360',
         dialogClass:'strings-modal',
+        height: 'auto',
         open: function() {
           if(!$('body').hasClass('blur')) $('body').addClass('blur');
           if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').blur().parents('.ui-dialog-content').css('overflow','visible');
@@ -61,10 +72,15 @@ var strings = {
           if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').parents('.ui-dialog-content').css('overflow','auto');
         }
       };
-      modal.dialog(opt).dialog('open');
+      modal.dialog(opt).dialog('open').load(obj.attr('data-src'), function() {
+          $(this).dialog("option", "position", ['center', 'center'] );
+      });
       modal.find('.cta:not(".cancel,.primary")').bind('click', function() {
         modal.dialog('close');
       });
+      //setTimeout(function() {
+      //  $('.ui-dialog').dialog("option", "position", "center");
+      //},5000);
     },
     tables : function() {
       $('table[data-type="datatable"]').not('.example table').each(function() {
@@ -74,6 +90,8 @@ var strings = {
           "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
           "oLanguage": { "sSearch": "" },
           "sDom": '<"top"f>rt<"bottom"p><"clear">',
+          //"sAjaxSource": ($(this).attr("data-src").length == 0 ? null : $(this).attr("data-src")),
+          //"sAjaxSource": ($(this).attr("data-src") === null || $(this).attr("data-src").length === 0 ? null : $(this).attr("data-src")),
           "fnInitComplete": function(oSettings) {
             var parent = $(this).parents('.dataTables_wrapper');
             if($(this).attr('data-cta')) parent.find('.top').prepend($(this).attr('data-cta'))
@@ -93,7 +111,7 @@ var strings = {
       // tooltips
       $('.tooltip').tooltip({ position: { my: "left+2 top+14", at: "left top+14" } });
       // modal windows
-      $('.modal').click(function(){strings.ui.modal($(this))});
+      $('.modal').live('click',function(){strings.ui.modal($(this))});
       // form ctas
       $('form .cta.submit').click(function(){ $(this).closest('form').submit() });
       //$('form .cta.submit').live('click',function(){ $(this).closest('form').submit() });

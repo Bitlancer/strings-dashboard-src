@@ -18,7 +18,7 @@
     <h1>Dashboard</h1>
     <div class="columns">
       <div>
-        <table data-type="datatable" id="instances" data-title="Instances" data-cta='<a class="cta primary">Create instance</a>'>
+        <table data-type="datatable" id="instances" data-title="Instances" data-cta='<a class="cta primary modal" data-src="/strings/assets/html/ajax/create-instance.html" data-title="Create instance">Create instance</a>'>
           <thead>
             <tr>
               <th>Name</th>
@@ -49,6 +49,27 @@
       <hr class="clear">
     </div>
   </section>
+  <!-- Create instance -->
+  <div class="hidden">
+    <div id="create-instance">
+      <form>
+        <fieldset>
+          <legend>Name</legend>
+          <input type="text" placeholder="first name" />
+          <input type="text" placeholder="last name" />
+        </fieldset>
+        <fieldset>
+          <legend>Details</legend>
+          <input type="email" placeholder="email address" />
+          <input type="text" placeholder="phone number (xxx-xxx-xxxx)" />
+        </fieldset>
+        <div class="submit">
+          <a class="cta primary submit">Save</a>
+          <a class="cta">Cancel</a>
+        </div>
+      </form>          
+    </div>
+  </div>
 <!-- Javascript -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>

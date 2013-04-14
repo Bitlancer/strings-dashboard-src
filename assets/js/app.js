@@ -61,7 +61,7 @@ var strings = {
         modal: true,
         title: obj.attr('data-title') || 'No Title',
         width: obj.attr('data-width') || '360',
-        dialogClass:'strings-modal',
+        dialogClass: 'strings-modal',
         height: 'auto',
         open: function() {
           if(!$('body').hasClass('blur')) $('body').addClass('blur');
@@ -70,13 +70,14 @@ var strings = {
         close: function() {
           if($('body').hasClass('blur')) $('body').removeClass('blur');
           if($('.ui-dialog .autocomplete').length) $('.ui-dialog input.maininput').parents('.ui-dialog-content').css('overflow','auto');
+          modal.find('.cta:not(".cancel,.primary")').unbind();
         }
       };
       modal.dialog(opt).dialog('open').load(obj.attr('data-src'), function() {
           $(this).dialog("option", "position", ['center', 'center'] );
-      });
-      modal.find('.cta:not(".cancel,.primary")').live('click', function() {
-        modal.dialog('close');
+          modal.find('.cta:not(".cancel,.primary")').bind('click', function() {
+            modal.dialog('close');
+          });
       });
       //setTimeout(function() {
       //  $('.ui-dialog').dialog("option", "position", "center");

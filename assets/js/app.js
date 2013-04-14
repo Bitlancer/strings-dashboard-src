@@ -75,6 +75,7 @@ var strings = {
       };
       modal.dialog(opt).dialog('open').load(obj.attr('data-src'), function() {
           $(this).dialog("option", "position", ['center', 'center'] );
+          strings.events.forms();
           modal.find('.cta:not(".cancel,.primary")').bind('click', function() {
             modal.dialog('close');
           });

@@ -507,6 +507,12 @@ ul#messages > li {
   padding: 10px 10px 15px;
   position: relative;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); }
+  ul#messages > li:last-of-type {
+    margin-bottom: 30px; }
+  ul#messages > li > a {
+    font-weight: 700;
+    color: inherit;
+    text-decoration: underline; }
   ul#messages > li > a.close {
     background: url("../img/close.png") 2px 2px no-repeat;
     background-size: 10px 10px;
@@ -517,6 +523,7 @@ ul#messages > li {
     top: 10px;
     width: 15px;
     border-radius: 3px;
+    text-decoration: none;
     -webkit-box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 8px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 8px rgba(0, 0, 0, 0.2);
     box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 0.2), inset 0 1px 8px rgba(0, 0, 0, 0.2); }

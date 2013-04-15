@@ -9,6 +9,14 @@ ul#messages {
     padding: 10px 10px 15px;
     position: relative;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    &:last-of-type {
+      margin-bottom: 30px;  
+    }
+    > a {
+      font-weight: 700;
+      color: inherit;
+      text-decoration: underline;  
+    }
     > a.close {
       background: url('../img/close.png') 2px 2px no-repeat;
       background-size: 10px 10px;
@@ -19,6 +27,7 @@ ul#messages {
       top: 10px;
       width: 15px;
       border-radius: 3px;
+      text-decoration:none;
       @include box-shadow((
         -1px -1px 0 rgba(0,0,0,0.3),
         1px 1px 0 rgba(255,255,255,.2),

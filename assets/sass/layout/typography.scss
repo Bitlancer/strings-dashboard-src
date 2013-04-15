@@ -17,6 +17,12 @@ body {
   p {
     line-height: 20px;  
     margin-top: -5px;
+    span {
+      &.highlight {
+        background: #FFFBCC;
+        padding: 0 3px;
+      }  
+    }
   }
   small {
     font-size: 75%;
@@ -50,5 +56,9 @@ body {
     table a {
       color: #555;  
     }
+  }
+  fieldset.info p {
+    margin: 0;
+    padding: 5px;
   }
 }

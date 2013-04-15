@@ -17,10 +17,8 @@ html {
   width: 100%; }
   html * {
     line-height: 1; }
-  html ::selection {
+  html header ::selection {
     background: rgba(0, 0, 0, 0); }
-  html pre ::selection, html code ::selection {
-    background: rgba(255, 255, 255, 0.1); }
   html body {
     height: 100%;
     width: 100%; }

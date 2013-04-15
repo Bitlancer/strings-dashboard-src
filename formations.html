@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Strings - User Management | Bitlancer</title>
+  <link id="style" rel="stylesheet" type="text/css" href="/strings/assets/css/app.css">
+  <script type="text/javascript">
+    //<![CDATA[
+    var config = {
+      name : 'formations'
+    };
+    //]]>
+  </script>
+</head>
+<body class="loading">
+  <header></header>
+  <nav></nav>
+  <!-- Content -->
+  <section>
+    <h1>Formations</h1>
+    <div class="columns">
+      <div>
+        <table data-type="datatable" id="users" data-cta='<a data-src="/strings/assets/html/ajax/create-user.html" data-title="Create User" class="cta primary modal">Create user</a>'>
+          <thead>
+            <tr>
+              <th>Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                asears
+                <ul class="action-menu" data-width="120">
+                  <li>Actions</li>
+                  <span>
+                    <a class="modal" data-src="/strings/assets/html/ajax/edit-user.html" data-title="Edit User">Edit User</a>
+                    <a class="disabled">Edit Permissions</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/reset-password.html" data-title="Reset Password">Reset Password</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/disable-user.html" data-title="Disable User">Disable</a>
+                  </span>
+                </ul>  
+              </td>
+            </tr>
+            <tr>
+              <td>
+                jcotton
+                <ul class="action-menu" data-width="120">
+                  <li>Actions</li>
+                  <span>
+                    <a class="disabled">Edit User</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/edit-permissions.html" data-title="Edit Permissions" data-width="600">Edit Permissions</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/reset-password.html" data-title="Reset Password">Reset Password</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/disable-user.html" data-title="Disable User">Disable</a>
+                  </span>
+                </ul>  
+              </td>
+            </tr>
+            <tr>
+              <td>
+                mjuszczak
+                <ul class="action-menu" data-width="120">
+                  <li>Actions</li>
+                  <span>
+                    <a class="modal" data-src="/strings/assets/html/ajax/edit-user.html" data-title="Edit User">Edit User</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/edit-permissions.html" data-title="Edit Permissions" data-width="600">Edit Permissions</a>
+                    <a class="disabled">Reset Password</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/disable-user.html" data-title="Disable User">Disable</a>
+                  </span>
+                </ul>  
+              </td>
+            </tr>
+            <tr>
+              <td>
+                ekeller
+                <ul class="action-menu" data-width="120">
+                  <li>Actions</li>
+                  <span>
+                    <a class="modal" data-src="/strings/assets/html/ajax/edit-user.html" data-title="Edit User">Edit User</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/edit-permissions.html" data-title="Edit Permissions" data-width="600">Edit Permissions</a>
+                    <a class="modal" data-src="/strings/assets/html/ajax/reset-password.html" data-title="Reset Password">Reset Password</a>
+                    <a class="disabled">Disable</a>
+                  </span>
+                </ul>  
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <div>
+        <h2>User activity<a class="cta refresh"></a></h2>
+        <ul id="activity">
+          <li>asears logged in<small>12 minutes ago</small></li>
+          <li>jcotton deleted the instance <strong>anarachy</strong><small>about 4 hours ago</small></li>
+          <li>mjuszczak edited user permissions for <strong>asears</strong><small>2 days ago</small></li>
+          <li>mjuszczak added the user <strong>asears</strong><small>2 days ago</small></li>
+        </ul>
+    </div>
+    <hr class="clear">
+  </section>
+<!-- Javascript -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/strings/assets/js/jquery.fcbkcomplete.js"></script>
+<script type="text/javascript" src="/strings/assets/js/app.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</body>
+</html>

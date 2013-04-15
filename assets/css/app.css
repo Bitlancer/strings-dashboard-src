@@ -616,6 +616,8 @@ form fieldset {
   position: relative; }
   form fieldset legend {
     font-weight: 600; }
+  form fieldset.info {
+    margin-bottom: 20px; }
 form hr {
   border: 1px solid #eee;
   background: transparent;

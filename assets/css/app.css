@@ -79,6 +79,8 @@ body {
     margin-top: 30px; }
     body section div h2:first-of-type {
       margin-top: 0; }
+  body section table a {
+    color: #555; }
 
 body {
   background: #f8f8f8;

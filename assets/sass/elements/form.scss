@@ -40,7 +40,7 @@ form {
     &:last-of-type { margin-bottom: 0 }
   }
   input {
-    &[type=text],&[type=search],&[type=email],&[type=password], {
+    &[type=text],&[type=search],&[type=email],&[type=password],&[type=number] {
       width: 100%;
     }
   }
@@ -50,7 +50,7 @@ form {
 }
 
 input {
-  &[type=text],&[type=search],&[type=email],&[type=password] {
+  &[type=text],&[type=search],&[type=email],&[type=password],&[type=number] {
     border: 1px solid #cacaca;
     border-bottom: 1px solid #eee;
     border-right: 1px solid #eee;

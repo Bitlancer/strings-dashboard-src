@@ -643,12 +643,12 @@ form input, form textarea {
   outline: none; }
   form input:last-of-type, form textarea:last-of-type {
     margin-bottom: 0; }
-form input[type=text], form input[type=search], form input[type=email], form input[type=password] {
+form input[type=text], form input[type=search], form input[type=email], form input[type=password], form input[type=number] {
   width: 100%; }
 form textarea {
   width: 100%; }
 
-input[type=text], input[type=search], input[type=email], input[type=password] {
+input[type=text], input[type=search], input[type=email], input[type=password], input[type=number] {
   border: 1px solid #cacaca;
   border-bottom: 1px solid #eee;
   border-right: 1px solid #eee;
@@ -660,7 +660,7 @@ input[type=text], input[type=search], input[type=email], input[type=password] {
   -webkit-box-shadow: inset 1px 1px 5px #f0f0f0;
   -moz-box-shadow: inset 1px 1px 5px #f0f0f0;
   box-shadow: inset 1px 1px 5px #f0f0f0; }
-  input[type=text].error, input[type=search].error, input[type=email].error, input[type=password].error {
+  input[type=text].error, input[type=search].error, input[type=email].error, input[type=password].error, input[type=number].error {
     border: 1px solid #d94141; }
 input[type=radio], input[type=checkbox] {
   margin: 0;

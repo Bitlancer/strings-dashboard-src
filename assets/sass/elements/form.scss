@@ -10,6 +10,26 @@ form {
     &.info {
       margin-bottom: 20px;  
     }
+    span {
+      &.with-input {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        line-height: 30px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        > input {
+          float: right;
+          width: 50%;
+        }
+        &:last-of-type {
+          border: 0;
+          margin: 0;
+          padding: 0;
+        }
+      }  
+    }
   }
   hr {
     border: 1px solid #eee;

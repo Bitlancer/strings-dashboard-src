@@ -1,8 +1,14 @@
 <div id="resize-formation">
   <form>
     <fieldset>
-      <legend>Number of Instances</legend>
-      <input type="number" min="1" max="10" />
+      <legend>Total number of Instances</legend>
+      <input type="number" min="1" max="10" value="3" />
+    </fieldset>
+    <fieldset>
+      <legend>Instance size (GB)</legend>
+      <span class="with-input">instanceOne<input type="number" min="1" max="3" value="1" /></span>
+      <span class="with-input">instanceTwo<input type="number" min="1" max="3" value="2" /></span>
+      <span class="with-input">instanceThree<input type="number" min="1" max="3" value="1" /></span>
     </fieldset>
     <div class="submit">
       <a class="cta primary submit">Confirm</a>

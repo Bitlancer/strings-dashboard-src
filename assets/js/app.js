@@ -92,8 +92,8 @@ var strings = {
           "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
           "oLanguage": { "sSearch": "" },
           "sDom": '<"top"f>rt<"bottom"p><"clear">',
-          //"sAjaxSource": ($(this).attr("data-src").length == 0 ? null : $(this).attr("data-src")),
-          //"sAjaxSource": ($(this).attr("data-src") === null || $(this).attr("data-src").length === 0 ? null : $(this).attr("data-src")),
+          "bServerSide": ($(this).attr("data-src") === undefined ? false : true),
+          "sAjaxSource": ($(this).attr("data-src") === undefined ? null : $(this).attr("data-src")),
           "fnInitComplete": function(oSettings) {
             var parent = $(this).parents('.dataTables_wrapper');
             if($(this).attr('data-cta')) parent.find('.top').prepend($(this).attr('data-cta'))

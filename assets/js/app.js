@@ -15,7 +15,7 @@ var strings = {
     include : function() {
       $('body > header').load('assets/html/header.html');
       $('body > nav').load('assets/html/nav.html', function(response, status, xhr){
-        if (status == "success" && typeof config && $('body > nav > span#'+config.name).length) $('body > nav > span#'+config.name).addClass('active');
+        console.log('Nav loaded via ajax')
       });
     }
   },

@@ -115,8 +115,7 @@ var strings = {
       // modal windows
       $('.modal').live('click',function(){strings.ui.modal($(this))});
       // form ctas
-      $('form .cta.submit').click(function(){ $(this).closest('form').submit() });
-      //$('form .cta.submit').live('click',function(){ $(this).closest('form').submit() });
+      $('form .cta.submit').live('click',function(){ $(this).closest('form').submit() });
     },
     keypress : function() {
       $(':input').keypress(function (e) {

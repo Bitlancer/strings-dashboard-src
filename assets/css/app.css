@@ -237,6 +237,8 @@ body > nav {
       background-size: auto 20px; }
     body > nav > span#formations > a:before {
       background-image: url("../img/cloud.png"); }
+    body > nav > span#applications > a:before {
+      background-image: url("../img/application.png"); }
     body > nav > span#user-management > a:before {
       background-image: url("../img/user.png"); }
     body > nav > span.active {

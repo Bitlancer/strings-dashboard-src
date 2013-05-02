@@ -381,11 +381,11 @@ table {
           animation: activity 2s infinite linear; }
         table tbody tr td:last-of-type {
           border: 0; }
-        table tbody tr td.blank, .dataTables_empty {
+        table tbody tr td.blank, table tbody tr td .dataTables_empty {
           font-size: 90%;
           padding: 20px;
           text-align: center; }
-          table tbody tr td.blank h3 {
+          table tbody tr td.blank h3, table tbody tr td .dataTables_empty h3 {
             font-weight: 600;
             font-size: 17px;
             margin-bottom: 5px; }
@@ -563,24 +563,20 @@ ul#messages > li {
     font-weight: 600;
     line-height: 1.5;
     text-transform: capitalize; }
-ul#notice {
-      li {
-        font-size: 89%;
-        list-style: none;
-        margin-bottom: 10px;
-        padding: 5px;
-        &.error {
-          background: lighten($red, 10%);  
-          border: 1px solid darken($red, 10%);
-          color: darken($red, 30%);
-        }
-        &.success {
-          background: lighten($green, 10%);  
-          border: 1px solid darken($green, 10%);
-          color: darken($green, 30%);
-        }
-      }
-    }
+
+ul#notice li {
+  font-size: 89%;
+  list-style: none;
+  margin-bottom: 10px;
+  padding: 5px; }
+  ul#notice li.error {
+    background: #e26b6b;
+    border: 1px solid #c12727;
+    color: #6c1515; }
+  ul#notice li.success {
+    background: #73c950;
+    border: 1px solid #45892a;
+    color: #1e3b12; }
 
 body .strings-modal {
   border: 0;
@@ -1159,19 +1155,6 @@ body#account {
         font-size: 80%; }
       body#account form#login div > .buttons .cta {
         margin-right: 5px; }
-    body#account form#login ul#notice li {
-      font-size: 89%;
-      list-style: none;
-      margin-bottom: 10px;
-      padding: 5px; }
-      body#account form#login ul#notice li.error {
-        background: #e26b6b;
-        border: 1px solid #c12727;
-        color: #6c1515; }
-      body#account form#login ul#notice li.success {
-        background: #73c950;
-        border: 1px solid #45892a;
-        color: #1e3b12; }
     body#account form#login #tabs {
       background-color: rgba(0, 0, 0, 0.05);
       background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1));

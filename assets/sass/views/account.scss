@@ -73,24 +73,6 @@ body#account {
         margin-right: 5px;  
       }
     }
-    ul#notice {
-      li {
-        font-size: 89%;
-        list-style: none;
-        margin-bottom: 10px;
-        padding: 5px;
-        &.error {
-          background: lighten($red, 10%);  
-          border: 1px solid darken($red, 10%);
-          color: darken($red, 30%);
-        }
-        &.success {
-          background: lighten($green, 10%);  
-          border: 1px solid darken($green, 10%);
-          color: darken($green, 30%);
-        }
-      }
-    }
     #tabs {
       @include gradient(rgba(0,0,0,0.05), rgba(0,0,0,0.1));
       @include box-shadow((

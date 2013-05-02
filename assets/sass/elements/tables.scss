@@ -53,7 +53,7 @@ table {
           @include animation(activity 2s infinite linear);
         }
         &:last-of-type { border: 0 }
-        &.blank {
+        &.blank, .dataTables_empty {
           font-size: 90%;
           padding: 20px;  
           text-align: center;

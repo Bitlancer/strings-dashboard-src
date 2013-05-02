@@ -572,13 +572,11 @@ ul#notice li {
   ul#notice li.error {
     background: #e26b6b;
     border: 1px solid #c12727;
-    color: white;
-    font-weight: bold; }
+    color: white; }
   ul#notice li.success {
     background: #73c950;
     border: 1px solid #45892a;
-    color: white;
-    font-weight: bold; }
+    color: white; }
 
 body .strings-modal {
   border: 0;

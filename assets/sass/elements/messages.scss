@@ -89,13 +89,11 @@ ul#notice {
       background: lighten($red, 10%);  
       border: 1px solid darken($red, 10%);
       color: white;
-      font-weight: bold;
     }
     &.success {
       background: lighten($green, 10%);  
       border: 1px solid darken($green, 10%);
       color: white;
-      font-weight: bold;
     }
   }
 }

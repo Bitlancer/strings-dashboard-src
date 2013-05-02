@@ -427,6 +427,8 @@ table {
       -moz-transform: scaleY(0.75);
       -o-transform: scaleY(0.75);
       transform: scaleY(0.75); }
+    table th span.disabled, table td span.disabled {
+      color: #999; }
 
 .dataTables_wrapper {
   position: relative; }

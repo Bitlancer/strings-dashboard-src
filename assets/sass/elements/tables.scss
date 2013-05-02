@@ -97,6 +97,9 @@ table {
       vertical-align: top;
       @include transform(scaleY(.75));
     }
+    span.disabled {
+      color: #999;
+    }
   }
 }
 

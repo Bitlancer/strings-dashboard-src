@@ -90,7 +90,7 @@ var strings = {
           "sPaginationType": "full_numbers",
           "aLengthMenu": [[2, 10, 25, 50, 100, 200, -1], [2, 10, 25, 50, 100, 200, "All"]],
           "iDisplayLength": parseInt($(this).attr('data-length')) || 10,
-          "oLanguage": { "sSearch": "" },
+          "oLanguage": { "sSearch": "","sEmptyTable":"No data available" },
           "sDom": '<"top"f>rt<"bottom"p><"clear">',
           "bServerSide": ($(this).attr("data-src") === undefined ? false : true),
           "sAjaxSource": ($(this).attr("data-src") === undefined ? null : $(this).attr("data-src")),

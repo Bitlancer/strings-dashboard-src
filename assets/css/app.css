@@ -381,7 +381,7 @@ table {
           animation: activity 2s infinite linear; }
         table tbody tr td:last-of-type {
           border: 0; }
-        table tbody tr td.blank {
+        table tbody tr td.blank, .dataTables_empty {
           font-size: 90%;
           padding: 20px;
           text-align: center; }

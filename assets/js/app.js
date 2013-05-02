@@ -126,6 +126,33 @@ var strings = {
       });
     },
     forms : function() {
+	  $('form.ajax').each(function() {
+		$(this).submit(function(e) {
+		  e.preventDefault();
+		  $.ajax({
+		    type: (($(this).attr('method') === undefined || $(this).attr('method').toLowerCase() == 'post') ? 'post' : 'post'),
+			url: $(this).attr('action'),
+			data: $(this).serialize(),
+			success: function(data, textStatus){
+			  if(data.redirectUri !== undefined){
+			    window.location.href = data.redirectUri;
+			  }
+			  else {
+			  	var messageElement = '<li>' + data.message + '</li>';
+			    var messageClass = "success";
+			    if(data.isError){
+			      messageClass = "error";
+			    }
+			    $("#notice").empty();
+			    $(messageElement).appendTo("#notice").addClass(messageClass);
+			  }
+		    }
+		  })
+		  .error(function(jqXHR,textStatus){
+		    console.log(textStatus);
+		  });
+		});
+	  });
       // count type validation
       $('.cta.disabled').each(function() {
         $(this).parents('form').find(':password').last().keyup(function() {

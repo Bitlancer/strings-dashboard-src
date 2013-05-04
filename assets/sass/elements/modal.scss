@@ -36,6 +36,19 @@ body {
         }
       }
     }
+    .details {
+      background: #fbfbfb;
+      border: 1px dashed #ddd;
+      padding: 10px;
+      p {
+        margin: 0;
+        > strong {
+          display: inline-block;
+          margin-right: 2%;
+          min-width: 30%;
+        }
+      }
+    }
   }  
   .ui-widget-overlay {
     background: rgba(0,0,0,0.1);

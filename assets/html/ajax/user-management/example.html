@@ -1,0 +1,32 @@
+<style>
+fieldset#create input {
+  margin-right: 5px;
+  width:88%;
+}
+fieldset table {
+  margin: 10px 0;
+}
+</style>
+<form>
+  <fieldset id="create">
+    <legend>Create association</legend>
+    <input type="text" placeholder="parent / child model association" />
+    <a class="cta primary small">Submit</a>
+  </fieldset>
+  <fieldset>
+    <legend>Existing associations</legend>
+    <table>
+      <thead>
+        <tr><td>Formation</td></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Primary MySQL Cluster<a class="action">Remove</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </fieldset>
+  <div class="submit">
+    <a class="cta">Cancel</a>
+  </div>
+</form>

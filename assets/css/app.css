@@ -1110,6 +1110,16 @@ ul.holder input {
   -moz-box-shadow: none;
   box-shadow: none; }
 
+input[type='range'] {
+  box-sizing: border-box;
+  width: 99%; }
+
+div#result {
+  margin-top: 5px; }
+  div#result:before {
+    content: 'Instances: ';
+    font-weight: 700; }
+
 body#account {
   background: url("http://assets.ambient.ly/bitlancer/wall3.jpg") center no-repeat; }
   body#account.landscape {

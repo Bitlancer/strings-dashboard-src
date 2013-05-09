@@ -31,7 +31,7 @@ body {
   .overflow-hidden { overflow: hidden }
   .block { display: block }
   .arrow {
-    :after { content: " \00bb" }
+    &:after { content: " \00bb" }
     &.block { margin-top: 5px }
   }
   ul {

@@ -132,7 +132,7 @@ body {
     overflow: hidden; }
   body .block {
     display: block; }
-  body .arrow :after {
+  body .arrow:after {
     content: " \00bb"; }
   body .arrow.block {
     margin-top: 5px; }

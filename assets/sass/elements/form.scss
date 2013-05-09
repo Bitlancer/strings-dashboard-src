@@ -113,3 +113,14 @@ textarea {
   line-height: 1.5;
   text-indent: 1px;
 }
+
+div.form {
+  form {
+    div.submit legend {
+      color: #999;
+      float: right;
+      line-height: 30px;
+      margin-right: 10px;
+    }  
+  }  
+}

@@ -130,8 +130,12 @@ body {
     float: right; }
   body .overflow-hidden {
     overflow: hidden; }
-  body .arrow:after {
+  body .block {
+    display: block; }
+  body .arrow :after {
     content: " \00bb"; }
+  body .arrow.block {
+    margin-top: 5px; }
   body ul {
     display: block;
     position: relative; }
@@ -745,6 +749,12 @@ textarea {
   font-size: 90%;
   line-height: 1.5;
   text-indent: 1px; }
+
+div.form form div.submit legend {
+  color: #999;
+  float: right;
+  line-height: 30px;
+  margin-right: 10px; }
 
 .ui-tooltip {
   background: rgba(0, 0, 0, 0.9);

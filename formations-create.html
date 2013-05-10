@@ -52,7 +52,7 @@
     <div class="columns">
       <div class="form">
         <form>
-          <h2>1. Select a Blueprint</h2>
+          <h2>1. Select Blueprints</h2>
           <table data-type="datatable" id="blueprints" data-length="10" data-search="false">
             <thead>
               <th>Name</th>
@@ -64,8 +64,7 @@
             </tbody>
           </table>
           <h2>2. Instances per Blueprint</h2>
-          <input type="range" id="sliderBar" min="2" max="8" step="1" value="3" onChange="showValue(this.value);" />
-          <div id="result"></div>
+          <input type="number" min="2" max="20" step="1" value="2" />
           <div class="submit">
             <a class="cta primary" href="/strings/formations-create-2.html">Next step</a>
             <a class="cta" href="/strings/formations.html">Cancel</a>
@@ -89,12 +88,5 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script>
-  function showValue(num){
-    var result = document.getElementById('result');     
-    result.innerHTML = num;
-  }
-  $(window).load(showValue($('#sliderBar').val()));
-</script>
 </body>
 </html>

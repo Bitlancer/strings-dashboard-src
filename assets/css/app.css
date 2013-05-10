@@ -745,11 +745,13 @@ textarea {
   line-height: 1.5;
   text-indent: 1px; }
 
-div.form form div.submit legend {
-  color: #999;
-  float: right;
-  line-height: 30px;
-  margin-right: 10px; }
+div.form form div.submit {
+  margin-top: 45px; }
+  div.form form div.submit legend {
+    color: #999;
+    float: right;
+    line-height: 30px;
+    margin-right: 10px; }
 
 .ui-tooltip {
   background: rgba(0, 0, 0, 0.9);

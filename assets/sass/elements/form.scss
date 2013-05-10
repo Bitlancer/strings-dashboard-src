@@ -112,11 +112,14 @@ textarea {
 
 div.form {
   form {
-    div.submit legend {
-      color: #999;
-      float: right;
-      line-height: 30px;
-      margin-right: 10px;
-    }  
+    div.submit {
+      margin-top: 45px;
+      legend {
+        color: #999;
+        float: right;
+        line-height: 30px;
+        margin-right: 10px;
+      }
+    }
   }  
 }

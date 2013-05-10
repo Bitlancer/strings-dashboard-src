@@ -354,6 +354,9 @@ table {
           color: #1e8fe2;
           float: right;
           font-size: 85%; }
+          table tbody tr td a.action.selected {
+            color: #999;
+            font-style: italic; }
         table tbody tr td ul.action-menu {
           float: right; }
           table tbody tr td ul.action-menu > span {

@@ -18,6 +18,10 @@ table {
           color: $blue_light;
           float:right;
           font-size: 85%;
+          &.selected {
+            color: #999;
+            font-style: italic;
+          }
         }
         ul.action-menu { 
           float: right;

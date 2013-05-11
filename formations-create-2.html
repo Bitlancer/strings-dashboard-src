@@ -55,8 +55,7 @@
           <h2>Configure Instances</h2>
           <div class="configure">
             <nav class="tabs">
-              <a data-tab="general">General</a>
-              <a data-tab="puppet">Puppet</a>
+              <a class="active" data-tab="general">General</a><a data-tab="puppet">Puppet</a>
             </nav>
             <span data-tab="general">
               <h3>Instance Name</h3>
@@ -101,8 +100,10 @@
     $('div.configure nav.tabs a').click(function() {
       var p = $(this).parents('.configure');
       var t = $(this).attr('data-tab');
+      p.find('nav.tabs a.active').removeClass('active');
+      $(this).addClass('active');
       p.find('span:visible').hide();
-      p.find('span[data-tab='+target+']').show();
+      p.find('span[data-tab='+t+']').show();
     });  
   });
 </script>

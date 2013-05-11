@@ -112,6 +112,13 @@ textarea {
 
 div.form {
   form {
+    div.configure {
+      background: #fff;
+      border: 1px solid #eee;
+      border-bottom: 1px solid #e0e0e0;
+      margin-top: 10px;
+      padding: 15px;
+    }
     div.submit {
       margin-top: 45px;
       legend {

@@ -52,12 +52,26 @@
     <div class="columns">
       <div class="form">
         <form>
-          <h2>1. Configure Instances</h2>
+          <h2>Configure Instances</h2>
           <div class="configure">
-            <h3>instanceOne</h3>
-          </div>
-          <div class="configure">
-            <h3>instanceTwo</h3>
+            <nav class="tabs">
+              <a data-tab="general">General</a>
+              <a data-tab="puppet">Puppet</a>
+            </nav>
+            <span data-tab="general">
+              <h3>Instance Name</h3>
+              <input type="text" placeholder="e.g. loremIpsum" />
+              <h3>Deployment Target</h3>
+              <select>
+                <option>targetOne</option>
+                <option>targetTwo</option>
+                <option>targetThree</option>
+                <option>targetFour</option>
+              </select>
+            </span>
+            <span data-tab="puppet">
+              I am tab two
+            </span>
           </div>
           <div class="submit">
             <a class="cta primary" href="/strings/formations.html">Done</a>
@@ -82,5 +96,15 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
+<script>
+  $(document).ready(function() {
+    $('div.configure nav.tabs a').click(function() {
+      var p = $(this).parents('.configure');
+      var t = $(this).attr('data-tab');
+      p.find('span:visible').hide();
+      p.find('span[data-tab='+target+']').show();
+    });  
+  });
+</script>
 </body>
 </html>

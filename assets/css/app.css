@@ -753,7 +753,18 @@ div.form form div.configure {
   border: 1px solid #eee;
   border-bottom: 1px solid #e0e0e0;
   margin-top: 10px;
-  padding: 15px; }
+  padding: 20px; }
+  div.form form div.configure h3 {
+    font-weight: 600;
+    margin: 15px 0 5px; }
+    div.form form div.configure h3:first-of-type {
+      margin-top: 0; }
+  div.form form div.configure input[type=text] {
+    max-width: 60%; }
+  div.form form div.configure > span {
+    display: none; }
+    div.form form div.configure > span:first-of-type, div.form form div.configure > span.active {
+      display: block; }
 div.form form div.submit {
   margin-top: 45px; }
   div.form form div.submit legend {

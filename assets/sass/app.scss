@@ -1,5 +1,5 @@
 // jQuery
-@import url('http://assets.ambient.ly/bitlancer/jquery.ui.theme.css');
+@import 'jquery.ui.theme.css';
 
 // Defaults
 @import 'reset.scss';
@@ -23,6 +23,7 @@
 @import 'elements/actionmenus.scss';
 @import 'elements/buttons.scss';
 @import 'elements/autocomplete.scss';
+@import 'elements/slider.scss';
 
 // Views
 @import 'views/account.scss';

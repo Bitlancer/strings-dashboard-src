@@ -29,7 +29,11 @@ body {
   .float-left { float: left }
   .float-right { float: right }
   .overflow-hidden { overflow: hidden }
-  .arrow:after { content: " \00bb" }
+  .block { display: block }
+  .arrow {
+    &:after { content: " \00bb" }
+    &.block { margin-top: 5px }
+  }
   ul {
     display: block;
     position: relative;

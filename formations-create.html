@@ -39,7 +39,7 @@
     <span id="formations" class="active">
       <a href="/strings/formations.html">Formations</a>
       <span>
-        <a href="/strings/formations-create.html">Create Formation</a>
+        <a href="#">Create Formation</a>
       </span>
     </span>
     <span id="user-management">
@@ -48,40 +48,33 @@
   </nav>
   <!-- Content -->
   <section>
-    <h1>Formations</h1>
+    <h1>Create Formation</h1>
     <div class="columns">
-      <div>
-        <table data-type="datatable" id="users" data-cta='<a class="cta primary" href="/strings/formations-create.html">Create formation</a>'>
-          <thead>
-            <tr>
+      <div class="form">
+        <form>
+          <h2>1. Select a Blueprint</h2>
+          <table data-type="datatable" id="blueprints" data-length="10" data-search="false">
+            <thead>
               <th>Name</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                formationOne
-                <ul class="action-menu" data-width="120">
-                  <li>Actions</li>
-                  <span>
-                    <a class="modal" data-src="/strings/assets/html/ajax/formations/show.html" data-title="formationOne">Detailed View</a>
-                    <a class="modal" data-src="/strings/assets/html/ajax/formations/edit.html" data-title="Edit Formation">Edit</a>
-                    <a class="modal" data-src="/strings/assets/html/ajax/formations/delete.html" data-title="Delete Formation" data-width="600">Delete</a>
-                  </span>
-                </ul>  
-              </td>
-            </tr>
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              <tr><td>blueprintOne<a class="action">Select</a></td></tr>
+              <tr><td>blueprintTwo<a class="action selected">Selected</a></td></tr>
+              <tr><td>blueprintThree<a class="action">Select</a></td></tr>
+            </tbody>
+          </table>
+          <h2>2. Instances per Blueprint</h2>
+          <input type="number" min="2" max="20" step="1" value="2" />
+          <div class="submit">
+            <a class="cta primary" href="/strings/formations-create-2.html">Next step</a>
+            <a class="cta" href="/strings/formations.html">Cancel</a>
+            <legend>Step 1 of 2</legend>
+          </div>
+        </form>
       </div>
-    <div>
-        <h2>User activity<a class="cta refresh"></a></h2>
-        <ul id="activity">
-          <li>asears logged in<small>12 minutes ago</small></li>
-          <li>jcotton deleted the instance <strong>anarachy</strong><small>about 4 hours ago</small></li>
-          <li>mjuszczak edited user permissions for <strong>asears</strong><small>2 days ago</small></li>
-          <li>mjuszczak added the user <strong>asears</strong><small>2 days ago</small></li>
-        </ul>
+      <div>
+        <h2>Pro tip</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut purus condimentum felis fringilla pharetra. <a class="arrow block">Lorem ipsum dolar</a></p>
       </div>
     </div>
     <hr class="clear">

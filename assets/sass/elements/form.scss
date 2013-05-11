@@ -126,7 +126,7 @@ div.form {
         }
       }
       input {
-        &[type=text] {
+        &[type=text],&[type=number] {
           max-width: 60%;  
         }  
       }
@@ -136,7 +136,7 @@ div.form {
         position: absolute;
         a {
           background: #f8f8f8;
-          color: #aaa;
+          color: #999;
           display: inline-block;
           line-height: 30px;
           margin: 0;
@@ -145,7 +145,7 @@ div.form {
             background: #fff;
             border: 1px solid #eee;
             border-bottom: 0;
-            color: #555;
+            color: #444;
           }
         }
       }

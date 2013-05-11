@@ -759,7 +759,7 @@ div.form form div.configure {
     margin: 15px 0 5px; }
     div.form form div.configure h3:first-of-type {
       margin-top: 0; }
-  div.form form div.configure input[type=text] {
+  div.form form div.configure input[type=text], div.form form div.configure input[type=number] {
     max-width: 60%; }
   div.form form div.configure nav.tabs {
     height: 30px;
@@ -767,7 +767,7 @@ div.form form div.configure {
     position: absolute; }
     div.form form div.configure nav.tabs a {
       background: #f8f8f8;
-      color: #aaa;
+      color: #999;
       display: inline-block;
       line-height: 30px;
       margin: 0;
@@ -776,7 +776,7 @@ div.form form div.configure {
         background: #fff;
         border: 1px solid #eee;
         border-bottom: 0;
-        color: #555; }
+        color: #444; }
   div.form form div.configure > span {
     display: none; }
     div.form form div.configure > span:first-of-type, div.form form div.configure > span.active {

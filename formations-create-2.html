@@ -53,6 +53,7 @@
       <div class="form">
         <form>
           <h2>Configure Instances</h2>
+          <!-- instance one -->
           <div class="configure">
             <nav class="tabs">
               <a class="active" data-tab="general">General</a><a data-tab="puppet">Puppet</a>
@@ -69,7 +70,63 @@
               </select>
             </span>
             <span data-tab="puppet">
-              I am tab two
+              <h3>Text Field</h3>
+              <input type="text" placeholder="lorem ipsum dolar" />
+              <h3>Check Box</h3>
+                <input type="checkbox" id="check" />
+                <label for="check">Boolean Value</label>
+              <h3>Select Box</h3>
+              <select>
+                <option>optionOne</option>
+                <option>optionTwo</option>
+                <option>optionThree</option>
+              </select>
+              <h3>Number Field</h3>
+              <input type="number" min="4" max="12" step="2" value="6" />
+              <h3>Radio Buttons</h3>
+              <input type="radio" name="example1" id="example1-option-1" checked=checked />
+              <label for="example1-option-1">Option One</label>
+              <hr class="clear">
+              <input type="radio" name="example1" id="example1-option-2" />
+              <label for="example1-option-2">Option Two</label>
+            </span>
+          </div>
+          <!-- instance two -->
+          <div class="configure">
+            <nav class="tabs">
+              <a class="active" data-tab="general">General</a><a data-tab="puppet">Puppet</a>
+            </nav>
+            <span data-tab="general">
+              <h3>Instance Name</h3>
+              <input type="text" placeholder="e.g. loremIpsum" />
+              <h3>Deployment Target</h3>
+              <select>
+                <option>targetOne</option>
+                <option>targetTwo</option>
+                <option>targetThree</option>
+                <option>targetFour</option>
+              </select>
+            </span>
+            <span data-tab="puppet">
+              <h3>Text Field</h3>
+              <input type="text" placeholder="lorem ipsum dolar" />
+              <h3>Check Box</h3>
+                <input type="checkbox" id="check2" />
+                <label for="check2">Boolean Value</label>
+              <h3>Select Box</h3>
+              <select>
+                <option>optionOne</option>
+                <option>optionTwo</option>
+                <option>optionThree</option>
+              </select>
+              <h3>Number Field</h3>
+              <input type="number" min="4" max="12" step="2" value="6" />
+              <h3>Radio Buttons</h3>
+              <input type="radio" name="example2" id="example2-option-1" checked=checked />
+              <label for="example2-option-1">Option One</label>
+              <hr class="clear">
+              <input type="radio" name="example2" id="example2-option-2" />
+              <label for="example2-option-2">Option Two</label>
             </span>
           </div>
           <div class="submit">
@@ -102,7 +159,7 @@
       var t = $(this).attr('data-tab');
       p.find('nav.tabs a.active').removeClass('active');
       $(this).addClass('active');
-      p.find('span:visible').hide();
+      p.find('span').hide();
       p.find('span[data-tab='+t+']').show();
     });  
   });

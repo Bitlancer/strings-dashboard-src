@@ -52,87 +52,12 @@
     <div class="columns">
       <div class="form">
         <form>
-          <h2>Configure Instances</h2>
-          <!-- instance one -->
-          <div class="configure">
-            <nav class="tabs">
-              <a class="active" data-tab="general">General</a><a data-tab="puppet">Puppet</a>
-            </nav>
-            <span data-tab="general">
-              <h3>Instance Name</h3>
-              <input type="text" placeholder="e.g. loremIpsum" />
-              <h3>Deployment Target</h3>
-              <select>
-                <option>targetOne</option>
-                <option>targetTwo</option>
-                <option>targetThree</option>
-                <option>targetFour</option>
-              </select>
-            </span>
-            <span data-tab="puppet">
-              <h3>Text Field</h3>
-              <input type="text" placeholder="lorem ipsum dolar" />
-              <h3>Check Box</h3>
-                <input type="checkbox" id="check" />
-                <label for="check">Boolean Value</label>
-              <h3>Select Box</h3>
-              <select>
-                <option>optionOne</option>
-                <option>optionTwo</option>
-                <option>optionThree</option>
-              </select>
-              <h3>Number Field</h3>
-              <input type="number" min="4" max="12" step="2" value="6" />
-              <h3>Radio Buttons</h3>
-              <input type="radio" name="example1" id="example1-option-1" checked=checked />
-              <label for="example1-option-1">Option One</label>
-              <hr class="clear">
-              <input type="radio" name="example1" id="example1-option-2" />
-              <label for="example1-option-2">Option Two</label>
-            </span>
-          </div>
-          <!-- instance two -->
-          <div class="configure">
-            <nav class="tabs">
-              <a class="active" data-tab="general">General</a><a data-tab="puppet">Puppet</a>
-            </nav>
-            <span data-tab="general">
-              <h3>Instance Name</h3>
-              <input type="text" placeholder="e.g. loremIpsum" />
-              <h3>Deployment Target</h3>
-              <select>
-                <option>targetOne</option>
-                <option>targetTwo</option>
-                <option>targetThree</option>
-                <option>targetFour</option>
-              </select>
-            </span>
-            <span data-tab="puppet">
-              <h3>Text Field</h3>
-              <input type="text" placeholder="lorem ipsum dolar" />
-              <h3>Check Box</h3>
-                <input type="checkbox" id="check2" />
-                <label for="check2">Boolean Value</label>
-              <h3>Select Box</h3>
-              <select>
-                <option>optionOne</option>
-                <option>optionTwo</option>
-                <option>optionThree</option>
-              </select>
-              <h3>Number Field</h3>
-              <input type="number" min="4" max="12" step="2" value="6" />
-              <h3>Radio Buttons</h3>
-              <input type="radio" name="example2" id="example2-option-1" checked=checked />
-              <label for="example2-option-1">Option One</label>
-              <hr class="clear">
-              <input type="radio" name="example2" id="example2-option-2" />
-              <label for="example2-option-2">Option Two</label>
-            </span>
-          </div>
+          <h2>2. MySQL master count</h2>
+          <input type="number" min="1" max="1" step="1" value="1" />
           <div class="submit">
-            <a class="cta primary" href="/strings/formations.html">Done</a>
+            <a class="cta primary" href="/strings/formations-create-3.html">Next step</a>
             <a class="cta" href="/strings/formations-create.html">Previous step</a>
-            <legend>Step 2 of 2</legend>
+            <legend>Step 2 of 5</legend>
           </div>
         </form>
       </div>
@@ -152,17 +77,5 @@
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script>
-  $(document).ready(function() {
-    $('div.configure nav.tabs a').click(function() {
-      var p = $(this).parents('.configure');
-      var t = $(this).attr('data-tab');
-      p.find('nav.tabs a.active').removeClass('active');
-      $(this).addClass('active');
-      p.find('span').hide();
-      p.find('span[data-tab='+t+']').show();
-    });  
-  });
-</script>
 </body>
 </html>

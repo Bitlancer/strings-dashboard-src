@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Strings - User Management | Bitlancer</title>
+  <link id="style" rel="stylesheet" type="text/css" href="/strings/assets/css/app.css">
+</head>
+<body class="loading">
+  <header>
+    <div>
+      <a id="logo">Strings</a>
+      <ul class="action-menu" id="menu" data-width="140">
+        <li><img src="https://en.gravatar.com/userimage/42637352/47e00755b87293bcc8381d75bae7b366.jpeg"> Axel Sears</li>
+        <span>
+          <a href="/strings/interface-elements.html">Interface Elements</a>
+          <li>Settings</li>
+          <li>Sign Out</li>
+        </span>
+      </ul>
+    </div>
+  </header>
+  <nav>
+    <span id="dashboard">
+      <a href="/strings/index.html">Dashboard</a>
+      <span>
+        <a href="/strings/test.html">Test Page</a>
+        <a href="#">Lorem Ipsum</a>
+        <a href="#">Lorem Ipsum</a>
+      </span>
+    </span>
+    <span id="devices">
+      <a href="#">Devices</a>
+      <span>
+        <a href="#">Lorem Ipsum</a>
+        <a href="#">Lorem Ipsum</a>
+        <a href="#">Lorem Ipsum</a>
+      </span>
+    </span>
+    <span id="formations" class="active">
+      <a href="/strings/formations.html">Formations</a>
+      <span>
+        <a href="#">Create Formation</a>
+      </span>
+    </span>
+    <span id="user-management">
+      <a href="/strings/user-management.html">User Management</a>
+    </span>
+  </nav>
+  <!-- Content -->
+  <section>
+    <h1>Create Formation</h1>
+    <div class="columns">
+      <div class="form">
+        <form>
+          <h2>4. Configure Instances</h2>
+          <!-- instance one -->
+          <div class="configure">
+            <nav class="tabs">
+              <a class="active" data-tab="general">General</a><a data-tab="puppet">Puppet</a>
+            </nav>
+            <span data-tab="general">
+              <h3>Instance Name</h3>
+              <input type="text" placeholder="e.g. loremIpsum" />
+              <h3>Deployment Target</h3>
+              <select>
+                <option>targetOne</option>
+                <option>targetTwo</option>
+                <option>targetThree</option>
+                <option>targetFour</option>
+              </select>
+            </span>
+            <span data-tab="puppet">
+              <h3>Text Field</h3>
+              <input type="text" placeholder="lorem ipsum dolar" />
+              <h3>Check Box</h3>
+                <input type="checkbox" id="check" />
+                <label for="check">Boolean Value</label>
+              <h3>Select Box</h3>
+              <select>
+                <option>optionOne</option>
+                <option>optionTwo</option>
+                <option>optionThree</option>
+              </select>
+              <h3>Number Field</h3>
+              <input type="number" min="4" max="12" step="2" value="6" />
+              <h3>Radio Buttons</h3>
+              <input type="radio" name="example1" id="example1-option-1" checked=checked />
+              <label for="example1-option-1">Option One</label>
+              <hr class="clear">
+              <input type="radio" name="example1" id="example1-option-2" />
+              <label for="example1-option-2">Option Two</label>
+            </span>
+          </div>
+          <!-- instance two -->
+          <div class="configure">
+            <nav class="tabs">
+              <a class="active" data-tab="general">General</a><a data-tab="puppet">Puppet</a>
+            </nav>
+            <span data-tab="general">
+              <h3>Instance Name</h3>
+              <input type="text" placeholder="e.g. loremIpsum" />
+              <h3>Deployment Target</h3>
+              <select>
+                <option>targetOne</option>
+                <option>targetTwo</option>
+                <option>targetThree</option>
+                <option>targetFour</option>
+              </select>
+            </span>
+            <span data-tab="puppet">
+              <h3>Text Field</h3>
+              <input type="text" placeholder="lorem ipsum dolar" />
+              <h3>Check Box</h3>
+                <input type="checkbox" id="check2" />
+                <label for="check2">Boolean Value</label>
+              <h3>Select Box</h3>
+              <select>
+                <option>optionOne</option>
+                <option>optionTwo</option>
+                <option>optionThree</option>
+              </select>
+              <h3>Number Field</h3>
+              <input type="number" min="4" max="12" step="2" value="6" />
+              <h3>Radio Buttons</h3>
+              <input type="radio" name="example2" id="example2-option-1" checked=checked />
+              <label for="example2-option-1">Option One</label>
+              <hr class="clear">
+              <input type="radio" name="example2" id="example2-option-2" />
+              <label for="example2-option-2">Option Two</label>
+            </span>
+          </div>
+          <div class="submit">
+            <a class="cta primary" href="/strings/formations-create-5.html">Next step</a>
+            <a class="cta" href="/strings/formations-create-3.html">Previous step</a>
+            <legend>Step 4 of 5</legend>
+          </div>
+        </form>
+      </div>
+      <div>
+        <h2>Pro tip</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ut purus condimentum felis fringilla pharetra. <a class="arrow block">Lorem ipsum dolar</a></p>
+      </div>
+    </div>
+    <hr class="clear">
+  </section>
+<!-- Javascript -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/strings/assets/js/jquery.fcbkcomplete.js"></script>
+<script type="text/javascript" src="/strings/assets/js/app.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+  $(document).ready(function() {
+    $('div.configure nav.tabs a').click(function() {
+      var p = $(this).parents('.configure');
+      var t = $(this).attr('data-tab');
+      p.find('nav.tabs a.active').removeClass('active');
+      $(this).addClass('active');
+      p.find('span').hide();
+      p.find('span[data-tab='+t+']').show();
+    });  
+  });
+</script>
+<style>
+  body { overflow-y: scroll }
+</style>
+</body>
+</html>

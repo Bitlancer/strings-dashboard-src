@@ -12,16 +12,20 @@ table {
     tr { 
       border-bottom: 1px solid darken($white,5%);
       &:last-of-type { border: 0 }
+      &.selected {
+        background: #1e8fe2;
+        color: #fff;
+        td a.action {
+          color: #fff;
+          font-style: italic;
+        }
+      }
       td {
         border-right: 1px solid darken($white,5%);
         a.action {
           color: $blue_light;
           float:right;
           font-size: 85%;
-          &.selected {
-            color: #999;
-            font-style: italic;
-          }
         }
         ul.action-menu { 
           float: right;

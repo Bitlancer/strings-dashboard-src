@@ -1000,6 +1000,11 @@ ul.action-menu {
     line-height: 18px;
     padding: 0 5px; }
 
+/* JQuery Autocomplete */
+ul.ui-autocomplete li {
+  list-style-type: none; }
+
+/* FCBK Autocomplete */
 /* Copyright: Guillermo Rauch <http://devthought.com/> - Distributed under MIT - Keep this message! */
 /* TextboxList sample CSS */
 ul.holder {

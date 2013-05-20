@@ -31,7 +31,6 @@ body#account {
     width: 260px;
     vertical-align: middle;
     @include box-shadow(0 1px 10px rgba(0,0,0,0.5));
-    @include transition(opacity .5s linear);
     h1 {
       box-sizing: border-box;
       color: #444;

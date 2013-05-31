@@ -55,7 +55,7 @@ body > nav {
       background-image: url('../img/user.png'); 
     }
     &.active {
-      background: lighten($white,4%);
+      background: #f6f6f6;
       margin-right: 0;
       &:after {
         background: #f8f8f8;
@@ -87,6 +87,9 @@ body > nav {
           &:last-of-type {
             border: 0; 
           }
+        }
+        > a.active {
+          background: #fdfdfd;
         }
       }
     }

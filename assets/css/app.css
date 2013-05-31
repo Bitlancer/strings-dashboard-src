@@ -236,7 +236,7 @@ body > nav {
     body > nav > span#user-management > a:before {
       background-image: url("../img/user.png"); }
     body > nav > span.active {
-      background: #f6f6f6;
+      background: #f9f9f9;
       margin-right: 0; }
       body > nav > span.active:after {
         background: #f8f8f8;

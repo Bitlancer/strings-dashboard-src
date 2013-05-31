@@ -1,5 +1,5 @@
 body#account {
-  background: url('http://assets.ambient.ly/bitlancer/wall3.jpg') center no-repeat;
+  background: url('../img/wall3.jpg') center no-repeat;
   &.landscape { background-size: 100% auto }
   &.portrait { background-size: auto 100% }
   header,nav { display: none }
@@ -16,9 +16,9 @@ body#account {
     margin-right: -0.25em; 
   } 
   &.loading {
-    form#login { opacity: 0 }  
+    div#login { opacity: 0 }  
   }
-  form#login {
+  div#login {
     background: #fff;
     border-radius: 7px 7px 0 0;
     display: inline-block;
@@ -59,7 +59,7 @@ body#account {
         margin-bottom: 15px;
       }
     }
-    div > .buttons {
+    form > .buttons {
       display: block;
       margin-top: 15px;
       > * {

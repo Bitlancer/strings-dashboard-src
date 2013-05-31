@@ -33,12 +33,16 @@ var strings = {
     actionmenu : function() {
       $('ul.action-menu').live('click',function(event) {
         event.stopPropagation();
-        var align = ($(this).outerWidth() - $(this).children('span').outerWidth()) * 0.5;
+        var offset = ($(this).outerWidth() - $(this).children('span').outerWidth()) * 0.5;
         if($(this).attr('data-width')){
           $(this).children('span').width($(this).attr('data-width'));
-          align = 0;
+          offset = 0;
         }
-        $(this).children('span').css('right',align);
+        var align = "right";
+        if($(this).attr('data-align')){
+          align = $(this).attr('data-align');
+        }
+        $(this).children('span').css(align,offset);
         $(this).toggleClass('active');
       });
       $('body').click(function() {
@@ -186,7 +190,7 @@ var strings = {
         var input = fieldset.find("input[type='text']");
         var name = input.val();
         var tbody = fieldset.find("tbody");
-        if(tbody.find("input[value='" + name + "']").length == 0){
+        if(name.length > 0 && tbody.find("input[value='" + name + "']").length == 0){
           $(tbody).find("td.blank").parent("tr").remove();
           var element = "<tr><td>";
           element += name;
